@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <MediaEntities>
-        <MediaEntity description="" documentationContent="" homeMashup="" lastModifiedDate="2015-10-14T20:14:37.265Z" name="HoneywellLogoPng" tags="Applications:Manufacturing">
+        <MediaEntity description="" documentationContent="" homeMashup="" lastModifiedDate="2015-10-14T20:14:37.265Z" name="HoneywellLogoPng" tags="Applications:Manufacturing;Version:1.0.0.0">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
