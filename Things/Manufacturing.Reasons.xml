@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.049Z" name="Manufacturing.Reasons" published="false" tags="Applications:Manufacturing" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.049Z" name="Manufacturing.Reasons" published="false" tags="Applications:Manufacturing;Version:1.0.0.0" thingTemplate="DataTable" valueStream="">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
