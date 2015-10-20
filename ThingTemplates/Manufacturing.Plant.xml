@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-14T20:22:19.702Z" name="Manufacturing.Plant" tags="Applications:Manufacturing" thingPackage="" valueStream="">
+        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-14T20:22:19.702Z" name="Manufacturing.Plant" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
