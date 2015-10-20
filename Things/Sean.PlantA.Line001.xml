@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-19T21:40:47.133Z" name="Sean.PlantA.Line001" published="false" tags="Applications:Manufacturing" thingTemplate="Manufacturing.ProductionLine" valueStream="">
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-19T21:40:47.133Z" name="Sean.PlantA.Line001" published="false" tags="Applications:Manufacturing;Version:1.0.0.0" thingTemplate="Manufacturing.ProductionLine" valueStream="">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
