@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.920Z" name="Manufacturing.GetPerBOMAllMaterialData" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="MaterialDescription" ordinal="8"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialsEqual" ordinal="10"/>
+                <FieldDefinition baseType="STRING" description="" name="OperationID" ordinal="3"/>
+                <FieldDefinition baseType="STRING" description="" name="Comments" ordinal="7"/>
+                <FieldDefinition baseType="NUMBER" description="" name="Quantity" ordinal="5"/>
+                <FieldDefinition baseType="NUMBER" description="" name="QuantityNeeded" ordinal="9"/>
+                <FieldDefinition baseType="STRING" description="" name="UnitOfMeasure" ordinal="6"/>
+                <FieldDefinition baseType="STRING" description="" name="VersionID" ordinal="2"/>
+                <FieldDefinition baseType="STRING" description="" name="BOMMaterialID" ordinal="4"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="1"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-12T19:44:15.098Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.920Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
