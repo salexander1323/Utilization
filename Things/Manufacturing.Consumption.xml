@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" effectiveThingPackage="StreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.046Z" name="Manufacturing.Consumption" published="false" tags="Applications:Manufacturing" thingTemplate="Stream" valueStream="">
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" effectiveThingPackage="StreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.046Z" name="Manufacturing.Consumption" published="false" tags="Applications:Manufacturing;Version:1.0.0.0" thingTemplate="Stream" valueStream="">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
