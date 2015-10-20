@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:39:09.967Z" name="Manufacturing.ProductionLineView" rows="0.0" tags="Applications:Manufacturing">
+        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:39:09.967Z" name="Manufacturing.ProductionLineView" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
