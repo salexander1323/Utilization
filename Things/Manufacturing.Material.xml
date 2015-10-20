@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;&#10;" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.039Z" name="Manufacturing.Material" published="false" tags="Applications:Manufacturing" thingTemplate="DataTable" valueStream="">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Index Settings" isMultiRow="true" name="Indexes" ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Index Field Names" baseType="STRING" description="Index fields" name="fieldNames" ordinal="1"/>
+                            <FieldDefinition aspect.friendlyName="Index Name" baseType="STRING" description="Index name" name="name" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows/>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <dataShape><![CDATA[Manufacturing.MaterialInformation]]></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="STRING" description="Service Provider Name" name="serviceProvider" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <serviceProvider/>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProducibleMaterials">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ConsumableMaterials">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="MaterialListWithUndefined">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialSelect" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="ProducibleMaterials">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+    filters: {
+        type : "OR", filters:
+        [
+            {
+                type : "EQ",
+                fieldName : "MaterialType",
+                value : "FG"
+            }
+            ,{
+                type : "EQ",
+                fieldName : "MaterialType",
+                value : "INT"
+            }
+        ]}
+};
+
+var params = {
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE dataShape:
+var material = me.QueryDataTableEntries(params);
+
+var params = {
+	sortColumn: "MaterialDescription" /* STRING */,
+	t: material /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ConsumableMaterials">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+    filters: {
+        type : "OR", filters:
+        [
+            {
+                type : "EQ",
+                fieldName : "MaterialType",
+                value : "RAW"
+            }
+            ,{
+                type : "EQ",
+                fieldName : "MaterialType",
+                value : "INT"
+            }
+        ]}
+};
+
+var params = {
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE dataShape:
+var material = me.QueryDataTableEntries(params);
+
+var params = {
+	sortColumn: "MaterialDescription" /* STRING */,
+	t: material /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="MaterialListWithUndefined">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var Material = Things["Manufacturing.Material"].GetDataTableEntries(params);
+
+// create MaterialList infotable
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Manufacturing.MaterialSelect"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AcmeTractor.MaterialSelect)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+// loop through Material to create select list
+var tableLength = Material.getRowCount();
+
+for (var x = 0; x < tableLength; x++) {
+	var MaterialRow = Material.getRow(x);
+	//add records to the infotable
+        
+	result.AddRow({
+	MaterialID : MaterialRow.MaterialID,
+	MaterialDescription : MaterialRow.MaterialDescription,
+});
+}
+
+// create MaterialListUndefined infotable
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Manufacturing.MaterialSelect"
+};
+
+// Add the undefined row
+	result.AddRow({
+	MaterialID : undefined,
+	MaterialDescription : undefined,
+});
+
+
+var params = {
+	sortColumn: "MaterialID" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:04.039Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
