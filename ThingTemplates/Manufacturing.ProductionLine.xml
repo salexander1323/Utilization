@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="GenericThing" description="Production Line Template for all tractor production lines." documentationContent="&lt;p&gt;This template is used for &lt;b&gt;BOTH&lt;/b&gt; the Final Assembly Lines and Feeder Lines (Transmission, Engine, and Cab Assembly).&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-20T18:23:10.100Z" name="Manufacturing.ProductionLine" tags="Applications:Manufacturing" thingPackage="" valueStream="">
+        <ThingTemplate baseThingTemplate="GenericThing" description="Production Line Template for all tractor production lines." documentationContent="&lt;p&gt;This template is used for &lt;b&gt;BOTH&lt;/b&gt; the Final Assembly Lines and Feeder Lines (Transmission, Engine, and Cab Assembly).&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-20T18:23:10.100Z" name="Manufacturing.ProductionLine" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
