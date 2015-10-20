@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.805Z" name="Manufacturing.OrderStatusLogInformation" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="User" ordinal="2"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="production_order" ordinal="3"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="new_status" ordinal="5"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="1"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="comment" ordinal="6"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="old_status" ordinal="4"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T20:27:56.287Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.805Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
