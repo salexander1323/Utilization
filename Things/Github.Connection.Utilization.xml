@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing aspect.isSystemObject="false" description="Used to store utilization stuff" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-20T18:53:58.590Z" name="Github.Connection.Utilization" published="false" tags="" thingTemplate="Github.Connection" valueStream="">
+            <Owner name="stevea" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <GithubAccessToken><![CDATA[S2wCbIAfdTIDGrHRku5N5oUJo4teZp8dj8r3nRE/g3zybv997lmnwOjUJoIu5h0o]]></GithubAccessToken>
+                <GithubReportedUserID><![CDATA[ThingWorx System]]></GithubReportedUserID>
+                <GithubUserID><![CDATA[salexander1323]]></GithubUserID>
+                <GithubReportedMessage><![CDATA[System Update]]></GithubReportedMessage>
+                <GithubRepo/>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Thing Github.Connection.Utilization created programatically" timestamp="2015-10-20T18:53:58.589Z" user="stevea"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
