@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:39:09.967Z" name="Manufacturing.ProductionLineView" rows="0.0" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>Sean.PlantA</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates>
+                <ThingTemplate>Manufacturing.ProductionLine</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent><![CDATA[{
+  "Data" : {
+    "UserExtensions" : {
+      "Services" : [ {
+        "Characteristic" : "Services",
+        "Name" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "Target" : "GetCurrentUserExtensionProperties",
+        "APIMethod" : "post",
+        "Id" : "UserExtensionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "UserExtensions",
+      "Id" : "UserExtensions",
+      "EntityName" : "",
+      "DataName" : "UserExtensions"
+    },
+    "Things_Sean_PlantA" : {
+      "Services" : [ {
+        "Characteristic" : "Services",
+        "Name" : "GetProperties",
+        "Parameters" : { },
+        "Target" : "GetProperties",
+        "APIMethod" : "get",
+        "Id" : "bb740f31-afc5-428d-85bc-a2f7483fe15b",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Things",
+      "EntityName" : "Sean.PlantA",
+      "Id" : "117acf20-76e9-46c7-a01a-fa5103340d21",
+      "DataName" : "Things_Sean_PlantA"
+    },
+    "Session" : {
+      "Services" : [ {
+        "Characteristic" : "Services",
+        "Name" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "Target" : "GetGlobalSessionValues",
+        "APIMethod" : "post",
+        "Id" : "SessionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Session",
+      "Id" : "session",
+      "EntityName" : "",
+      "DataName" : "Session"
+    },
+    "ThingTemplates_Manufacturing_ProductionLine" : {
+      "Services" : [ {
+        "Characteristic" : "Services",
+        "Name" : "QueryImplementingThingsWithData",
+        "Parameters" : { },
+        "Target" : "QueryImplementingThingsWithData",
+        "APIMethod" : "post",
+        "Id" : "4ac87b3a-0e42-4fdf-8a4a-91842bfdba17",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "ThingTemplates",
+      "EntityName" : "Manufacturing.ProductionLine",
+      "Id" : "7645a669-9883-4986-9ac3-2eeda7abe6fb",
+      "DataName" : "ThingTemplates_Manufacturing_ProductionLine"
+    }
+  },
+  "DataBindings" : [ {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetProperty" : "Data",
+      "SourcePropertyType" : "InfoTable",
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "ThingTemplates_Manufacturing_ProductionLine",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "037206af-77b5-4b81-92bc-beae262ab6af",
+    "SourceDetails" : "AllData",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "TargetId" : "List-4"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "TargetProperty" : "Line",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "ThingTemplates_Manufacturing_ProductionLine",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "cd8143e0-9cfa-46ba-8526-ff5018b9bce0",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "TargetId" : "ContainedMashup-5"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "LineDescription",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "description",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "ThingTemplates_Manufacturing_ProductionLine",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "d022f630-64ba-40c0-8afc-3471f8bc730f",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "TargetId" : "ContainedMashup-5"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "TargetProperty" : "Plant",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "Things_Sean_PlantA",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "4408cb02-ef38-4852-8320-aca0e7e76035",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetProperties",
+    "TargetId" : "ContainedMashup-5"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "PlantDescription",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "description",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "Things_Sean_PlantA",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "77a5bbfc-1de4-4c4f-8622-261aae0c655c",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetProperties",
+    "TargetId" : "ContainedMashup-5"
+  } ],
+  "mashupType" : "mashup",
+  "RunTimePermissions" : { },
+  "Events" : [ {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "a2ae8df4-168e-4625-b310-6a08ff2f7dc5",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerId" : "ThingTemplates_Manufacturing_ProductionLine",
+    "EventHandlerService" : "QueryImplementingThingsWithData"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "24757235-abed-4ea4-8c2b-7c7ab99f002a",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerId" : "Things_Sean_PlantA",
+    "EventHandlerService" : "GetProperties"
+  } ],
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ ],
+          "Properties" : {
+            "ListLabelStyle" : "DefaultWidgetLabelStyle",
+            "MultiSelect" : false,
+            "DisplayField" : "name",
+            "Visible" : true,
+            "__TypeDisplayName" : "List",
+            "Type" : "dhxlist",
+            "Area" : "UI",
+            "Z-index" : 10,
+            "View" : "list",
+            "Width" : 110,
+            "ListItemStyle" : "DefaultListItemStyle",
+            "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+            "Top" : 140,
+            "ResponsiveLayout" : true,
+            "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
+            "Height" : 200,
+            "NumberOfItemsInDropdownView" : 6,
+            "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+            "DisplayName" : "List-4",
+            "Left" : 35,
+            "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+            "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
+            "__supportsLabel" : true,
+            "ClearIfNoSelection" : false,
+            "DropdownStyle" : "DefaultDropdownStyle",
+            "Id" : "List-4",
+            "Alignment" : "left",
+            "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+            "Label" : "",
+            "ShowDataLoading" : true,
+            "AutoSelectFirstRow" : false,
+            "RowHeight" : 28,
+            "HeightOfDropdownView" : 200
+          }
+        } ],
+        "Properties" : {
+          "TabWidth" : 36,
+          "Visible" : true,
+          "__TypeDisplayName" : "Container",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "ResponsiveLayout" : true,
+          "Type" : "container",
+          "MinHeight" : 0,
+          "Area" : "UI",
+          "Style" : "DefaultContainerStyle",
+          "AnimateExpandCollapse" : true,
+          "ExpandCollapseTabLocation" : "outside",
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "Overlay" : false,
+          "DisplayName" : "Left Sidebar",
+          "OverlayIsTransparent" : false,
+          "BGImageRepeat" : "no-repeat",
+          "BGImageSize" : "auto",
+          "Id" : "container-2",
+          "ShowDataLoading" : true,
+          "TabOffset" : 0,
+          "ShowExpandCollapseTab" : false,
+          "TabLocation" : "center",
+          "Expanded" : true,
+          "TabHeight" : 36,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ ],
+          "Properties" : {
+            "Top" : 150,
+            "__TypeDisplayName" : "Contained Mashup",
+            "Visible" : true,
+            "ResponsiveLayout" : true,
+            "MashupParameters" : [ {
+              "BaseType" : "THINGNAME",
+              "Description" : "",
+              "ParmDef" : {
+                "baseType" : "THINGNAME",
+                "description" : "",
+                "name" : "Plant",
+                "aspects" : {
+                  "ordinal" : "0"
+                },
+                "ordinal" : 0
+              },
+              "ParameterName" : "Plant"
+            }, {
+              "BaseType" : "STRING",
+              "Description" : "",
+              "ParmDef" : {
+                "baseType" : "STRING",
+                "description" : "",
+                "name" : "PlantDescription",
+                "aspects" : {
+                  "ordinal" : "2"
+                },
+                "ordinal" : 0
+              },
+              "ParameterName" : "PlantDescription"
+            }, {
+              "BaseType" : "STRING",
+              "Description" : "",
+              "ParmDef" : {
+                "baseType" : "STRING",
+                "description" : "",
+                "name" : "LineDescription",
+                "aspects" : {
+                  "ordinal" : "3"
+                },
+                "ordinal" : 0
+              },
+              "ParameterName" : "LineDescription"
+            }, {
+              "BaseType" : "THINGNAME",
+              "Description" : "",
+              "ParmDef" : {
+                "baseType" : "THINGNAME",
+                "description" : "",
+                "name" : "Line",
+                "aspects" : {
+                  "ordinal" : "1"
+                },
+                "ordinal" : 0
+              },
+              "ParameterName" : "Line"
+            } ],
+            "Type" : "mashupcontainer",
+            "Area" : "UI",
+            "Height" : 300,
+            "Z-index" : 10,
+            "DisplayName" : "ContainedMashup-5",
+            "Left" : 255,
+            "Name" : "Manufacturing.LineUtilization",
+            "Id" : "ContainedMashup-5",
+            "Width" : 400,
+            "ShowDataLoading" : true
+          }
+        } ],
+        "Properties" : {
+          "TabWidth" : 36,
+          "Visible" : true,
+          "__TypeDisplayName" : "Container",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "ResponsiveLayout" : true,
+          "Type" : "container",
+          "MinHeight" : 0,
+          "Area" : "UI",
+          "Style" : "DefaultContainerStyle",
+          "AnimateExpandCollapse" : true,
+          "ExpandCollapseTabLocation" : "outside",
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "Overlay" : false,
+          "DisplayName" : "Column 1",
+          "OverlayIsTransparent" : false,
+          "BGImageRepeat" : "no-repeat",
+          "BGImageSize" : "auto",
+          "Id" : "container-3",
+          "ShowDataLoading" : true,
+          "TabOffset" : 0,
+          "ShowExpandCollapseTab" : false,
+          "TabLocation" : "center",
+          "Expanded" : true,
+          "TabHeight" : 36,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle"
+        }
+      } ],
+      "Properties" : {
+        "PrintWidth" : 650,
+        "Columns" : 1,
+        "Rows" : 0,
+        "Visible" : true,
+        "__TypeDisplayName" : "Layout",
+        "Type" : "layout",
+        "Area" : "UI",
+        "Z-index" : 10,
+        "LeftSidebarWidth" : 100,
+        "Footer" : false,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "PctColumn1" : 100,
+        "PctRow1" : 50,
+        "PctColumn2" : 0,
+        "PctRow8" : 0,
+        "PctColumn3" : 1,
+        "PctRow7" : 0,
+        "PctColumn4" : 1,
+        "Header" : false,
+        "PctRow6" : 0,
+        "IncludeSpacingInFixedAreas" : false,
+        "PctColumn5" : 1,
+        "PctRow5" : 0,
+        "PctColumn6" : 1,
+        "RightSidebar" : false,
+        "HeaderHeight" : 0,
+        "Top" : 115,
+        "PrintMarginLeftRight" : 0.5,
+        "Orientation" : "horizontal",
+        "ResponsiveLayout" : true,
+        "RightSidebarWidth" : 0,
+        "PctColumn8" : 1,
+        "PctColumn7" : 1,
+        "DisplayName" : "Layout-1",
+        "Spacing" : 2,
+        "Left" : 335,
+        "PrintMarginTopBottom" : 0.5,
+        "IsPrintLayout" : false,
+        "FooterHeight" : 0,
+        "Id" : "Layout-1",
+        "LeftSidebar" : true,
+        "ShowDataLoading" : true
+      }
+    } ],
+    "Properties" : {
+      "Columns" : 0,
+      "Rows" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "Visible" : true,
+      "Type" : "mashup",
+      "Area" : "Mashup",
+      "Style" : {
+        "displayString" : "",
+        "fontEmphasisUnderline" : false,
+        "textSize" : "normal",
+        "fontEmphasisItalic" : false,
+        "lineColor" : "",
+        "backgroundColor" : "",
+        "lineStyle" : "solid",
+        "lineThickness" : 1,
+        "image" : "",
+        "secondaryBackgroundColor" : "",
+        "fontEmphasisBold" : false,
+        "foregroundColor" : ""
+      },
+      "Z-index" : 10,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "BGImageRepeat" : "no-repeat",
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "Width" : 1154,
+      "id_index" : 5,
+      "Master" : "Manufacturing.Master",
+      "Top" : 0,
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "IgnoreWarningsInViewMashup" : false,
+      "MinHeight" : 0,
+      "Height" : 498,
+      "MinWidth" : 0,
+      "DisplayName" : "Mashup",
+      "Left" : 0,
+      "Title" : "",
+      "IsPrintLayout" : false,
+      "TitleBar" : false,
+      "supportsAutoResize" : true,
+      "TitleBarText" : "Gadget Title Here",
+      "BGImageSize" : "auto",
+      "Id" : "mashup-root",
+      "ShowDataLoading" : true
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-14T20:20:15.883Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-14T20:26:49.508Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:39:09.967Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
