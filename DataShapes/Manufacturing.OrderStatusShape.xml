@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="DataShape to represent a product already processed." documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.795Z" name="Manufacturing.OrderStatusShape" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="Comments" ordinal="8"/>
+                <FieldDefinition baseType="STRING" description="" name="Description" ordinal="4"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="OrderNumber" ordinal="1"/>
+                <FieldDefinition baseType="DATETIME" description="" name="ExpectedDeliveryDate" ordinal="7"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="VersionID" ordinal="2"/>
+                <FieldDefinition baseType="STRING" description="" name="BOMMaterialID" ordinal="5"/>
+                <FieldDefinition baseType="NUMBER" description="" name="QuantityOrdered" ordinal="6"/>
+                <FieldDefinition aspect.defaultValue="true" baseType="BOOLEAN" description="" name="ComponentsOrdered" ordinal="9"/>
+                <FieldDefinition aspect.defaultValue="0.0" baseType="NUMBER" description="" name="UnitCost" ordinal="10"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="MaterialID" ordinal="3"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T20:45:46.577Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.795Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
