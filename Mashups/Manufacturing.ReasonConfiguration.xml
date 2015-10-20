@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="page" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:40:04.487Z" name="Manufacturing.ReasonConfiguration" rows="0.0" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>Manufacturing.Reasons</Thing>
+                <Thing>Manufacturing.ReasonGroups</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "Data" : {
+    "UserExtensions" : {
+      "Services" : [ {
+        "Name" : "GetCurrentUserExtensionProperties",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "GetCurrentUserExtensionProperties",
+        "APIMethod" : "post",
+        "Id" : "UserExtensionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "UserExtensions",
+      "Id" : "UserExtensions",
+      "EntityName" : "",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "Services" : [ {
+        "Name" : "GetGlobalSessionValues",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "GetGlobalSessionValues",
+        "APIMethod" : "post",
+        "Id" : "SessionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Session",
+      "Id" : "session",
+      "EntityName" : "",
+      "DataName" : "Session"
+    },
+    "Things_Manufacturing_ReasonGroups" : {
+      "Services" : [ {
+        "Name" : "GetDataTableEntries",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "GetDataTableEntries",
+        "APIMethod" : "post",
+        "Id" : "c367bcfc-5598-4bc0-8e2d-d76317294d95",
+        "RefreshInterval" : 0
+      }, {
+        "Name" : "DeleteDataTableEntryByKey",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "DeleteDataTableEntryByKey",
+        "APIMethod" : "post",
+        "Id" : "179f6554-2757-4ce5-9117-ad2ae7793f87",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Things",
+      "Id" : "0b649f5e-96cd-44d7-a27e-ac257578664c",
+      "EntityName" : "Manufacturing.ReasonGroups",
+      "DataName" : "Things_Manufacturing_ReasonGroups"
+    },
+    "Things_Manufacturing_Reasons" : {
+      "Services" : [ {
+        "Name" : "DeleteDataTableEntriesByKeyFields",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "DeleteDataTableEntriesByKeyFields",
+        "APIMethod" : "post",
+        "Id" : "24a0746a-ca5b-4e00-85e2-d12922ef2c14",
+        "RefreshInterval" : 0
+      }, {
+        "Name" : "QueryDataTableEntriesByReasonGroup",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "QueryDataTableEntriesByReasonGroup",
+        "APIMethod" : "post",
+        "Id" : "72ca70c0-3bf5-4ed3-9554-d8a2113a9a45",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Things",
+      "Id" : "25fd8800-c114-4272-816e-f36074064a7e",
+      "EntityName" : "Manufacturing.Reasons",
+      "DataName" : "Things_Manufacturing_Reasons"
+    }
+  },
+  "DataBindings" : [ {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetProperty" : "Data",
+      "SourcePropertyType" : "InfoTable",
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "5caf4403-cf43-4601-8428-d240e9597cb1",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Tree-31"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetProperty" : "Data",
+      "SourcePropertyType" : "InfoTable",
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "62e9c589-2701-4cee-81d6-4610d32d766a",
+    "SourceDetails" : "AllData",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "Grid-4"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "Parameter",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroup",
+      "SourceProperty" : "Name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "Things_Manufacturing_Reasons",
+    "TargetArea" : "Data",
+    "SourceArea" : "Data",
+    "Id" : "a08efbc2-f3eb-43a7-8cbc-b2856dc20bf6",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "QueryDataTableEntriesByReasonGroup"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "Parameter",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "Reason",
+      "SourceProperty" : "Reason",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "Things_Manufacturing_Reasons",
+    "TargetArea" : "Data",
+    "SourceArea" : "Data",
+    "Id" : "ef3c6dc1-335a-4808-b886-efef3577976f",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "DeleteDataTableEntriesByKeyFields"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "Parameter",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroup",
+      "SourceProperty" : "ReasonGroup",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "Things_Manufacturing_Reasons",
+    "TargetArea" : "Data",
+    "SourceArea" : "Data",
+    "Id" : "c2e00486-f00b-435a-8dde-943c1553154c",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "DeleteDataTableEntriesByKeyFields"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "Reason",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Reason",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "acd971b6-3260-4274-85d4-04121dad3996",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "Navigation-20"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroup",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "ReasonGroup",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "3afa1ebd-a584-4499-8462-08afb4a8414e",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "Navigation-20"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "TAGS",
+      "TargetProperty" : "TimeClassification",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "TimeClassification",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "e2dde90b-f464-4208-8448-412c8d2a05e9",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "Navigation-20"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "TAGS",
+      "TargetProperty" : "UtilizationState",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "UtilizationState",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "Things_Manufacturing_Reasons",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "a5f597d6-76a7-4497-8eb1-435629ef141e",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "QueryDataTableEntriesByReasonGroup",
+    "TargetId" : "Navigation-20"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "Parameter",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "key",
+      "SourceProperty" : "Name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetArea" : "Data",
+    "SourceArea" : "Data",
+    "Id" : "9d87c016-5470-41fc-8689-d16092fa1e68",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "DeleteDataTableEntryByKey"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ParentReasonGroup",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Parent",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "0ad68cd0-99e4-4ea0-8436-bfe577771747",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-12"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroupDescription",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Description",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "33ba2970-ee27-4b49-b3a1-b210421dff2f",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-12"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroupName",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "623abed4-5d00-4a3c-bf99-c79b61116ba1",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-12"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "TAGS",
+      "TargetProperty" : "ReasonType",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "ReasonType",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "2f1c2058-3597-4603-8c33-c971f75a9b4d",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-12"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroup",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "2f7ff286-db00-4429-8190-191c4aa9a109",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-16"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ParentReasonGroup",
+      "SourcePropertyType" : "Field",
+      "SourceProperty" : "Name",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "61fffe01-a854-4c9f-8003-0c6d88562eee",
+    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetDataTableEntries",
+    "TargetId" : "Navigation-10"
+  } ],
+  "mashupType" : "page",
+  "RunTimePermissions" : {
+    "permissions" : [ ]
+  },
+  "Events" : [ {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "30313e06-a35b-4a78-99f5-8299e65b83a9",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "GetDataTableEntries"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Navigation-16",
+    "EventTriggerSection" : "",
+    "Id" : "df0f791f-6f62-41c8-8c75-a4b66df9a7cf",
+    "EventTriggerEvent" : "PopupClosed",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_Reasons",
+    "EventHandlerService" : "QueryDataTableEntriesByReasonGroup"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Navigation-20",
+    "EventTriggerSection" : "",
+    "Id" : "77a9b31a-e5d3-417c-b61e-2b4100873bfe",
+    "EventTriggerEvent" : "PopupClosed",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_Reasons",
+    "EventHandlerService" : "QueryDataTableEntriesByReasonGroup"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "GetDataTableEntries",
+    "EventTriggerSection" : "Things_Manufacturing_ReasonGroups",
+    "Id" : "de17ab84-03ff-4d81-8f93-5eb6fa4836be",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "EventTriggerArea" : "Data",
+    "EventHandlerId" : "Things_Manufacturing_Reasons",
+    "EventHandlerService" : "QueryDataTableEntriesByReasonGroup"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "DeleteDataTableEntriesByKeyFields",
+    "EventTriggerSection" : "Things_Manufacturing_Reasons",
+    "Id" : "1bf56d25-eb6d-4999-a972-95f68e6e9b1a",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "EventTriggerArea" : "Data",
+    "EventHandlerId" : "Things_Manufacturing_Reasons",
+    "EventHandlerService" : "QueryDataTableEntriesByReasonGroup"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Button-22",
+    "EventTriggerSection" : "",
+    "Id" : "5fc6131c-20d7-422b-ad44-7b206e0fee96",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_Reasons",
+    "EventHandlerService" : "DeleteDataTableEntriesByKeyFields"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Navigation-10",
+    "EventTriggerSection" : "",
+    "Id" : "dcf97fc2-aacf-4235-8821-05fe2c1e8c35",
+    "EventTriggerEvent" : "PopupClosed",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "GetDataTableEntries"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Navigation-12",
+    "EventTriggerSection" : "",
+    "Id" : "f7769e42-b648-4947-9c8c-ed71d611643e",
+    "EventTriggerEvent" : "PopupClosed",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "GetDataTableEntries"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Button-14",
+    "EventTriggerSection" : "",
+    "Id" : "e4d73772-0c71-4f94-94c0-cbd930b81c59",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "GetDataTableEntries"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "DeleteDataTableEntryByKey",
+    "EventTriggerSection" : "Things_Manufacturing_ReasonGroups",
+    "Id" : "6fdc08ab-b2ec-44cc-8585-81e95b45dd8e",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "EventTriggerArea" : "Data",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "GetDataTableEntries"
+  } ],
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 0,
+        "DynamicRangeMinimum" : 0,
+        "GradientType" : "linear",
+        "Visible" : true,
+        "ShapeFormatter_StateParameters" : [ ],
+        "__TypeDisplayName" : "Shape",
+        "ResponsiveLayout" : false,
+        "ShapeType" : "rectangle",
+        "Type" : "shape",
+        "Area" : "UI",
+        "DynamicFillOrientation" : "vertical",
+        "ShapeStyle" : "MESBlueHeaderBG",
+        "Height" : 26,
+        "Z-index" : 14,
+        "RectangleCornerRadius" : 10,
+        "DisplayName" : "Shape-33",
+        "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+        "Left" : 0,
+        "GradientOrientation" : "vertical",
+        "DynamicRangeMaximum" : 100,
+        "Id" : "Shape-33",
+        "Width" : 295,
+        "ShowDataLoading" : true,
+        "EnableDynamicFill" : false
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 0,
+        "DynamicRangeMinimum" : 0,
+        "GradientType" : "linear",
+        "Visible" : true,
+        "ShapeFormatter_StateParameters" : [ ],
+        "__TypeDisplayName" : "Shape",
+        "ResponsiveLayout" : false,
+        "ShapeType" : "rectangle",
+        "Type" : "shape",
+        "Area" : "UI",
+        "DynamicFillOrientation" : "vertical",
+        "ShapeStyle" : "MESBlueHeaderBG",
+        "Height" : 26,
+        "Z-index" : 14,
+        "RectangleCornerRadius" : 10,
+        "DisplayName" : "Shape-35",
+        "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+        "Left" : 309,
+        "GradientOrientation" : "vertical",
+        "DynamicRangeMaximum" : 100,
+        "Id" : "Shape-35",
+        "Width" : 715,
+        "ShowDataLoading" : true,
+        "EnableDynamicFill" : false
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 1,
+        "__TypeDisplayName" : "Label",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "label",
+        "Area" : "UI",
+        "Style" : "MESBlueHeaderText",
+        "Height" : 22,
+        "Z-index" : 15,
+        "DisplayName" : "Label-37",
+        "Left" : 10,
+        "Text" : "Reason Groups",
+        "Id" : "Label-37",
+        "Alignment" : "left",
+        "Width" : 120,
+        "ShowDataLoading" : true
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 1,
+        "__TypeDisplayName" : "Label",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "label",
+        "Area" : "UI",
+        "Style" : "MESBlueHeaderText",
+        "Height" : 22,
+        "Z-index" : 15,
+        "DisplayName" : "Label-38",
+        "Left" : 320,
+        "Text" : "Reasons",
+        "Id" : "Label-38",
+        "Alignment" : "left",
+        "Width" : 120,
+        "ShowDataLoading" : true
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 26,
+        "AlternateText" : "",
+        "__TypeDisplayName" : "Image",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "BorderStyle" : "DefaultImageBorderStyle",
+        "Type" : "image",
+        "Area" : "UI",
+        "Height" : 6,
+        "Z-index" : 10,
+        "DisplayName" : "Image-34",
+        "SourceURL" : "/Thingworx/MediaEntities/MESbluetrianglebottom",
+        "Left" : 0,
+        "PreventCaching" : false,
+        "Id" : "Image-34",
+        "Width" : 12,
+        "ShowDataLoading" : true,
+        "Scaling" : "width"
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Top" : 26,
+        "AlternateText" : "",
+        "__TypeDisplayName" : "Image",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "BorderStyle" : "DefaultImageBorderStyle",
+        "Type" : "image",
+        "Area" : "UI",
+        "Height" : 6,
+        "Z-index" : 10,
+        "DisplayName" : "Image-36",
+        "SourceURL" : "/Thingworx/MediaEntities/MESbluetrianglebottom",
+        "Left" : 310,
+        "PreventCaching" : false,
+        "Id" : "Image-36",
+        "Width" : 12,
+        "ShowDataLoading" : true,
+        "Scaling" : "width"
+      }
+    }, {
+      "Widgets" : [ {
+        "Widgets" : [ ],
+        "Properties" : {
+          "TargetWindow" : "popup",
+          "PopupScrolling" : "auto",
+          "__TypeDisplayName" : "Navigation",
+          "Visible" : true,
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+          "Type" : "navigation",
+          "MashupParameters" : [ {
+            "BaseType" : "INFOTABLE",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "INFOTABLE",
+              "description" : "",
+              "name" : "ReasonGroupValues",
+              "aspects" : {
+                "ordinal" : "3",
+                "dataShape" : "Manfacturing.ReasonGroups"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupValues"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "ReasonType",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "4"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonType"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroupDescription",
+              "aspects" : {
+                "ordinal" : "2"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupDescription"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ParentReasonGroup",
+              "aspects" : {
+                "ordinal" : "0"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ParentReasonGroup"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroupName",
+              "aspects" : {
+                "ordinal" : "1"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupName"
+          } ],
+          "Area" : "UI",
+          "Style" : "DefaultNavigationStyle",
+          "Z-index" : 10,
+          "MessageToShow" : "Mashup must be selected",
+          "ModalPopupOpacity" : 0.5,
+          "RoundedCorners" : true,
+          "Width" : 88,
+          "Top" : 19.53125,
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "FixedPopupHeight" : 0,
+          "PopupTitle" : "",
+          "DisplayName" : "Add Group",
+          "Left" : 6.359375,
+          "ClickOutsideToClose" : false,
+          "FixedPopupWidth" : 0,
+          "Text" : "Add Group",
+          "ShowMessageIfNoMashup" : false,
+          "IconAlignment" : "left",
+          "Transparent" : false,
+          "ShowCloseButton" : true,
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Id" : "Navigation-10",
+          "Alignment" : "center",
+          "ShowDataLoading" : true,
+          "MashupName" : "Manufacturing.AddReasonGroup",
+          "PopupTitleStyle" : "DefaultPopupTitleStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "TargetWindow" : "popup",
+          "PopupScrolling" : "auto",
+          "__TypeDisplayName" : "Navigation",
+          "Visible" : true,
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+          "Type" : "navigation",
+          "MashupParameters" : [ {
+            "BaseType" : "INFOTABLE",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "INFOTABLE",
+              "description" : "",
+              "name" : "ReasonGroupValues",
+              "aspects" : {
+                "ordinal" : "3",
+                "dataShape" : "Manfacturing.ReasonGroups"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupValues"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "ReasonType",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "4"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonType"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroupDescription",
+              "aspects" : {
+                "ordinal" : "2"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupDescription"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ParentReasonGroup",
+              "aspects" : {
+                "ordinal" : "0"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ParentReasonGroup"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroupName",
+              "aspects" : {
+                "ordinal" : "1"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroupName"
+          } ],
+          "Area" : "UI",
+          "Style" : "DefaultNavigationStyle",
+          "Z-index" : 10,
+          "MessageToShow" : "Mashup must be selected",
+          "ModalPopupOpacity" : 0.5,
+          "RoundedCorners" : true,
+          "Width" : 83,
+          "Top" : 20,
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "FixedPopupHeight" : 0,
+          "PopupTitle" : "",
+          "DisplayName" : "Navigation-12",
+          "Left" : 97,
+          "ClickOutsideToClose" : false,
+          "FixedPopupWidth" : 0,
+          "Text" : "Edit Group",
+          "ShowMessageIfNoMashup" : false,
+          "IconAlignment" : "left",
+          "Transparent" : false,
+          "ShowCloseButton" : true,
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Id" : "Navigation-12",
+          "Alignment" : "center",
+          "ShowDataLoading" : true,
+          "MashupName" : "Manufacturing.AddReasonGroup",
+          "PopupTitleStyle" : "DefaultPopupTitleStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "ActiveStyle" : "DefaultButtonActiveStyle",
+          "Visible" : true,
+          "__TypeDisplayName" : "Button",
+          "TabSequence" : 0,
+          "Type" : "button",
+          "Area" : "UI",
+          "Style" : "DefaultButtonStyle",
+          "Z-index" : 10,
+          "ConfirmationButton2Label" : "No",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Disabled" : false,
+          "ConfirmationRequired" : false,
+          "RoundedCorners" : true,
+          "Width" : 88,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationButton1Label" : "Yes",
+          "DefaultConfirmationButton" : "button1",
+          "Top" : 20,
+          "CancelConfirmationButton" : "button2",
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "DisplayName" : "Button-14",
+          "Left" : 185,
+          "ConfirmationTitle" : "Confirm Action",
+          "IconAlignment" : "left",
+          "Id" : "Button-14",
+          "Label" : "Delete Group",
+          "ShowDataLoading" : true,
+          "ConfirmationPrompt" : "Do Action?"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "RootParentID" : "",
+          "Visible" : true,
+          "__TypeDisplayName" : "Tree",
+          "TooltipField" : "Name",
+          "Type" : "tree",
+          "NoChildFormatter_StateParameters" : [ ],
+          "Area" : "UI",
+          "Z-index" : 10,
+          "LabelField" : "Name",
+          "TreeBGStyle" : "DefaultTreeBGStyle",
+          "ParentIDField" : "Parent",
+          "IDField" : "Name",
+          "Width" : 265,
+          "ValueField" : "Name",
+          "ClosedNodeFormatter_StateParameters" : [ ],
+          "Top" : 45,
+          "ResponsiveLayout" : false,
+          "CollapseChildrenOfLevel" : 99,
+          "Height" : 605,
+          "DisplayName" : "Tree-31",
+          "Left" : 7,
+          "TreeSelectedStyle" : "DefaultTreeSelectedStyle",
+          "OpenNodeFormatter_StateParameters" : [ ],
+          "TreeFormatter" : {
+            "FieldName" : "",
+            "StateFormats" : [ {
+              "stateName" : "fixed",
+              "state" : "UtilizationReasonGroup"
+            } ],
+            "StateDefinitionType" : "fixed",
+            "StateDefinition" : ""
+          },
+          "TreeFormatter_StateParameters" : [ ],
+          "Id" : "Tree-31",
+          "ShowDataLoading" : true,
+          "AutoSelectFirstRow" : false
+        }
+      } ],
+      "Properties" : {
+        "Top" : 10,
+        "__TypeDisplayName" : "Fieldset",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "fieldset",
+        "FieldsetStyle" : "DefaultFieldsetStyle",
+        "Area" : "UI",
+        "Height" : 661,
+        "Z-index" : 10,
+        "DisplayName" : "Fieldset-9",
+        "Left" : 12,
+        "Title" : "Reason Groups",
+        "Id" : "Fieldset-9",
+        "Width" : 283,
+        "ShowDataLoading" : true,
+        "FieldsetLabelStyle" : "AltFieldsetLabelStyle"
+      }
+    }, {
+      "Widgets" : [ {
+        "Widgets" : [ ],
+        "Properties" : {
+          "CurrentScrollTop" : 0,
+          "MultiSelect" : false,
+          "Visible" : true,
+          "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+          "__TypeDisplayName" : "Grid",
+          "RowHoverStyle" : "DefaultRowHoverStyle",
+          "Type" : "dhxgrid",
+          "Area" : "UI",
+          "Z-index" : 10,
+          "ShowAllColumns" : false,
+          "IsEditable" : false,
+          "Width" : 685,
+          "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+          "Top" : 45,
+          "ResponsiveLayout" : false,
+          "ColumnFormat" : {
+            "formatInfo" : [ {
+              "ValidationMessage" : "",
+              "AllowEdit" : false,
+              "FormatOptions" : {
+                "renderer" : "STRING",
+                "formatInfo" : {
+                  "FieldName" : "",
+                  "StateFormats" : [ {
+                    "stateName" : "fixed",
+                    "state" : ""
+                  } ],
+                  "StateDefinitionType" : "fixed",
+                  "StateDefinition" : ""
+                },
+                "FormatString" : "full"
+              },
+              "FieldName" : "Reason",
+              "ValidationExpression" : "",
+              "Width" : "auto",
+              "Align" : "left",
+              "Title" : "Reason"
+            }, {
+              "ValidationMessage" : "",
+              "AllowEdit" : false,
+              "FormatOptions" : {
+                "renderer" : "TAGS",
+                "FormatString" : "plain"
+              },
+              "FieldName" : "TimeClassification",
+              "ValidationExpression" : "",
+              "Width" : "auto",
+              "Align" : "left",
+              "Title" : "TimeClassification"
+            }, {
+              "ValidationMessage" : "",
+              "AllowEdit" : false,
+              "FormatOptions" : {
+                "renderer" : "TAGS",
+                "FormatString" : "plain"
+              },
+              "FieldName" : "UtilizationState",
+              "ValidationExpression" : "",
+              "Width" : "auto",
+              "Align" : "left",
+              "Title" : "State"
+            } ]
+          },
+          "ScrollTop" : 0,
+          "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+          "GridHeaderStyle" : "AltGridHeaderStyle",
+          "Height" : 605,
+          "DisplayName" : "Grid-4",
+          "Left" : 5,
+          "IsPrintLayout" : false,
+          "CellTextWrapping" : false,
+          "RowFormat_StateParameters" : [ ],
+          "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+          "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+          "RowSelectedStyle" : "AltRowSelectedStyle",
+          "Id" : "Grid-4",
+          "ShowDataLoading" : true,
+          "AutoSelectFirstRow" : true,
+          "RowHeight" : 30
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "TargetWindow" : "popup",
+          "PopupScrolling" : "auto",
+          "__TypeDisplayName" : "Navigation",
+          "Visible" : true,
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+          "Type" : "navigation",
+          "MashupParameters" : [ {
+            "BaseType" : "INFOTABLE",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "INFOTABLE",
+              "description" : "",
+              "name" : "ReasonValues",
+              "aspects" : {
+                "ordinal" : "1",
+                "dataShape" : "Manufacturing.Reasons"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonValues"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroup",
+              "aspects" : {
+                "ordinal" : "0"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroup"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "UtilizationState",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "3"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "UtilizationState"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "TimeClassification",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "4"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "TimeClassification"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "Reason",
+              "aspects" : {
+                "ordinal" : "2"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "Reason"
+          } ],
+          "Area" : "UI",
+          "Style" : "DefaultNavigationStyle",
+          "Z-index" : 10,
+          "MessageToShow" : "Mashup must be selected",
+          "ModalPopupOpacity" : 0.5,
+          "RoundedCorners" : true,
+          "Width" : 103,
+          "Top" : 18.90625,
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "FixedPopupHeight" : 0,
+          "PopupTitle" : "",
+          "DisplayName" : "Navigation-20",
+          "Left" : 118,
+          "ClickOutsideToClose" : false,
+          "FixedPopupWidth" : 0,
+          "Text" : "Edit Reason",
+          "ShowMessageIfNoMashup" : false,
+          "IconAlignment" : "left",
+          "Transparent" : false,
+          "ShowCloseButton" : true,
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Id" : "Navigation-20",
+          "Alignment" : "center",
+          "ShowDataLoading" : true,
+          "MashupName" : "Manufacturing.AddReason",
+          "PopupTitleStyle" : "DefaultPopupTitleStyle"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "ActiveStyle" : "DefaultButtonActiveStyle",
+          "Visible" : true,
+          "__TypeDisplayName" : "Button",
+          "TabSequence" : 0,
+          "Type" : "button",
+          "Area" : "UI",
+          "Style" : "DefaultButtonStyle",
+          "Z-index" : 10,
+          "ConfirmationButton2Label" : "No",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Disabled" : false,
+          "ConfirmationRequired" : false,
+          "RoundedCorners" : true,
+          "Width" : 103,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationButton1Label" : "Yes",
+          "DefaultConfirmationButton" : "button1",
+          "Top" : 18.909085392951965,
+          "CancelConfirmationButton" : "button2",
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "DisplayName" : "Button-22",
+          "Left" : 233,
+          "ConfirmationTitle" : "Confirm Action",
+          "IconAlignment" : "left",
+          "Id" : "Button-22",
+          "Label" : "Delete Reason",
+          "ShowDataLoading" : true,
+          "ConfirmationPrompt" : "Do Action?"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "TargetWindow" : "modal-popup",
+          "PopupScrolling" : "auto",
+          "__TypeDisplayName" : "Navigation",
+          "Visible" : true,
+          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+          "Type" : "navigation",
+          "MashupParameters" : [ {
+            "BaseType" : "INFOTABLE",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "INFOTABLE",
+              "description" : "",
+              "name" : "ReasonValues",
+              "aspects" : {
+                "ordinal" : "1",
+                "dataShape" : "Manufacturing.Reasons"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonValues"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "ReasonGroup",
+              "aspects" : {
+                "ordinal" : "0"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "ReasonGroup"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "UtilizationState",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "3"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "UtilizationState"
+          }, {
+            "BaseType" : "TAGS",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "TAGS",
+              "description" : "",
+              "name" : "TimeClassification",
+              "aspects" : {
+                "tagType" : "DataTags",
+                "ordinal" : "4"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "TimeClassification"
+          }, {
+            "BaseType" : "STRING",
+            "Description" : "",
+            "ParmDef" : {
+              "baseType" : "STRING",
+              "description" : "",
+              "name" : "Reason",
+              "aspects" : {
+                "ordinal" : "2"
+              },
+              "ordinal" : 0
+            },
+            "ParameterName" : "Reason"
+          } ],
+          "Area" : "UI",
+          "Style" : "DefaultNavigationStyle",
+          "Z-index" : 10,
+          "MessageToShow" : "Mashup must be selected",
+          "ModalPopupOpacity" : 0.5,
+          "RoundedCorners" : true,
+          "Width" : 103,
+          "Top" : 18.909085392951965,
+          "ResponsiveLayout" : false,
+          "Height" : 20,
+          "FixedPopupHeight" : 0,
+          "PopupTitle" : "Add Reason",
+          "DisplayName" : "Navigation-16",
+          "Left" : 5.909085392951965,
+          "ClickOutsideToClose" : false,
+          "FixedPopupWidth" : 0,
+          "Text" : "Add Reason",
+          "ShowMessageIfNoMashup" : false,
+          "IconAlignment" : "left",
+          "Transparent" : false,
+          "ShowCloseButton" : true,
+          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+          "Id" : "Navigation-16",
+          "Alignment" : "center",
+          "ShowDataLoading" : true,
+          "MashupName" : "Manufacturing.AddReason",
+          "PopupTitleStyle" : "DefaultPopupTitleStyle"
+        }
+      } ],
+      "Properties" : {
+        "Top" : 11,
+        "__TypeDisplayName" : "Fieldset",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "fieldset",
+        "FieldsetStyle" : "DefaultFieldsetStyle",
+        "Area" : "UI",
+        "Height" : 660,
+        "Z-index" : 10,
+        "DisplayName" : "Fieldset-15",
+        "Left" : 323,
+        "Title" : "Reasons",
+        "Id" : "Fieldset-15",
+        "Width" : 700,
+        "ShowDataLoading" : true,
+        "FieldsetLabelStyle" : "AltFieldsetLabelStyle"
+      }
+    } ],
+    "Properties" : {
+      "Columns" : 0,
+      "Rows" : 0,
+      "Visible" : true,
+      "__TypeDisplayName" : "Mashup",
+      "Type" : "mashup",
+      "Area" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "Z-index" : 10,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "BGImageRepeat" : "no-repeat",
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "Width" : 1024,
+      "id_index" : 39,
+      "Top" : 0,
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "IgnoreWarningsInViewMashup" : false,
+      "MinHeight" : 0,
+      "Height" : 680,
+      "MinWidth" : 0,
+      "DisplayName" : "Mashup",
+      "Left" : 0,
+      "Title" : "",
+      "IsPrintLayout" : false,
+      "Tags" : [ {
+        "vocabulary" : "Applications",
+        "vocabularyTerm" : "OEE"
+      } ],
+      "TitleBar" : false,
+      "BGImageSize" : "auto",
+      "TitleBarText" : "Gadget Title Here",
+      "Id" : "mashup-root",
+      "ShowDataLoading" : true
+    }
+  },
+  "DesignTimePermissions" : {
+    "Update" : [ ],
+    "Create" : [ ],
+    "Read" : [ ],
+    "Metadata" : [ ],
+    "Delete" : [ ]
+  }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-23T16:39:34.675Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T16:41:03.011Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T16:46:51.335Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T16:59:21.231Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T17:07:46.556Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T17:34:52.482Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T18:36:45.275Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T18:49:19.106Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T19:09:04.361Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T19:13:16.485Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-24T14:07:10.125Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-24T14:19:19.901Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:04.018Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-14T15:31:58.835Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-14T15:38:27.947Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-14T16:35:58.428Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-16T15:15:26.545Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T14:51:00.367Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T14:51:07.193Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:40:04.487Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
