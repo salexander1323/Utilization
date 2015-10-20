@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <DataShapes>
-        <DataShape description="DataShape to represent a product already processed." documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.795Z" name="Manufacturing.OrderStatusShape" tags="Applications:Manufacturing">
+        <DataShape description="DataShape to represent a product already processed." documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.795Z" name="Manufacturing.OrderStatusShape" tags="Applications:Manufacturing;Version:1.0.0.0">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
