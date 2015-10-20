@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-14T20:22:19.702Z" name="Manufacturing.Plant" tags="Applications:Manufacturing" thingPackage="" valueStream="">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="TotalScrap"/>
+                <AlertDefinitions name="SpotlightProductionLines"/>
+                <AlertDefinitions name="FirstPassYield"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalProduction" ordinal="12"/>
+                    <PropertyDefinition aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="Quality" ordinal="4"/>
+                    <PropertyDefinition aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="LOCATION" category="" description="" isLocalOnly="false" name="Location" ordinal="6"/>
+                    <PropertyDefinition aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="USERNAME" category="" description="" isLocalOnly="false" name="PlantManager" ordinal="5"/>
+                    <PropertyDefinition aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OEE" ordinal="1"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalScrap" ordinal="13"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="100.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="FirstPassYield" ordinal="14"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.dataShape="SpotLightProductionLines" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INFOTABLE" category="" description="" isLocalOnly="false" name="SpotlightProductionLines" ordinal="7"/>
+                    <PropertyDefinition aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="Availability" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="THINGNAME" category="" description="" isLocalOnly="false" name="CurrentSpotLightProductionLine" ordinal="8"/>
+                    <PropertyDefinition aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="Performance" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="PlantAddress" ordinal="9"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TrueEfficiency" ordinal="11"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="NetEfficiency" ordinal="12"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetPreviousSpotLightProductionLine">
+                        <ResultType aspect.dataShape="SpotLightProductionLines" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetOEEStreamValues">
+                        <ResultType aspect.dataShape="OEEGenericTrend" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="PlantLineOrMachineName" ordinal="3"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddOEEStream">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetPlantManagerDetails">
+                        <ResultType aspect.dataShape="AcmeTractor.PlantManagerDetails" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetCurrentOEEValues">
+                        <ResultType aspect.dataShape="OEEValues" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="PlantLineOrMachine" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="numHours" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SetEfficiencyNumbers">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetNextSpotLightProductionLine">
+                        <ResultType aspect.dataShape="SpotLightProductionLines" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="BOOLEAN" description="" name="GoBackwards" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetProductionLines">
+                        <ResultType aspect.dataShape="AcmeTractor.NetworkWithLocationAndTemplate" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="TogglePlayButton">
+                        <ResultType aspect.dataShape="AutoRefreshToggleShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="BOOLEAN" description="" name="AutoRefreshOn" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetEfficiencyNumbers">
+                        <ResultType aspect.dataShape="AcmeTractor.EfficiencyNumbers" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="BusinessUnit" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetPreviousSpotLightProductionLine">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "SpotLightProductionLines"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(SpotLightProductionLines)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+if(me.SpotlightProductionLines.getRowCount() > 0) {
+    if(me.CurrentSpotLightProductionLine == "") {
+        result.AddRow(me.SpotlightProductionLines[0]);
+        me.CurrentSpotLightProductionLine = result[0].Entity;
+    } else {
+
+        var entityIndex = -1;
+        var usePreviousEntity = false;
+        for each (var entity in me.SpotlightProductionLines.rows) {
+            entityIndex++;
+            if(entity.Entity == me.CurrentSpotLightProductionLine) {
+                if(entityIndex == 0)
+                    result.AddRow(me.SpotlightProductionLines[me.SpotlightProductionLines.getRowCount()-1]);
+                else
+                    result.AddRow(me.SpotlightProductionLines[entityIndex-1]);              
+                break;
+            }
+        }
+        
+        me.CurrentSpotLightProductionLine = result[0].Entity;
+    }
+        
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddOEEStream">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// location:LOCATION
+var location = new Object();
+location.latitude = 0;
+location.longitude = 0;
+location.elevation = 0;
+location.units = 'WGS84';
+
+// tags:TAGS
+var tags = new Array();
+
+// values:INFOTABLE(Datashape: SparkDataShape)
+var values = Things['OEETrendStreamArea'].CreateValues();
+
+
+var params = {
+	name: me.name /* STRING */
+};
+
+// result: INFOTABLE dataShape: "undefined"
+var lines = Networks["PlantTree"].GetChildConnections(params);
+
+var numlines = lines.getRowCount();
+values.Performance = 0;
+values.Availability = 0;
+values.Quality = 0;
+values.OEE = 0;
+for each(var line in lines.rows) {
+      values.Performance += Things[line.to].CurrentPerformance;
+      values.Availability += Things[line.to].CurrentAvailability;
+      values.Quality += Things[line.to].CurrentQuality ;
+      values.OEE += Things[line.to].CurrentOEE; 
+}
+
+values.Performance = Math.round((values.Performance/numlines)*100)/100;
+values.Availability = Math.round((values.Availability/numlines)*100)/100;
+values.Quality = Math.round((values.Quality/numlines)*100)/100;;
+values.OEE = Math.round((values.OEE/numlines)*100)/100;;
+
+me.Performance = values.Performance;
+me.Availability = values.Availability;
+me.Quality = values.Quality;
+me.OEE = values.OEE;
+
+// timestamp:DATETIME
+var timestamp = new Date();
+
+var params = {
+	location : location,
+	tags : tags,
+	values : values,
+	timestamp : timestamp,
+	source : me.name
+};
+
+// AddStreamEntry(location:LOCATION, tags:TAGS, values:INFOTABLE(SparkDataShape), timestamp:DATETIME, source:STRING("me.name")):NOTHING
+var Result = Things['OEETrendStreamArea'].AddStreamEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetOEEStreamValues">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[  var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "OEEGenericTrend"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+try {
+
+        if(PlantLineOrMachineName != undefined) {
+                var query = {filters:{type:"EQ",fieldName:"source",value: PlantLineOrMachineName}};
+                var params = {
+                  oldestFirst: false /* BOOLEAN */,
+                  startDate: StartDate /* DATETIME */,
+                  query : query,
+                  source: PlantLineOrMachineName /* STRING */,
+                  endDate: EndDate /* DATETIME */,
+                  maxItems: 500 /* NUMBER */
+                 };
+          
+                //need to determine whether this is a plant line or machine. 
+                if(Things[PlantLineOrMachineName].thingTemplate == "PlantThingTemplate"){
+                
+                        // result: NUMBER
+                        var streamEntries = Things["OEETrendStreamArea"].QueryStreamEntriesWithData(params);
+                         
+                        for each(var entry in streamEntries.rows) {
+        
+                              var newRow = {
+                                OEE : entry.OEE,
+                                Performance : entry.Performance,
+                                Quality : entry.Quality,
+                                Availability : entry.Availability,
+                                PlantLineOrMachine : entry.source,
+                                timestamp : entry.timestamp
+                              }
+                                      
+                              result.AddRow(newRow);
+                        }
+                  
+                } else {
+                          var lineName = Things[PlantLineOrMachineName].name;
+                          if (Things[PlantLineOrMachineName].thingTemplate == "MachineTemplate"){
+                                            
+                                    var params = {
+                                        name: Things[PlantLineOrMachineName].name /* STRING */
+                                    };
+                                    
+                                    // result: INFOTABLE dataShape: "undefined"
+                                    lineName = Networks["PlantTree"].GetParentName(params);			
+                          }
+                                  
+                          // result: NUMBER
+                          var streamEntries = Things["OEETrendStream"].QueryStreamEntriesWithData(params);
+                          for each(var entry in streamEntries.rows) {
+                            
+                                var newRow = {
+                                  OEE : entry.OEE,
+                                  Performance : entry.Performance,
+                                  Quality : entry.Quality,
+                                  Availability : entry.Availability,
+                                  PlantLineOrMachine : lineName,
+                                  timestamp : entry.timestamp
+                                }
+                                        
+                                result.AddRow(newRow);
+                          }                  
+                          
+                }
+          
+        } 
+} catch(err) {
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetPlantManagerDetails">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+// result: IMAGE
+var Avatar = Users[me.PlantManager].GetAvatar();
+
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "AcmeTractor.PlantManagerDetails"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AcmeTractor.PlantManagerDetails)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+
+// result: INFOTABLE
+var ue = Resources["CurrentSessionInfo"].GetCurrentUserExtensionProperties();
+
+var emailAddress = Users[me.PlantManager].emailAddress;
+var phone = Users[me.PlantManager].workPhone;
+var plantmgr = Users[me.PlantManager].description;
+
+result.AddRow({Name:plantmgr,Avatar:Avatar,PhoneNumber:phone, EmailAddress:emailAddress});]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="SetEfficiencyNumbers">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	name: me.name /* STRING */
+};
+
+// result: INFOTABLE dataShape: NetworkConnection
+var result = Networks["MESCorpNetwork"].GetChildConnections(params);
+
+
+var totalOEE = 0;
+var totalAvailbility = 0;
+var totalPerformance = 0;
+var totalQuality = 0;
+var totalTE = 0;
+var totalNE = 0;
+for each(var row in result.rows) {
+    totalOEE += Things[row.to].OEE;
+    totalAvailbility += Things[row.to].Availability;
+    totalPerformance += Things[row.to].Performance;
+    totalQuality += Things[row.to].Quality;
+    totalTE += Things[row.to].TrueEfficiency;
+    totalNE += Things[row.to].NetEfficiency;  
+    me.TotalProduction += Things[row.to].TotalProduction;
+    me.TotalWaste += Things[row.to].TotalWaste;
+}
+
+me.OEE = totalOEE/result.getRowCount();
+me.TrueEfficiency = totalTE/result.getRowCount();
+me.NetEfficiency = totalNE/result.getRowCount();
+me.Availability = totalAvailbility/result.getRowCount();
+me.Performance = totalPerformance/result.getRowCount();
+me.Quality = totalQuality/result.getRowCount();]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetCurrentOEEValues">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[if(PlantLineOrMachine != undefined && numHours != undefined) {
+        var params = {
+            infoTableName : "InfoTable",
+            dataShapeName : "OEEValues"
+        };
+        
+        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+        
+        //need to determine whether this is a plant line or machine. 
+        if(Things[PlantLineOrMachine].thingTemplate == "PlantThingTemplate"){
+          
+          var newRow = {
+            OEE : Things[PlantLineOrMachine].OEE,
+            Performance : Things[PlantLineOrMachine].Performance,
+            Quality : Things[PlantLineOrMachine].Quality,
+            Availability : Things[PlantLineOrMachine].Availability,
+            WorkOrder : "Select Line",
+            UtilizationReason : "",
+            ProductName : "",
+            RequiredQty : "",
+            GoodQty : "",
+            ScrapQty : "",
+            UtilizationState : "",
+            MachineDown : 0
+          }
+              
+          result.AddRow(newRow);
+        
+        } else {
+              var lineName = Things[PlantLineOrMachine].name;
+              if (Things[PlantLineOrMachine].thingTemplate == "MachineTemplate"){
+                                
+                        var params = {
+                            name: Things[PlantLineOrMachine].name /* STRING */
+                        };
+                        
+                        // result: INFOTABLE dataShape: "undefined"
+                        lineName = Networks["PlantTree"].GetParentName(params);			
+              }
+                              
+              var perf = Things[lineName].CurrentPerformance;
+              var avail = Things[lineName].CurrentAvailability;
+              var qual = Things[lineName].CurrentQuality;                       
+              var oee = Things[lineName].CurrentOEE;
+              
+                    
+              var params = {
+                  LineName: lineName /* STRING */
+              };
+              
+              // result: INFOTABLE dataShape: "undefined"
+              var curUtil = Things["UtilizationLog"].GetActiveUtilizationEvent(params);
+              
+              var utilReason = "";
+              var utilDown = 0;
+          	   var utilState = "";
+              if(curUtil.getRowCount() > 0) {             
+                	utilReason = curUtil.rows[0].Reason;
+                    if(curUtil.rows[0].Downtime == true) {
+                            utilDown =1;
+                      		utilState = "DOWN";
+                    } else if(curUtil.rows[0].Runtime == true) {
+                            utilDown =0;
+                      		utilState = "RUNNING";                
+                    } else {
+                            utilDown =0;
+                      		utilState = "IDLE";                            
+                    }
+                
+              }           
+              var query = {filters: {type: "And", filters: [{type: "EQ", fieldName: "Line", value: lineName},{type : "EQ", fieldName: "Status", value: "In Progress"}]}};             
+              var params = {
+                  query: query /* QUERY */,
+                  maxItems: 1 /* NUMBER */
+              };
+              
+              // result: STRING
+              var curWO = Things["WorkOrdersDataTable"].QueryDataTableEntries(params);
+             
+              if(curWO.getRowCount() >0) {
+                    var newRow = {
+                          OEE : Math.round(oee*100)/100,
+                          Performance :  Math.round(perf*100)/100 ,
+                          Quality :  Math.round(qual*100)/100 ,
+                          Availability :  Math.round(avail*100)/100 ,
+                          WorkOrder : curWO.rows[0].WorkOrderNumber,
+                          ProductName : curWO.rows[0].ProductName,
+                          UtilizationReason : utilReason,
+                          RequiredQty : curWO.rows[0].RequestedQuantity,
+                          GoodQty :curWO.rows[0].GoodQuantity,
+                          ScrapQty : curWO.rows[0].BadQuantity,
+                          UtilizationState : utilState,
+                          MachineDown : utilDown
+                     }
+             } else {
+                    var newRow = {
+                          OEE : Math.round(oee*100)/100,
+                          Performance :  Math.round(perf*100)/100 ,
+                          Quality :  Math.round(qual*100)/100 ,
+                          Availability :  Math.round(avail*100)/100 ,
+                          WorkOrder : "",
+                          ProductName : "",
+                          UtilizationReason : utilReason,
+                          RequiredQty : "",
+                          GoodQty :"",
+                          ScrapQty : "",
+                          UtilizationState : utilState,
+                          MachineDown : utilDown
+                     }               
+             }
+              
+              result.AddRow(newRow); 
+        } 
+} else {
+          var params = {
+            infoTableName : "InfoTable",
+            dataShapeName : "OEEValues"
+        };
+        
+        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+        
+        
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="TogglePlayButton">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "AutoRefreshToggleShape"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AutoRefreshToggleShape)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+
+if(AutoRefreshOn == true)
+    result.AddRow({Value : false, ImageLink : "/Thingworx/MediaEntities/iconPLay"});
+else
+    result.AddRow({Value : true, ImageLink : "/Thingworx/MediaEntities/iconPause"});]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetProductionLines">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//create infotable for end result
+
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "AcmeTractor.NetworkWithLocationAndTemplate"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(NetworkWithLocationAndTemplate)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+// get child connections from the plant for the areas
+var params = {
+    name: me.name /* STRING */
+};
+
+// result: INFOTABLE dataShape: NetworkConnection
+var resultArea = Networks["AcmeTractor.Network"].GetChildConnections(params);
+
+// for each ara, get the lines
+for each (var row in resultArea.rows) {
+    var params = {
+        name: row.to /* STRING */
+    };
+
+    // result: INFOTABLE dataShape: NetworkConnection
+    var resultLine = Networks["AcmeTractor.Network"].GetChildConnections(params);
+
+    for each (var row2 in resultLine.rows) {
+        result.AddRow({
+            To:row2.to,
+            ToLocation : undefined,
+            ToTemplate : Things[row2.to].thingTemplate,
+            ToDescription : Things[row2.to].description}
+                     );
+    }
+}
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetNextSpotLightProductionLine">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "SpotLightProductionLines"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(SpotLightProductionLines)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+if(me.SpotlightProductionLines.getRowCount() > 0) {
+    if(me.CurrentSpotLightProductionLine == "") {
+        result.AddRow(me.SpotlightProductionLines[0]);
+        me.CurrentSpotLightProductionLine = result[0].Entity;
+    } else {
+     	
+
+  
+        var useNextEntity = false;
+        for each (var entity in me.SpotlightProductionLines.rows) {
+            if(useNextEntity == true) {
+            	useNextEntity = false;
+                result.AddRow(entity);
+                break;
+            } else if(entity.Entity == me.CurrentSpotLightProductionLine) {
+                useNextEntity = true;
+            }
+        }
+        if(result.getRowCount() == 0) 
+             result.AddRow(me.SpotlightProductionLines[0]);
+        
+        me.CurrentSpotLightProductionLine = result[0].Entity;
+    }
+        
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetEfficiencyNumbers">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "AcmeTractor.EfficiencyNumbers"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(MESEfficiencyNumbers)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+
+if(BusinessUnit == undefined) {
+    result.AddRow({OEE:me.OEE,TE:me.TrueEfficiency,NE:me.NetEfficiency, FPY:me.FirstPassYield});
+} else {
+    result.AddRow({OEE:Things[BusinessUnit].OEE,TE:Things[BusinessUnit].TrueEfficiency,NE:Things[BusinessUnit].NetEfficiency, FPY:Things[BusinessUnit].FirstPassYield});
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="Timer" source="OneMinTimer" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="OneMinTimer:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+me.GetLatestWeather();
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="Timer" source="OneHourTimer" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="OneHourTimer:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+me.AddOEEStream();
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape name="WeatherData" type="ThingShape"/>
+            </ImplementedShapes>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-14T20:22:19.702Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
