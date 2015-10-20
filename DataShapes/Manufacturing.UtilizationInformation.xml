@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.912Z" name="Manufacturing.UtilizationInformation" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.defaultValue="false" aspect.isPrimaryKey="false" baseType="BOOLEAN" description="" name="Active" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="LineName" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="LocalTimeStamp" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="Duration" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="UtilizationState" ordinal="7"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Comment" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="TimeClassification" ordinal="8"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="UtilizationStateString" ordinal="10"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Reason" ordinal="0"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-17T18:30:01.658Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-17T18:31:27.486Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.912Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
