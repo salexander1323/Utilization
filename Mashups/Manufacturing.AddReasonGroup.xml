@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="page" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:04.026Z" name="Manufacturing.AddReasonGroup" rows="0.0" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions>
+                <FieldDefinition aspect.dataShape="Manfacturing.ReasonGroups" aspect.ordinal="3" baseType="INFOTABLE" description="" name="ReasonGroupValues" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="4" aspect.tagType="DataTags" baseType="TAGS" description="" name="ReasonType" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="2" baseType="STRING" description="" name="ReasonGroupDescription" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="0" baseType="STRING" description="" name="ParentReasonGroup" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="1" baseType="STRING" description="" name="ReasonGroupName" ordinal="0"/>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>Manufacturing.ReasonGroups</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "Data" : {
+    "UserExtensions" : {
+      "Services" : [ {
+        "Name" : "GetCurrentUserExtensionProperties",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "GetCurrentUserExtensionProperties",
+        "APIMethod" : "post",
+        "Id" : "UserExtensionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "UserExtensions",
+      "Id" : "UserExtensions",
+      "EntityName" : "",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "Services" : [ {
+        "Name" : "GetGlobalSessionValues",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "GetGlobalSessionValues",
+        "APIMethod" : "post",
+        "Id" : "SessionInterface",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Session",
+      "Id" : "session",
+      "EntityName" : "",
+      "DataName" : "Session"
+    },
+    "Things_Manufacturing_ReasonGroups" : {
+      "Services" : [ {
+        "Name" : "AddOrUpdateDataTableEntry",
+        "Characteristic" : "Services",
+        "Parameters" : { },
+        "Target" : "AddOrUpdateDataTableEntry",
+        "APIMethod" : "post",
+        "Id" : "f7cb551a-3eb0-4d6f-8831-29071db3cfbd",
+        "RefreshInterval" : 0
+      } ],
+      "EntityType" : "Things",
+      "Id" : "f0dcebcd-8e7a-49d8-862d-515f5224fccc",
+      "EntityName" : "Manufacturing.ReasonGroups",
+      "DataName" : "Things_Manufacturing_ReasonGroups"
+    }
+  },
+  "DataBindings" : [ {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "Text",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "ParentReasonGroup",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Mashup",
+    "Id" : "11348774234622",
+    "SourceId" : "mashup-root",
+    "TargetId" : "Textbox-3"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "Text",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "ReasonGroupName",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Mashup",
+    "Id" : "971348774242141",
+    "SourceId" : "mashup-root",
+    "TargetId" : "Textbox-1"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "Text",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "ReasonGroupDescription",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Mashup",
+    "Id" : "951348774248682",
+    "SourceId" : "mashup-root",
+    "TargetId" : "Textbox-2"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroupValues",
+      "TargetSubProperty" : "Description",
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "Mashup",
+    "SourceArea" : "UI",
+    "Id" : "941348775293668",
+    "SourceId" : "Textbox-2",
+    "TargetId" : "mashup-root"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroupValues",
+      "TargetSubProperty" : "Name",
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "Mashup",
+    "SourceArea" : "UI",
+    "Id" : "0438a70b-7c38-45fb-8728-8986cd63936e",
+    "SourceId" : "Textbox-1",
+    "TargetId" : "mashup-root"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "TAGS",
+      "TargetProperty" : "Tags",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "ReasonType",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "Mashup",
+    "Id" : "3b49c949-e219-4f4c-97dc-895d59f0eb91",
+    "SourceId" : "mashup-root",
+    "TargetId" : "TagPicker-6"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "TAGS",
+      "TargetProperty" : "ReasonGroupValues",
+      "SourcePropertyType" : "Property",
+      "TargetSubProperty" : "ReasonType",
+      "SourceProperty" : "Tags",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "Mashup",
+    "SourceArea" : "UI",
+    "Id" : "45d42853-ba4a-42af-b68b-3cc3b18cf327",
+    "SourceId" : "TagPicker-6",
+    "TargetId" : "mashup-root"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "TargetProperty" : "Data",
+      "SourcePropertyType" : "Property",
+      "SourceProperty" : "Tags",
+      "SourcePropertyBaseType" : "TAGS"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "UI",
+    "SourceArea" : "UI",
+    "Id" : "2c7bd453-0607-41b3-82dc-a4b0a41f0029",
+    "SourceId" : "TagPicker-6",
+    "TargetId" : "ValueDisplay-8"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetProperty" : "ReasonGroupValues",
+      "SourcePropertyType" : "Property",
+      "TargetSubProperty" : "Parent",
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "",
+    "TargetArea" : "Mashup",
+    "SourceArea" : "UI",
+    "Id" : "86954047-fc34-4d3c-b332-1fbb03f39cbc",
+    "SourceId" : "Textbox-3",
+    "TargetId" : "mashup-root"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "Parameter",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetProperty" : "values",
+      "SourceProperty" : "ReasonGroupValues",
+      "SourcePropertyBaseType" : "INFOTABLE"
+    } ],
+    "SourceSection" : "",
+    "TargetSection" : "Things_Manufacturing_ReasonGroups",
+    "TargetArea" : "Data",
+    "SourceArea" : "Mashup",
+    "Id" : "a7aa99c2-ab77-417f-8bfe-caf6b64bd126",
+    "SourceId" : "mashup-root",
+    "TargetId" : "AddOrUpdateDataTableEntry"
+  } ],
+  "mashupType" : "page",
+  "RunTimePermissions" : {
+    "permissions" : [ ]
+  },
+  "Events" : [ {
+    "EventHandlerArea" : "Mashup",
+    "EventTriggerId" : "Button-5",
+    "EventTriggerSection" : "",
+    "Id" : "a14cfee5-dfb0-45e9-88e7-2ef11bea9eb3",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "mashup-root",
+    "EventHandlerService" : "CloseIfPopup"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventTriggerId" : "Button-4",
+    "EventTriggerSection" : "",
+    "Id" : "5468b2c1-5c81-44f5-a579-f4d384877aed",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerArea" : "UI",
+    "EventHandlerId" : "Things_Manufacturing_ReasonGroups",
+    "EventHandlerService" : "AddOrUpdateDataTableEntry"
+  }, {
+    "EventHandlerArea" : "Mashup",
+    "EventTriggerId" : "AddOrUpdateDataTableEntry",
+    "EventTriggerSection" : "Things_Manufacturing_ReasonGroups",
+    "Id" : "e08b1815-b548-4744-a8f3-307a41accba8",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "EventTriggerArea" : "Data",
+    "EventHandlerId" : "mashup-root",
+    "EventHandlerService" : "CloseIfPopup"
+  } ],
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ ],
+        "Properties" : {
+          "ReadOnly" : false,
+          "MaskInputCharacters" : false,
+          "Visible" : true,
+          "__TypeDisplayName" : "Textbox",
+          "TabSequence" : 0,
+          "Type" : "textbox",
+          "Area" : "UI",
+          "Style" : "DefaultTextBoxStyle",
+          "Z-index" : 10,
+          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+          "Width" : 200,
+          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+          "Top" : 22.71875,
+          "ResponsiveLayout" : false,
+          "Height" : 24,
+          "DisplayName" : "Textbox-1",
+          "TextAlign" : "left",
+          "Left" : 18.171875,
+          "Text" : "",
+          "__supportsLabel" : true,
+          "LabelAlignment" : "left",
+          "CursorPosition" : 0,
+          "InnerShadow" : true,
+          "Id" : "Textbox-1",
+          "Label" : "Reason Group Name",
+          "ShowDataLoading" : true,
+          "PlaceholderText" : ""
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "ReadOnly" : false,
+          "MaskInputCharacters" : false,
+          "Visible" : true,
+          "__TypeDisplayName" : "Textbox",
+          "TabSequence" : 0,
+          "Type" : "textbox",
+          "Area" : "UI",
+          "Style" : "DefaultTextBoxStyle",
+          "Z-index" : 10,
+          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+          "Width" : 200,
+          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+          "Top" : 75.45455658435822,
+          "ResponsiveLayout" : false,
+          "Height" : 24,
+          "DisplayName" : "Textbox-2",
+          "TextAlign" : "left",
+          "Left" : 18.18182098865509,
+          "Text" : "",
+          "__supportsLabel" : true,
+          "LabelAlignment" : "left",
+          "CursorPosition" : 0,
+          "InnerShadow" : true,
+          "Id" : "Textbox-2",
+          "Label" : "Reason Group Description",
+          "ShowDataLoading" : true,
+          "PlaceholderText" : ""
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "ReadOnly" : false,
+          "MaskInputCharacters" : false,
+          "Visible" : true,
+          "__TypeDisplayName" : "Textbox",
+          "TabSequence" : 0,
+          "Type" : "textbox",
+          "Area" : "UI",
+          "Style" : "DefaultTextBoxStyle",
+          "Z-index" : 10,
+          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+          "Width" : 200,
+          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+          "Top" : 132,
+          "ResponsiveLayout" : false,
+          "Height" : 24,
+          "DisplayName" : "Textbox-3",
+          "TextAlign" : "left",
+          "Left" : 19,
+          "Text" : "",
+          "__supportsLabel" : true,
+          "LabelAlignment" : "left",
+          "CursorPosition" : 0,
+          "InnerShadow" : true,
+          "Id" : "Textbox-3",
+          "Label" : "Parent Reason Group",
+          "ShowDataLoading" : true,
+          "PlaceholderText" : ""
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "Top" : 195,
+          "MultiSelect" : true,
+          "__TypeDisplayName" : "Tag Picker",
+          "Visible" : true,
+          "ResponsiveLayout" : false,
+          "Type" : "tagpicker",
+          "Area" : "UI",
+          "Height" : 18,
+          "Z-index" : 10,
+          "DisplayName" : "TagPicker-6",
+          "TagType" : "DataTags",
+          "Left" : 101,
+          "Id" : "TagPicker-6",
+          "VocabularyRestriction" : "ReasonTypes",
+          "Width" : 35,
+          "ShowDataLoading" : true
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "Top" : 175,
+          "__TypeDisplayName" : "Label",
+          "Visible" : true,
+          "ResponsiveLayout" : false,
+          "Type" : "label",
+          "Area" : "UI",
+          "Style" : "DefaultLabelStyle",
+          "Height" : 22,
+          "Z-index" : 10,
+          "DisplayName" : "Label-7",
+          "Left" : 87,
+          "Text" : "Reason Type",
+          "Id" : "Label-7",
+          "Alignment" : "left",
+          "Width" : 75,
+          "ShowDataLoading" : true
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "Overflow" : "hidden",
+          "Visible" : true,
+          "__TypeDisplayName" : "Value Display",
+          "Type" : "valuedisplay",
+          "Area" : "UI",
+          "Z-index" : 10,
+          "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+          "ImageScaling" : "width",
+          "TextWrap" : true,
+          "Width" : 210,
+          "BackgroundFill" : "content",
+          "Top" : 210,
+          "TextIfNoValue" : "",
+          "ValueFormat_StateParameters" : [ ],
+          "ResponsiveLayout" : false,
+          "Height" : 17,
+          "TextIfNoValueOffset" : 0,
+          "DisplayName" : "ValueDisplay-8",
+          "Left" : 15,
+          "ValueFormat" : {
+            "renderer" : "DEFAULT"
+          },
+          "__supportsLabel" : true,
+          "LabelAlignment" : "left",
+          "VerticalAlignment" : "middle",
+          "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+          "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+          "Id" : "ValueDisplay-8",
+          "Alignment" : "center",
+          "Label" : "",
+          "ShowDataLoading" : true
+        }
+      } ],
+      "Properties" : {
+        "Top" : 5,
+        "__TypeDisplayName" : "Fieldset",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "fieldset",
+        "FieldsetStyle" : "DefaultFieldsetStyle",
+        "Area" : "UI",
+        "Height" : 231,
+        "Z-index" : 10,
+        "DisplayName" : "Fieldset-1",
+        "Left" : 5,
+        "Title" : "Reason Group",
+        "Id" : "Fieldset-1",
+        "Width" : 249,
+        "ShowDataLoading" : true,
+        "FieldsetLabelStyle" : "AltFieldsetLabelStyle"
+      }
+    }, {
+      "Widgets" : [ {
+        "Widgets" : [ ],
+        "Properties" : {
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "ActiveStyle" : "DefaultButtonActiveStyle",
+          "Visible" : true,
+          "__TypeDisplayName" : "Button",
+          "TabSequence" : 0,
+          "Type" : "button",
+          "Area" : "UI",
+          "Style" : "DefaultButtonStyle",
+          "Z-index" : 10,
+          "ConfirmationButton2Label" : "No",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Disabled" : false,
+          "ConfirmationRequired" : false,
+          "RoundedCorners" : true,
+          "Width" : 88,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationButton1Label" : "Yes",
+          "DefaultConfirmationButton" : "button1",
+          "Top" : 16.36364471912384,
+          "CancelConfirmationButton" : "button2",
+          "ResponsiveLayout" : false,
+          "Height" : 30,
+          "DisplayName" : "Button-4",
+          "Left" : 19,
+          "ConfirmationTitle" : "Confirm Action",
+          "IconAlignment" : "left",
+          "Id" : "Button-4",
+          "Label" : "Save",
+          "ShowDataLoading" : true,
+          "ConfirmationPrompt" : "Do Action?"
+        }
+      }, {
+        "Widgets" : [ ],
+        "Properties" : {
+          "FocusStyle" : "DefaultButtonFocusStyle",
+          "ActiveStyle" : "DefaultButtonActiveStyle",
+          "Visible" : true,
+          "__TypeDisplayName" : "Button",
+          "TabSequence" : 0,
+          "Type" : "button",
+          "Area" : "UI",
+          "Style" : "DefaultButtonStyle",
+          "Z-index" : 10,
+          "ConfirmationButton2Label" : "No",
+          "HoverStyle" : "DefaultButtonHoverStyle",
+          "Disabled" : false,
+          "ConfirmationRequired" : false,
+          "RoundedCorners" : true,
+          "Width" : 88,
+          "DisabledStyle" : "DefaultButtonDisabledStyle",
+          "ConfirmationButton1Label" : "Yes",
+          "DefaultConfirmationButton" : "button1",
+          "Top" : 16,
+          "CancelConfirmationButton" : "button2",
+          "ResponsiveLayout" : false,
+          "Height" : 30,
+          "DisplayName" : "Button-5",
+          "Left" : 136,
+          "ConfirmationTitle" : "Confirm Action",
+          "IconAlignment" : "left",
+          "Id" : "Button-5",
+          "Label" : "Close",
+          "ShowDataLoading" : true,
+          "ConfirmationPrompt" : "Do Action?"
+        }
+      } ],
+      "Properties" : {
+        "Top" : 241,
+        "__TypeDisplayName" : "Fieldset",
+        "Visible" : true,
+        "ResponsiveLayout" : false,
+        "Type" : "fieldset",
+        "FieldsetStyle" : "DefaultFieldsetStyle",
+        "Area" : "UI",
+        "Height" : 57,
+        "Z-index" : 10,
+        "DisplayName" : "Fieldset-2",
+        "Left" : 5,
+        "Title" : "",
+        "Id" : "Fieldset-2",
+        "Width" : 250,
+        "ShowDataLoading" : true,
+        "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle"
+      }
+    } ],
+    "Properties" : {
+      "Columns" : 0,
+      "Rows" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "Visible" : true,
+      "Type" : "mashup",
+      "Area" : "Mashup",
+      "Style" : "DefaultMenuLevelSelectedStyle",
+      "Z-index" : 10,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "BGImageRepeat" : "no-repeat",
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "Width" : 260,
+      "id_index" : 8,
+      "Top" : 0,
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "IgnoreWarningsInViewMashup" : false,
+      "MinHeight" : 0,
+      "Height" : 302,
+      "MinWidth" : 0,
+      "DisplayName" : "Mashup",
+      "Left" : 0,
+      "Title" : "",
+      "IsPrintLayout" : false,
+      "Tags" : [ {
+        "vocabulary" : "Applications",
+        "vocabularyTerm" : "OEE"
+      } ],
+      "TitleBar" : false,
+      "_currentParameterDefs" : [ {
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "ParentReasonGroup"
+      }, {
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "ReasonGroupName"
+      }, {
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "ReasonGroupDescription"
+      }, {
+        "BaseType" : "INFOTABLE",
+        "Description" : "",
+        "Aspects" : {
+          "dataShape" : "Manfacturing.ReasonGroups"
+        },
+        "ParameterName" : "ReasonGroupValues"
+      }, {
+        "BaseType" : "TAGS",
+        "Description" : "",
+        "Aspects" : {
+          "tagType" : "DataTags"
+        },
+        "ParameterName" : "ReasonType"
+      } ],
+      "BGImageSize" : "auto",
+      "TitleBarText" : "Gadget Title Here",
+      "Id" : "mashup-root",
+      "ShowDataLoading" : true
+    }
+  },
+  "DesignTimePermissions" : {
+    "Update" : [ ],
+    "Create" : [ ],
+    "Read" : [ ],
+    "Metadata" : [ ],
+    "Delete" : [ ]
+  }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-23T16:58:34.166Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-23T19:13:10.303Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-24T14:13:35.754Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-24T14:19:07.727Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:04.026Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
