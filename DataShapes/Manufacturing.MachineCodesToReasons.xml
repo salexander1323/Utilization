@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-19T18:50:03.088Z" name="Manufacturing.MachineCodesToReasons" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="ReasonGroup" ordinal="3"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="MachineCode" ordinal="2"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="MachineID" ordinal="1"/>
+                <FieldDefinition baseType="STRING" description="" name="Reason" ordinal="4"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;fields : MachineID : Added, Updated, MachineCode : Added, ReasonGroup : Added, Reason : Added&#10;" timestamp="2015-10-16T14:27:45.315Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : MachineCode : Updated&#10;" timestamp="2015-10-19T18:50:00.509Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T18:50:03.088Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
