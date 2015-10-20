@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-16T21:31:22.143Z" name="Sean.PlantA.Line005" published="false" tags="Applications:Manufacturing" thingTemplate="Manufacturing.ProductionLine" valueStream="">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="MachineCode" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="MachineID" ordinal="1"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="MachineCode"/>
+                <AlertDefinitions name="MachineID"/>
+            </AlertConfigurations>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <MaterialPersonnelShortageTime>0.0</MaterialPersonnelShortageTime>
+                <DefaultReworkReason/>
+                <CurrentUtilTimeClassification/>
+                <ShiftChangeOverTime>0.0</ShiftChangeOverTime>
+                <UpTime>0.0</UpTime>
+                <ShiftMinutesCompleted>0.0</ShiftMinutesCompleted>
+                <LastUtilizationTimeEvent>2015-10-16T21:18:06.268Z</LastUtilizationTimeEvent>
+                <StandardizedProductionTime>0.0</StandardizedProductionTime>
+                <LineBlog/>
+                <CurrentShift/>
+                <NetEfficiency>0.0</NetEfficiency>
+                <LinePerformance>0.0</LinePerformance>
+                <ShiftUptime>0.0</ShiftUptime>
+                <DefaultProductionReason/>
+                <CurrentUtilReason/>
+                <TotalProductionCurrentPO>0.0</TotalProductionCurrentPO>
+                <MachineCode/>
+                <CurrentProductionOrder/>
+                <DefaultReworkReasonGroup/>
+                <GlobalEfficiency>0.0</GlobalEfficiency>
+                <LineAvailability>0.0</LineAvailability>
+                <LineQuality>0.0</LineQuality>
+                <DefectLostTime>0.0</DefectLostTime>
+                <TotalScrapCurrentPO>0.0</TotalScrapCurrentPO>
+                <ChangeoverTime>0.0</ChangeoverTime>
+                <CurrentProductionLotID/>
+                <ShiftOtherTime>0.0</ShiftOtherTime>
+                <DefaultUtilizationReasonGroup/>
+                <OEE>0.0</OEE>
+                <MaintenanceTime>0.0</MaintenanceTime>
+                <FirstPassYieldCurrentPO>0.0</FirstPassYieldCurrentPO>
+                <DefaultConsumptionReasonGroup/>
+                <FirstPassYield>0.0</FirstPassYield>
+                <DefaultScrapReasonCode/>
+                <ShiftEquipmentDowntime>0.0</ShiftEquipmentDowntime>
+                <CurrentUtilState/>
+                <MachineID><![CDATA[005]]></MachineID>
+                <DefaultProductionReasonGroup/>
+                <AvailableTimeUtilization>0.0</AvailableTimeUtilization>
+                <EquipmentDowntime>0.0</EquipmentDowntime>
+                <OperationStandardsIndex>0.0</OperationStandardsIndex>
+                <ShiftManagerContactNo/>
+                <ShiftQualityDowntime>0.0</ShiftQualityDowntime>
+                <DefaultConsumptionReason/>
+                <DefaultScrapReasonGroup/>
+                <QualityDowntime>0.0</QualityDowntime>
+                <LineImage/>
+                <TotalScrapCurrentShift>0.0</TotalScrapCurrentShift>
+                <OperationLostTime>0.0</OperationLostTime>
+                <SpeedLostTime>0.0</SpeedLostTime>
+                <TotalProductionCurrentShift>0.0</TotalProductionCurrentShift>
+                <LackOfDemandTime>0.0</LackOfDemandTime>
+                <TrueEfficiency>0.0</TrueEfficiency>
+                <DefectFreeTime>0.0</DefectFreeTime>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2015-10-16T21:18:06.264Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineID : Added, MachineCode : Added&#10;" timestamp="2015-10-16T21:31:22.142Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
