@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.903Z" name="Manufacturing.ProductionOrderInformation" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="StatusString" ordinal="9"/>
+                <FieldDefinition baseType="NUMBER" description="" name="GoodQty" ordinal="5"/>
+                <FieldDefinition baseType="DATETIME" description="" name="DueDate" ordinal="10"/>
+                <FieldDefinition aspect.defaultValue="No" baseType="STRING" description="" name="InventoryLow" ordinal="17"/>
+                <FieldDefinition baseType="DATETIME" description="" name="ScheduledEndDate" ordinal="12"/>
+                <FieldDefinition baseType="STRING" description="" name="ScheduledLineDescription" ordinal="17"/>
+                <FieldDefinition baseType="STRING" description="" name="ScheduledPlant" ordinal="13"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="11"/>
+                <FieldDefinition baseType="NUMBER" description="" name="Priority" ordinal="6"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialDescription" ordinal="14"/>
+                <FieldDefinition aspect.tagType="DataTags" baseType="TAGS" description="" name="Status" ordinal="3"/>
+                <FieldDefinition baseType="STRING" description="" name="ScheduledLine" ordinal="7"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
+                <FieldDefinition baseType="DATETIME" description="" name="ScheduledStartDate" ordinal="15"/>
+                <FieldDefinition baseType="NUMBER" description="" name="BadQty" ordinal="8"/>
+                <FieldDefinition baseType="STRING" description="" name="ScheduledPlantDescription" ordinal="16"/>
+                <FieldDefinition baseType="NUMBER" description="" name="RequiredQty" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T20:19:09.774Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.903Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
