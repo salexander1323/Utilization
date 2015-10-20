@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.955Z" name="Manufacturing.Reasons" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="ReasonGroup" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="UtilizationState" ordinal="4"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="TimeClassification" ordinal="3"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="Reason" ordinal="0"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-21T20:53:30.513Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.955Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
