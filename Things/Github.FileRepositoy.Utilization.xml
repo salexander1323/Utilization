@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing aspect.isSystemObject="false" description="Used to store utilization stuff" documentationContent="" effectiveThingPackage="FileRepositoryThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-20T18:53:58.592Z" name="Github.FileRepositoy.Utilization" published="false" tags="" thingTemplate="Github.FileRepository" valueStream="">
+            <Owner name="stevea" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <TagsToExport/>
+                <GithubConnection><![CDATA[Github.Connection.Utilization]]></GithubConnection>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Thing Github.FileRepositoy.Utilization created programatically" timestamp="2015-10-20T18:53:58.592Z" user="stevea"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
