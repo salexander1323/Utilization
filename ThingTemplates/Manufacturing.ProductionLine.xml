@@ -1,0 +1,2634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="GenericThing" description="Production Line Template for all tractor production lines." documentationContent="&lt;p&gt;This template is used for &lt;b&gt;BOTH&lt;/b&gt; the Final Assembly Lines and Feeder Lines (Transmission, Engine, and Cab Assembly).&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-20T18:23:10.100Z" name="Manufacturing.ProductionLine" tags="Applications:Manufacturing" thingPackage="" valueStream="">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="DefaultProductionReasonGroup"/>
+                <AlertDefinitions name="TotalScrapCurrentPO"/>
+                <AlertDefinitions name="DefaultReworkReason"/>
+                <AlertDefinitions name="ChangeoverTime"/>
+                <AlertDefinitions name="DefaultUtilizationReasonGroup"/>
+                <AlertDefinitions name="MaintenanceTime"/>
+                <AlertDefinitions name="ShiftQualityDowntime"/>
+                <AlertDefinitions name="FirstPassYieldCurrentPO"/>
+                <AlertDefinitions name="DefaultProductionReason"/>
+                <AlertDefinitions name="DefaultConsumptionReason"/>
+                <AlertDefinitions name="DefaultConsumptionReasonGroup"/>
+                <AlertDefinitions name="DefaultScrapReasonCode"/>
+                <AlertDefinitions name="FirstPassYield"/>
+                <AlertDefinitions name="DefaultScrapReasonGroup"/>
+                <AlertDefinitions name="DefaultReworkReasonGroup"/>
+                <AlertDefinitions name="LineImage"/>
+                <AlertDefinitions name="TotalScrapCurrentShift"/>
+                <AlertDefinitions name="CurrentShift"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="MaterialPersonnelShortageTime" ordinal="13"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultReworkReason" ordinal="48"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentUtilTimeClassification" ordinal="27"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftChangeOverTime" ordinal="36"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="UpTime" ordinal="7"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftMinutesCompleted" ordinal="32"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="DATETIME" category="" description="" isLocalOnly="false" name="LastUtilizationTimeEvent" ordinal="30"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="StandardizedProductionTime" ordinal="16"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" aspect.thingTemplate="Blog" baseType="THINGNAME" category="" description="" isLocalOnly="false" name="LineBlog" ordinal="38"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentShift" ordinal="49"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="NetEfficiency" ordinal="21"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="LinePerformance" ordinal="23"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftUptime" ordinal="33"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultProductionReason" ordinal="43"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalProductionCurrentPO" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentUtilReason" ordinal="28"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentProductionOrder" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultReworkReasonGroup" ordinal="47"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="GlobalEfficiency" ordinal="31"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="LineAvailability" ordinal="23"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="LineQuality" ordinal="24"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="DefectLostTime" ordinal="17"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalScrapCurrentPO" ordinal="41"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ChangeoverTime" ordinal="38"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentProductionLotID" ordinal="26"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftOtherTime" ordinal="37"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultUtilizationReasonGroup" ordinal="44"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OEE" ordinal="20"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="MaintenanceTime" ordinal="39"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="FirstPassYieldCurrentPO" ordinal="51"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultConsumptionReasonGroup" ordinal="45"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="This is a percentage field" isLocalOnly="false" name="FirstPassYield" ordinal="50"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultScrapReasonCode" ordinal="40"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftEquipmentDowntime" ordinal="34"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="CurrentUtilState" ordinal="29"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultProductionReasonGroup" ordinal="41"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="AvailableTimeUtilization" ordinal="26"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="EquipmentDowntime" ordinal="8"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OperationStandardsIndex" ordinal="25"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="ShiftManagerContactNo" ordinal="39"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="ShiftQualityDowntime" ordinal="35"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultConsumptionReason" ordinal="46"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="DefaultScrapReasonGroup" ordinal="42"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="QualityDowntime" ordinal="9"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="IMAGELINK" category="" description="" isLocalOnly="false" name="LineImage" ordinal="52"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalScrapCurrentShift" ordinal="40"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OperationLostTime" ordinal="14"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="SpeedLostTime" ordinal="15"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TotalProductionCurrentShift" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="TrueEfficiency" ordinal="22"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="LackOfDemandTime" ordinal="11"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0.0" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="DefectFreeTime" ordinal="18"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNDowntimes">
+                        <ResultType aspect.dataShape="Manufacturing.DowntimeOccurrences" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="10.0" baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateLinePerformance">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Uptime" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="SpeedLosses" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="QualityDowntime" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="EquipmentDowntime" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateNetEfficiency">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Uptime" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="QualityDowntime" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="EquipmentDowntime" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="DefectFreeTime" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProductionOrderComplete">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="UserID" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryConusmptionData">
+                        <ResultType aspect.dataShape="Manufacturing.ConsumptionInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="QUERY" description="" name="Query" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryProductionData">
+                        <ResultType aspect.dataShape="Manufacturing.ProductionInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="QUERY" description="" name="Query" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateCalculatedProperties">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateGlobalEfficiency">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="PlannedProductionTime" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="DefectFreeTime" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddConsumptionEvent">
+                        <ResultType baseType="BOOLEAN" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="ConsumptionLotID" ordinal="7"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Quantity" ordinal="5"/>
+                            <FieldDefinition baseType="STRING" description="" name="ReasonGroup" ordinal="8"/>
+                            <FieldDefinition baseType="STRING" description="" name="MaterialDesc" ordinal="7"/>
+                            <FieldDefinition baseType="STRING" description="" name="Comment" ordinal="6"/>
+                            <FieldDefinition aspect.isRequired="false" baseType="STRING" description="" name="UOM" ordinal="7"/>
+                            <FieldDefinition baseType="STRING" description="" name="LotID" ordinal="8"/>
+                            <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="Reason" ordinal="9"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="InsertUtilizationData">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="machineCode" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="machineID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddUtilizationEvent">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ReasonGroup" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="Comment" ordinal="3"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="Reason" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetProducibleMaterial">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateLineAvailability">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Uptime" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="QualityDowntime" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="EquipmentDowntime" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="LoadingTime" ordinal="4"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateShiftDurations">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="2013-03-28T01:00:00.000Z" aspect.isRequired="false" baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="2013-03-27T17:00:00.000Z" aspect.isRequired="true" baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateATU">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="PlannedProductionTime" ordinal="1"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="AvailableLineHrs" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryUtilizationData">
+                        <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="QUERY" description="" name="Query" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddProductionEvent">
+                        <ResultType baseType="BOOLEAN" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Quantity" ordinal="9"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ReasonGroup" ordinal="3"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="MaterialDesc" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Weight" ordinal="8"/>
+                            <FieldDefinition baseType="STRING" description="" name="Comment" ordinal="6"/>
+                            <FieldDefinition aspect.isRequired="false" baseType="STRING" description="" name="UOM" ordinal="7"/>
+                            <FieldDefinition baseType="STRING" description="" name="LotID" ordinal="8"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="MaterialID" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="Reason" ordinal="4"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetReworkProductionData">
+                        <ResultType aspect.dataShape="Manufacturing.ProductionInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddProductionOrder">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="MaterialDescription" ordinal="12"/>
+                            <FieldDefinition baseType="STRING" description="" name="ScheduledLine" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="RequiredQuantity" ordinal="7"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="DueDate" ordinal="8"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="ScheduledEndDate" ordinal="10"/>
+                            <FieldDefinition baseType="STRING" description="" name="ScheduledLineDescription" ordinal="4"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="ScheduledStartDdate" ordinal="9"/>
+                            <FieldDefinition baseType="STRING" description="" name="ProductionOrderIdentifier" ordinal="5"/>
+                            <FieldDefinition baseType="STRING" description="" name="ScheduledPlant" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="11"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Priority" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="ScheduledPlantDescription" ordinal="3"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateOEE">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Availability" ordinal="1"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Quality" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Performance" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNRework">
+                        <ResultType aspect.dataShape="Manufacturing.ReworkOccurrences" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="10.0" baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProductionOrderHold">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="UserID" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetUtilizationTimeStream">
+                        <ResultType aspect.dataShape="Manufacturing.UtilizationTimeInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProductionOrderStart">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="UserID" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateMaintenanceDataPriority">
+                        <ResultType aspect.dataShape="AcmeTractor.MaintenanceDataInformation" baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="Order" ordinal="1"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Priority" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetBOMItems">
+                        <ResultType aspect.dataShape="Manufacturing.GetPerBOMAllMaterialData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="1.0" aspect.isRequired="true" baseType="STRING" description="" name="VersionID" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="Empty" aspect.isRequired="true" baseType="STRING" description="" name="MaterialID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddUtilizationTimeStream">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetMaterial">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNUtilizationReasons">
+                        <ResultType aspect.dataShape="Manufacturing.DowntimeOccurancesInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryDowntimeData">
+                        <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="QUERY" description="" name="Query" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetComponentMaterial">
+                        <ResultType aspect.dataShape="Manufacturing.MaterialInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryMaintenanceData">
+                        <ResultType aspect.dataShape="Manufacturing.MaintenanceDataInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition baseType="QUERY" description="" name="Query" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateOSI">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="PlannedProductionTime" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="LoadingTime" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateLineQuality">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Uptime" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="SpeedLosses" ordinal="4"/>
+                            <FieldDefinition baseType="STRING" description="" name="DefectFreeTime" ordinal="3"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateTE">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="ChangeoverTime" ordinal="7"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="QualityDowntime" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="UpTime" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="EquipmentDowntime" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="MaintenanceTime" ordinal="8"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="NUMBER" description="" name="DefectFreeTime" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNScrap">
+                        <ResultType aspect.dataShape="Manufacturing.ScrapOccurrences" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="10.0" baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions>
+                    <EventDefinition category="" dataShape="Manufacturing.UtilizationInformation" description="" name="HighTemperatureAlarm"/>
+                </EventDefinitions>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNDowntimes">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.DowntimeOccurrences"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{type:"EQ",fieldName:"LineName",value: me.name}, { type:"EQ",fieldName:"UtilizationStateString",value: "ReasonStates:Down"},{ type:"Between",fieldName:"LocalTimeStamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+        oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var downtimeEntries = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: downtimeEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get the total count and sum of duration
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: downtimeEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Duration",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                DowntimeReason : record.Reason,
+                TotalDuration : aggResult.SUM_Duration ,
+                NumberOfOccurrences :reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurrences" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalDuration" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateLinePerformance">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//Line Performance calculation
+result = Math.round(((Uptime - SpeedLosses)/(Uptime + (EquipmentDowntime + QualityDowntime))) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateNetEfficiency">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//Net Efficiency calculation
+result = Math.round((DefectFreeTime/(Uptime + EquipmentDowntime + QualityDowntime)) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ProductionOrderComplete">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//get the production order record from the datatable
+
+var params = {
+	key: ProductionOrder /* STRING */
+};
+
+// result: INFOTABLE
+var prodOrder = Things["Manufacturing.ProductionOrder"].GetDataTableEntryByKey(params);
+
+//update the production order datatable record
+var values = Things["Manufacturing.ProductionOrder"].CreateValues();
+
+values.StatusString = "Completed"; //STRING
+values.GoodQty = prodOrder[0].GoodQty; //NUMBER
+values.DueDate = prodOrder[0].DueDate; //DATETIME
+values.ScheduledEndDate = prodOrder[0].ScheduledEndDate; //DATETIME
+values.ScheduledLineDescription = prodOrder[0].ScheduledLineDescription; //STRING
+values.ScheduledPlant = prodOrder[0].ScheduledPlant; //STRING
+values.Priority = prodOrder[0].Priority; //NUMBER
+values.MaterialID = prodOrder[0].MaterialID; //STRING
+values.MaterialDescription = prodOrder[0].MaterialDescription; //STRING
+values.Status = "Status:Completed"; //TAGS
+values.ScheduledLine = prodOrder[0].ScheduledLine; //STRING
+values.ProductionOrder = prodOrder[0].ProductionOrder; //STRING [Primary Key]
+values.ScheduledStartDate = prodOrder[0].ScheduledStartDate; //DATETIME
+values.BadQty = prodOrder[0].BadQty; //NUMBER
+values.ScheduledPlantDescription = prodOrder[0].ScheduledPlantDescription; //STRING
+values.RequiredQty = prodOrder[0].RequiredQty; //NUMBER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// no return
+Things["Manufacturing.ProductionOrder"].UpdateDataTableEntry(params);
+
+//set production line properties
+me.CurrentProductionOrder = "";
+me.TotalProductionCurrentPO = 0;
+me.TotalScrapCurrentPO = 0;
+
+//automatically enter utilization event to make machine go to hold
+var params = {
+	ReasonGroup: "Lack of Demand" /* HYPERLINK */,
+	Comment: "Hold Order" /* STRING */,
+	Reason: "Between Orders" /* STRING */
+};
+
+me.AddUtilizationEvent(params);
+
+//enter value in the Order Status Stream
+
+var values = Things["Manufacturing.OrderStatusLog"].CreateValues();
+
+values.User = UserID; //STRING
+values.new_status = "Status:Completed"; //TAGS
+values.production_order = ProductionOrder; //STRING
+values.Shift = me.CurrentShift; //STRING
+values.comment = "Status went to complete on order complete"; //STRING
+values.old_status = prodOrder[0].Status; //TAGS
+
+var params = {
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+};
+
+// no return
+Things["Manufacturing.OrderStatusLog"].AddStreamEntry(params);
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="QueryConusmptionData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: Query /* QUERY */,
+	endDate: EndDate /* DATETIME */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Consumption"].QueryStreamEntriesWithData(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="QueryProductionData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: Query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Production"].QueryStreamEntriesWithData(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="UpdateCalculatedProperties">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//Calculate TE
+var params = {
+	DefectFreeTime: me.DefectFreeTime /* NUMBER */,
+	UpTime: me.UpTime /* NUMBER */,
+	EquipmentDowntime: me.EquipmentDowntime /* NUMBER */,
+	QualityDowntime: me.QualityDowntime /* NUMBER */,
+	ChangeoverTime: me.ChangeoverTime /* NUMBER */,
+	MaintenanceTime: me.MaintenanceTime /* NUMBER */
+};
+// result: NUMBER
+me.TrueEfficiency = me.CalculateTE(params);
+
+//Calculate GE
+
+var ppt = 60;
+var params = {
+	DefectFreeTime: me.DefectFreeTime /* NUMBER */,
+	PlannedProductionTime: ppt /* For demo just assume 60. Real world this would come from schedule */
+};
+
+me.GlobalEfficiency = me.CalculateGlobalEfficiency(params);
+
+//calculate Net Efficiency
+
+var params = {
+	DefectFreeTime: me.DefectFreeTime /* NUMBER */,
+	Uptime: me.UpTime /* NUMBER */,
+	EquipmentDowntime: me.EquipmentDowntime /* NUMBER */,
+	QualityDowntime: me.QualityDowntime /* NUMBER */
+};
+
+me.NetEfficiency = me.CalculateNetEfficiency(params);
+
+var loadingTime = 60 //just default to 60 for now
+//calculate Line Availability
+var params = {
+	EquipmentDowntime: me.EquipmentDowntime /* NUMBER */,
+	QualityDowntime: me.QualityDowntime /* NUMBER */,
+	LoadingTime: loadingTime /* just default to 60 for now */,
+	Uptime: me.UpTime /* NUMBER */
+};
+
+me.LineAvailability = me.CalculateLineAvailability(params);
+
+var params = {
+	EquipmentDowntime: me.EquipmentDowntime /* NUMBER */,
+	QualityDowntime: me.QualityDowntime /* NUMBER */,
+	SpeedLosses: me.SpeedLostTime /* NUMBER */,
+	Uptime: me.UpTime /* NUMBER */
+};
+
+me.LinePerformance = me.CalculateLinePerformance(params);
+
+var params = {
+	SpeedLosses: me.SpeedLostTime /* NUMBER */,
+	DefectFreeTime: me.DefectFreeTime /* STRING */,
+	Uptime:  me.StandardizedProductionTime /* Make this standarize production time rather than update for demo only */
+};
+
+me.LineQuality = me.CalculateLineQuality(params);
+
+var params = {
+	Availability: me.LineAvailability /* NUMBER */,
+	Performance: me.LinePerformance /* NUMBER */,
+	Quality: me.LineQuality /* NUMBER */
+};
+
+me.OEE = me.CalculateOEE(params);
+
+var params = {
+	LoadingTime: loadingTime /* Just assume 60 for demo */,
+	PlannedProductionTime: ppt /* Just assume 60 for demo */
+};
+
+// result: NUMBER
+me.OperationStandardsIndex = me.CalculateOSI(params);
+
+var availHrs = 60;
+var params = {
+	PlannedProductionTime: ppt /* Just assume 60 for demo */,
+	AvailableLineHrs: availHrs /* Just assume 60 for demo */
+};
+
+me.AvailableTimeUtilization = me.CalculateATU(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddConsumptionEvent">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//first need to check that a production order is running
+if(me.CurrentProductionOrder != "" && me.CurrentProductionOrder != "No Order") {
+
+    // tags:TAGS
+
+    var tags = [{"vocabulary":"Manufacturing.Lots","vocabularyTerm":LotID},{"vocabulary":"Manufacturing.Lots","vocabularyTerm":ConsumptionLotID}];
+    
+     //need to get the utlization reason
+    var params = {
+        key : ReasonGroup
+    };   
+    
+     // GetDataTableEntryByKey(key:STRING):INFOTABLE(Reasons)
+    var ReasonResult = Things['Manufacturing.ReasonGroups'].GetDataTableEntryByKey(params);
+
+    var goodCons = false;
+    if(ReasonResult.getRowCount() > 0) {
+        if(ReasonResult[0].ReasonType == "ReasonTypes:Consumption")
+            goodCons = true;
+    };   
+    
+    // timestamp:DATETIME
+    var timestamp = new Date();
+
+    // values:INFOTABLE(Datashape: AcmeTractor.ConsumptionInformation)
+    var values = Things["Manufacturing.Consumption"].CreateValues();
+    
+    values.MaterialID = MaterialID; //STRING
+    values.ConsumptionLotID = ConsumptionLotID; //STRING
+    values.Comments = Comment; //STRING
+    values.Quantity = Quantity; //NUMBER
+    values.MaterialDesc = MaterialDesc; //STRING
+    values.ProductionOrder = me.CurrentProductionOrder; //STRING
+    values.UOM = UOM; //STRING
+    values.LotID = LotID; //STRING
+    values.Shift = me.CurrentShift;
+    values.GoodConsumption = goodCons;
+    values.Reason = Reason;
+    values.ReasonGroup = ReasonGroup;
+    
+    // location:LOCATION
+    var location = new Object();
+    location.latitude = 0;
+    location.longitude = 0;
+    location.elevation = 0;
+    location.units ="WGS84";
+    
+    var params = {
+        tags : tags,
+        timestamp : timestamp,
+        source : me.name,
+        values : values,
+        location : location
+    };
+    
+    // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(AcmeTractor.ConsumptionInformation), location:LOCATION):NOTHING
+    Things["Manufacturing.Consumption"].AddStreamEntry(params);
+    
+    var result = true;
+    
+} else {
+    var result = false;
+    throw "A work order is not currently running, cannot consume.";
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateGlobalEfficiency">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//Global Efficiency calculation
+result = Math.round((DefectFreeTime/PlannedProductionTime) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="InsertUtilizationData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var values = Things["Manufacturing.MachineCodesToReasons"].CreateValues();
+
+values.MachineCode = machineCode; //STRING [Primary Key]
+values.MachineID = machineID; //STRING [Primary Key]
+
+var params = {
+	tags: undefined /* TAGS */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	query: undefined /* QUERY */,
+	maxItems: undefined /* NUMBER */
+};
+
+// look up reason based on code
+var codesToReasons = Things["Manufacturing.MachineCodesToReasons"].QueryDataTableEntries(params);
+var reasonGrp = codesToReasons[0].ReasonGroup;
+var reason = codesToReasons[0].Reason;
+
+// add utilization event
+var params = {
+	ReasonGroup: reasonGrp /* STRING */,
+	Comment: "Automated utilization event" /* STRING */,
+	Reason: reason /* STRING */
+};
+
+me.AddUtilizationEvent(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetProducibleMaterial">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var query = new Object();
+
+query = {
+    filters: {
+        type : "OR", filters:
+        [
+            {
+                fieldName : "MaterialType", type : "EQ", value : "FG"}
+            ,
+            {
+                fieldName : "MaterialType", type : "EQ", value : "INT"}
+        ]}
+};
+
+var params = {
+    query: query /* QUERY */,
+};
+
+// result: INFOTABLE
+var Material = Things["Manufacturing.Material"].QueryDataTableEntries(params);
+
+var params = {
+    sortColumn: "MaterialDescription" /* STRING */,
+    t: Material /* INFOTABLE */,
+    ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddUtilizationEvent">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// we want to retrieve the active utilization stream record for the line and complete it
+var tags = new Array();
+
+var query = {
+    filters: {
+        type: "AND",
+        filters: [{
+            type: "EQ",
+            fieldName: "LineName",
+            value: me.name
+        }
+                  , {
+                      type: "EQ",
+                      fieldName: "Active",
+                      value: true
+                  }
+                 ]
+    }
+};
+
+var params = {
+    //source : "",
+    tags : tags,
+    maxItems : 500,
+    query : query
+};
+
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+if(result.getRowCount() > 0) {
+
+    // location:LOCATION
+    var location = new Object();
+    location.latitude = 0;
+    location.longitude = 0;
+    location.elevation = 0;
+    location.units = 'WGS84';
+
+    // values:INFOTABLE(Datashape: AcmeTractor.Utilization)
+    var values = Things["Manufacturing.Utilization"].CreateValues();
+
+    // date1:DATETIME
+    var date1 = Date.now();
+
+    for each (var activeRow in result.rows) {
+        // date2:DATETIME
+        var date2 = activeRow.LocalTimeStamp;
+
+        // dateDifference(date1:DATETIME, date2:DATETIME):NUMBER
+        //difference returns millsec, need to convert to minutes
+        var difference = dateDifference(date1, date2)/60000;
+
+        values.Duration = Math.round(difference*100)/100;
+        values.Active = false;
+        values.LocalTimeStamp = activeRow.LocalTimeStamp;
+        values.Comment = activeRow.Comment;
+        values.TimeClassification = activeRow.TimeClassification;
+        values.Reason = activeRow.Reason;
+        values.UtilizationState = activeRow.UtilizationState;
+        values.UtilizationStateString = activeRow.UtilizationStateString;
+        values.LineName = me.name;
+        values.Shift = activeRow.Shift;
+
+        var params = {
+            values: values /* INFOTABLE*/,
+            source: me.name /* STRING */,
+            location: location /* LOCATION */,
+            streamEntryId: activeRow.id /* STRING */,
+            tags : activeRow.tags
+        };
+
+        // no return
+        Things["Manufacturing.Utilization"].UpdateStreamEntry(params);
+    }
+}
+
+//Next, we need to get the utlization reason
+var keyReason = Reason + ReasonGroup;
+
+var params = {
+    key : keyReason
+};
+
+// GetDataTableEntryByKey(key:STRING):INFOTABLE(AcmeTractor.Reasons)
+var ReasonResult = Things['Manufacturing.Reasons'].GetDataTableEntryByKey(params);
+
+//add in a new active record
+// values:INFOTABLE(Datashape: AcmeTractor.UtilizationInformation)
+var values = Things["Manufacturing.Utilization"].CreateValues();
+
+values.LineName = me.name;
+values.Comment = Comment;
+values.Duration = 0;
+values.Active = true;
+values.LocalTimeStamp = Date.now();
+values.TimeClassification = ReasonResult[0].TimeClassification;
+values.UtilizationState = ReasonResult[0].UtilizationState;
+values.UtilizationStateString = ReasonResult[0].UtilizationState;
+values.Reason = Reason;
+values.Shift = me.CurrentShift;
+
+// tags:TAGS
+var tags = new Array();
+
+// location:LOCATION
+var location = new Object();
+location.latitude = 0;
+location.longitude = 0;
+location.elevation = 0;
+location.units = 'WGS84';
+
+var tags = new Array();
+if(me.CurrentProductionOrder == "") 
+    tags = "ProductionOrders:No Order";
+else 
+    tags = "ProductionOrders:" + me.CurrentProductionOrder;
+
+var params = {
+    values : values,
+    tags : tags,
+    location : location,
+    source : me.name
+};
+
+// no return
+Things["Manufacturing.Utilization"].AddStreamEntry(params);
+
+me.CurrentUtilTimeClassification = ReasonResult[0].TimeClassification;
+me.CurrentUtilState = ReasonResult[0].UtilizationState;
+me.CurrentUtilReason = Reason;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateLineAvailability">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//Line Availability calculation
+result = Math.round(((Uptime + EquipmentDowntime + QualityDowntime)/LoadingTime) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateShiftDurations">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {filters:{ type:"Between",fieldName:"LocalTimestamp",from : StartDate, to : EndDate}};
+
+var params = {
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+};
+
+// result: INFOTABLE
+var records = Things["Manufacturing.UtilizationTime"].QueryStreamEntriesWithData(params);
+
+// sum the contents of various info table columns and update thing properties
+var params = {
+	t: records ,
+	columns: "Uptime",
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftUptime = result[0].SUM_Uptime;
+else
+    me.ShiftUptime = 0;
+
+var params = {
+	t: records ,
+	columns: "EquipmentDowntime" ,
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftEquipmentDowntime = result[0].SUM_EquipmentDowntime;
+else
+    me.ShiftEquipmentDowntime = 0;
+
+var params = {
+	t: records ,
+	columns: "QualityDowntime" ,
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftQualityDowntime = result[0].SUM_QualityDowntime;
+else
+    me.ShiftQualityDowntime = 0;
+
+var params = {
+	t: records ,
+	columns: "ChangeoverOrMaintenanceTime" ,
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftChangeOverTime = result[0].SUM_ChangeoverOrCleaningTime;
+else
+    me.ShiftChangeOverTime = 0;
+
+var params = {
+	t: records ,
+	columns: "MaterialPersonnelShortageTime" ,
+	aggregates: "SUM",
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftOtherTime = result[0].SUM_MaterialPersonnelShortageTime;
+else
+    me.ShiftOtherTime = 0;
+
+var params = {
+	t: records,
+	columns: "OutOfProductionTime" ,
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftOtherTime += result[0].SUM_OutOfProductionTime;
+
+var params = {
+	t: records ,
+	columns: "SpeedLostTime",
+	aggregates: "SUM" ,
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftOtherTime += result[0].SUM_SpeedLostTime;
+
+var params = {
+	t: records,
+	columns: "LackOfDemandTime" ,
+	aggregates: "SUM",
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftOtherTime += result[0].SUM_LackOfDemandTime;
+
+var params = {
+	t: records,
+	columns: "OperationLostTime" ,
+	aggregates: "SUM",
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+if(result.getRowCount() > 0)
+    me.ShiftOtherTime += result[0].SUM_OperationLostTime;
+
+me.ShiftMinutesCompleted = me.ShiftUptime + me.ShiftEquipmentDowntime + me.ShiftQualityDowntime + me.ShiftChangeOverTime + me.ShiftOtherTime;
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateATU">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//Available Utilization Time calculation
+result = Math.round((PlannedProductionTime/AvailableLineHrs) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="QueryUtilizationData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+    startDate: StartDate /* DATETIME */,
+    endDate: EndDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: Query /* QUERY */,
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+if(result.getRowCount() == 0) {
+    //this means no row was returned with filter so just want to return the active row
+    var query = {
+        filters: {
+                    type: "And",
+                    filters: [{
+                            type: "EQ",
+                            fieldName: "Active",
+                        	value: true
+                        }, {
+                            type: "EQ",
+                            fieldName: "LineName",
+                            value: me.name		
+                        }
+                    ]
+        } 
+    };        
+    var params = {
+        source: me.name /* STRING */,
+        query: query /* QUERY */,
+    };
+    
+    // result: INFOTABLE
+    result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+    
+}
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddProductionEvent">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//first need to check that a production order is running
+if(me.CurrentProductionOrder != "" && me.CurrentProductionOrder != "No Order") {
+
+    //need to get the utlization reason
+    var params = {
+        key : ReasonGroup
+    };
+
+    // GetDataTableEntryByKey(key:STRING):INFOTABLE(Reasons)
+    var ReasonResult = Things['Manufacturing.ReasonGroups'].GetDataTableEntryByKey(params);
+
+    var goodProd = false;
+    if(ReasonResult.getRowCount() > 0) {
+        if(ReasonResult[0].ReasonType == "ReasonTypes:Production")
+            goodProd = true;
+    };
+
+    // tags:TAGS
+    var tags = new Array();
+    tags = "Manufacturing.Lots:" + LotID;
+
+    // timestamp:DATETIME
+    var timestamp = new Date();
+
+    // values:INFOTABLE(Datashape: AcmeTractor.ProductionInformation)
+    var values = Things["Manufacturing.Production"].CreateValues();
+    values.Quantity = Quantity;
+    //NUMBER
+    values.ReasonGroup = ReasonGroup;
+    //STRING
+    values.MaterialDesc = MaterialDesc;
+    //STRING
+    values.UOM = UOM;
+    //STRING
+    values.ProductionOrder = me.CurrentProductionOrder;
+    //STRING
+    values.GoodProduction = goodProd;
+    //BOOLEAN
+    values.MaterialID = MaterialID;
+    //STRING
+    values.Reason = Reason;
+    //STRING
+    values.LotID = LotID;
+    values.Comments = Comment;
+    values.Shift = me.CurrentShift;
+
+    // location:LOCATION
+    var location = new Object();
+    location.latitude = 0;
+    location.longitude = 0;
+    location.elevation = 0;
+    location.units ="WGS84";
+
+    var params = {
+        tags : tags,
+        timestamp : timestamp,
+        source : me.name,
+        values : values,
+        location : location
+    };
+
+    // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(AcmeTractor.ProductionInformation), location:LOCATION):NOTHING
+    Things["Manufacturing.Production"].AddStreamEntry(params);
+
+    //update the lot number if it changes
+    me.CurrentProductionLotID = LotID;
+
+    //update the totals on the Thing
+    var goodQty = me.TotalProductionCurrentPO;
+    var badQty = me.TotalScrapCurrentPO;
+    if(goodProd == true) {
+        me.TotalProductionCurrentPO += Quantity;
+        me.TotalProductionCurrentShift += Quantity;
+        goodQty += Quantity;
+    }
+    else {
+        me.TotalScrapCurrentPO += Quantity;
+        me.TotalScrapCurrentShift += Quantity;
+        badQty += Quantity;
+    }
+
+
+    //update the WO quantities in the ProductionOrder DataTable
+
+    var params = {
+        key: me.CurrentProductionOrder /* STRING */
+    };
+
+    // result: INFOTABLE
+    var prodOrder = Things["Manufacturing.ProductionOrder"].GetDataTableEntryByKey(params);
+
+    var values = Things["Manufacturing.ProductionOrder"].CreateValues();
+
+    values.StatusString = prodOrder[0].StatusString;
+    //STRING
+    values.GoodQty = goodQty;
+    //NUMBER
+    values.DueDate = prodOrder[0].DueDate;
+    //DATETIME
+    values.ScheduledEndDate = prodOrder[0].ScheduledEndDate;
+    //DATETIME
+    values.ScheduledPlant = prodOrder[0].ScheduledPlant;
+    //STRING
+    values.Priority = prodOrder[0].Priority;
+    //NUMBER
+    values.MaterialID = prodOrder[0].MaterialID;
+    //STRING
+    values.MaterialDescription = prodOrder[0].MaterialDescription;
+    //STRING
+    values.Status = prodOrder[0].Status;
+    //TAGS
+    values.ScheduledLine = prodOrder[0].ScheduledLine;
+    //STRING
+    values.ProductionOrder = me.CurrentProductionOrder;
+    //STRING [Primary Key]
+    values.ScheduledStartDate = prodOrder[0].ScheduledStartDate;
+    //DATETIME
+    values.BadQty = badQty;
+    //NUMBER
+    values.RequiredQty = prodOrder[0].RequiredQty;
+    //NUMBER
+
+    var params = {
+        tags: undefined /* TAGS */,
+        sourceType: undefined /* STRING */,
+        values: values /* INFOTABLE*/,
+        source: undefined /* STRING */,
+        location: undefined /* LOCATION */
+    };
+
+    // no return
+    Things["Manufacturing.ProductionOrder"].UpdateDataTableEntry(params);
+
+    var result = true;
+
+}
+else {
+    var result = false;
+    throw "A work order is not currently running, cannot produce.";
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetReworkProductionData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var Query = {
+    filters: {
+        
+                type : "EQ",
+                fieldName : "GoodProduction",
+                value : false
+        }
+};
+
+var params = {
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: Query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Production"].QueryStreamEntriesWithData(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddProductionOrder">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// Create a new Production Order Datatable Entry
+
+var values = Things["Mnaufacturing.ProductionOrder"].CreateValues();
+
+values.StatusString = "Scheduled"; //STRING
+values.GoodQty = 0; //NUMBER
+values.DueDate = DueDate; //DATETIME
+values.ScheduledEndDate = ScheduledEndDate; //DATETIME
+values.ScheduledLineDescription = ScheduledLineDescription; //STRING
+values.ScheduledPlant = ScheduledPlant; //STRING
+values.Priority = Priority; //NUMBER
+values.MaterialID = MaterialID; //STRING
+values.MaterialDescription = MaterialDescription; //STRING
+values.Status = "Status:Scheduled"; //TAGS
+values.ScheduledLine = ScheduledLine; //STRING
+values.ProductionOrder = ProductionOrderIdentifier; //STRING [Primary Key]
+values.ScheduledStartDate = ScheduledStartDdate; //DATETIME
+values.BadQty = 0; //NUMBER
+values.ScheduledPlantDescription = ScheduledPlantDescription; //STRING
+values.RequiredQty = RequiredQuantity; //NUMBER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// result: STRING
+var id = Things["Manufacturing.ProductionOrder"].AddDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateOEE">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//OEE calculation
+result = Math.round(((Availability/100)*(Performance/100)*(Quality/100)) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNRework">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.ReworkOccurrences"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AcmeTractor.ReworkOccurrences)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{ type:"EQ",fieldName:"GoodProduction",value: false},{ type:"Between",fieldName:"timestamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+ 	  source: me.name /* STRING */,
+      oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var reworkEntries = Things["Manufacturing.Production"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: reworkEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get the total count and sum of quantity
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: reworkEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Quantity",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                ReworkReason : record.Reason,
+                TotalRework : aggResult.SUM_Quantity ,
+                NumberOfOccurrences : reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurrences" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalRework" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ProductionOrderHold">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//get the production order record from the datatable
+
+var params = {
+	key: ProductionOrder /* STRING */
+};
+
+// result: INFOTABLE
+var prodOrder = Things["Manufacturing.ProductionOrder"].GetDataTableEntryByKey(params);
+
+//update the production order datatable record
+var values = Things["Manufacturing.ProductionOrder"].CreateValues();
+
+values.StatusString = "Hold"; //STRING
+values.GoodQty = prodOrder[0].GoodQty; //NUMBER
+values.DueDate = prodOrder[0].DueDate; //DATETIME
+values.ScheduledEndDate = prodOrder[0].ScheduledEndDate; //DATETIME
+values.ScheduledLineDescription = prodOrder[0].ScheduledLineDescription; //STRING
+values.ScheduledPlant = prodOrder[0].ScheduledPlant; //STRING
+values.Priority = prodOrder[0].Priority; //NUMBER
+values.MaterialID = prodOrder[0].MaterialID; //STRING
+values.MaterialDescription = prodOrder[0].MaterialDescription; //STRING
+values.Status = "Status:Hold"; //TAGS
+values.ScheduledLine = prodOrder[0].ScheduledLine; //STRING
+values.ProductionOrder = prodOrder[0].ProductionOrder; //STRING [Primary Key]
+values.ScheduledStartDate = prodOrder[0].ScheduledStartDate; //DATETIME
+values.BadQty = prodOrder[0].BadQty; //NUMBER
+values.ScheduledPlantDescription = prodOrder[0].ScheduledPlantDescription; //STRING
+values.RequiredQty = prodOrder[0].RequiredQty; //NUMBER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// no return
+Things["Manufacturing.ProductionOrder"].UpdateDataTableEntry(params);
+
+//set production line properties
+me.CurrentProductionOrder = "";
+me.TotalProductionCurrentPO = 0;
+me.TotalScrapCurrentPO = 0;
+
+//automatically enter utilization event to make machine go to hold
+var params = {
+	ReasonGroup: "Lack of Demand" /* HYPERLINK */,
+	Comment: "Hold Order" /* STRING */,
+	Reason: "Between Orders" /* STRING */
+};
+
+me.AddUtilizationEvent(params);
+
+//enter value in the Order Status Stream
+
+var values = Things["Manufacturing.OrderStatusLog"].CreateValues();
+
+values.User = UserID; //STRING
+values.new_status = "Status:Hold"; //TAGS
+values.production_order = ProductionOrder; //STRING
+values.Shift = me.CurrentShift; //STRING
+values.comment = "Status went to hold on order hold"; //STRING
+values.old_status = prodOrder[0].Status; //TAGS
+
+var params = {
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+};
+
+// no return
+Things["Manufacturing.OrderStatusLog"].AddStreamEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetUtilizationTimeStream">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+  "filters": {
+    "fieldName": "LocalTimestamp",
+    "type": "BETWEEN",
+    "from": StartDate,
+    "to": EndDate
+  }
+};
+
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: undefined /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: undefined /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.UtilizationTime"].QueryStreamEntriesWithData(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ProductionOrderStart">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//get the production order record from the datatable
+
+var params = {
+	key: ProductionOrder /* STRING */
+};
+
+// result: INFOTABLE
+var prodOrder = Things["Manufacturing.ProductionOrder"].GetDataTableEntryByKey(params);
+
+//update the production order datatable record
+var values = Things["Manufacturing.ProductionOrder"].CreateValues();
+
+values.StatusString = "Running"; //STRING
+values.GoodQty = prodOrder[0].GoodQty; //NUMBER
+values.DueDate = prodOrder[0].DueDate; //DATETIME
+values.ScheduledEndDate = prodOrder[0].ScheduledEndDate; //DATETIME
+values.ScheduledLineDescription = prodOrder[0].ScheduledLineDescription; //STRING
+values.ScheduledPlant = prodOrder[0].ScheduledPlant; //STRING
+values.Priority = prodOrder[0].Priority; //NUMBER
+values.MaterialID = prodOrder[0].MaterialID; //STRING
+values.MaterialDescription = prodOrder[0].MaterialDescription; //STRING
+values.Status = "Status:Running"; //TAGS
+values.ScheduledLine = prodOrder[0].ScheduledLine; //STRING
+values.ProductionOrder = prodOrder[0].ProductionOrder; //STRING [Primary Key]
+values.ScheduledStartDate = prodOrder[0].ScheduledStartDate; //DATETIME
+values.BadQty = prodOrder[0].BadQty; //NUMBER
+values.ScheduledPlantDescription = prodOrder[0].ScheduledPlantDescription; //STRING
+values.RequiredQty = prodOrder[0].RequiredQty; //NUMBER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// no return
+Things["Manufacturing.ProductionOrder"].UpdateDataTableEntry(params);
+
+//set production line properties
+me.CurrentProductionOrder = ProductionOrder;
+me.CurrentProductionLotID = "LOT-" + ProductionOrder;
+me.TotalProductionCurrentPO = 0;
+me.TotalScrapCurrentPO = 0;
+
+//automatically enter utilization event to make machine go to running
+var params = {
+	ReasonGroup: "Production Time" /* HYPERLINK */,
+	Comment: "Start Order" /* STRING */,
+	Reason: "Running at Target" /* STRING */
+};
+
+me.AddUtilizationEvent(params);
+
+//enter value in the Order Status Stream
+
+var values = Things["Manufacturing.OrderStatusLog"].CreateValues();
+
+values.User = UserID; //STRING
+values.new_status = "Status:Running"; //TAGS
+values.production_order = ProductionOrder; //STRING
+values.Shift = me.CurrentShift; //STRING
+values.comment = "Status went to running on order start"; //STRING
+values.old_status = "Status:Scheduled"; //TAGS
+
+var params = {
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+};
+
+// no return
+Things["Manufacturing.OrderStatusLog"].AddStreamEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddUtilizationTimeStream">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// tags:TAGS
+var tags = [{"vocabulary":"ProductionOrders","vocabularyTerm":me.CurrentProductionOrder},{"vocabulary":"MESLots","vocabularyTerm":me.CurrentProductionLotID},
+            {"vocabulary":"Shifts","vocabularyTerm":me.CurrentShift}];
+
+// timestamp:DATETIME
+var timestamp = new Date();
+
+// values:INFOTABLE(Datashape: AcmeTractor.UtilizationTimeInformation)
+var values = Things["Manufacturing.UtilizationTime"].CreateValues();
+
+values.MaterialPersonnelShortageTime = me.MaterialPersonnelShortageTime; //NUMBER
+values.LinePerformance = me.LinePerformance; //NUMBER
+values.Uptime = me.UpTime; //NUMBER
+values.LineQuality = me.LineQuality; //NUMBER
+values.DefectLostTime = me.DefectLostTime; //NUMBER
+values.AvailableTimeUtilization = me.AvailableTimeUtilization; //NUMBER
+values.EquipmentDowntime = me.EquipmentDowntime; //NUMBER
+values.OEE = me.OEE; //NUMBER
+values.LocalTimestamp = me.LastUtilizationTimeEvent; //DATETIME
+values.OperationalStandardsIndex = me.OperationStandardsIndex; //NUMBER
+values.MaintenanceTime = me.MaintenanceTime; //NUMBER
+values.ChangeoverTime = me.ChangeoverTime; //NUMBER
+values.QualityDowntime = me.QualityDowntime; //NUMBER
+values.GlobalEfficiency = me.GlobalEfficiency; //NUMBER
+values.OperationLostTime = me.OperationLostTime; //NUMBER
+values.SpeedLostTime = me.SpeedLostTime; //NUMBER
+values.StandardizedProductionTime = me.StandardizedProductionTime; //NUMBER
+values.LineAvailability = me.LineAvailability; //NUMBER
+values.TrueEfficiency = me.TrueEfficiency; //NUMBER
+values.LackOfDemandTime = me.LackOfDemandTime; //NUMBER
+values.NetEfficiency = me.NetEfficiency; //NUMBER
+values.DefectFreeTime = me.DefectFreeTime; //NUMBER
+
+// location:LOCATION
+var location = new Object();
+location.latitude = 0;
+location.longitude = 0;
+location.elevation = 0;
+location.units ="WGS84";
+
+var params = {
+	tags : tags,
+	timestamp : timestamp,
+	source : me.name,
+	values : values,
+	location : location
+};
+
+// AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(AcmeTractor.UtilizationTimeInformation), location:LOCATION):NOTHING
+Things["Manufacturing.UtilizationTime"].AddStreamEntry(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetBOMItems">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// get the rquired data from the BOMMaterail datatable
+
+if(MaterialID != "Empty"){    
+
+var query = new Object();
+    
+  query = {filters: { type : "And", filters:
+          [
+              {fieldName : "MaterialID", type : "EQ", value : MaterialID},
+              {fieldName : "VersionID", type : "EQ", value : VersionID}
+          ]}
+          };
+    
+var params = {
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE
+    var BOMMaterial = Things["Manufacturing.BOMMaterial"].QueryDataTableEntries(params);
+}
+else {
+
+var params = {
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var BOMMaterial = Things["Manufacturing.BOMMaterial"].GetDataTableEntries(params);
+}
+
+// grab the material data
+
+var params = {
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var Material = Things["Manufacturing.Material"].GetDataTableEntries(params);
+
+// join the BOMMaterial and the Material
+
+var params = {
+	t2: Material /* INFOTABLE */,
+	t1: BOMMaterial /* INFOTABLE */,
+	joinColumns2: "MaterialID" /* STRING */,
+	joinColumns1: "BOMMaterialID" /* STRING */,
+	columns2: "MaterialDescription" /* STRING */,
+	columns1: "MaterialID,VersionID,OperationID,BOMMaterialID,Quantity,UnitOfMeasure,Comments" /* STRING */,
+	joinType: "INNER" /* STRING */
+};
+
+// result: INFOTABLE
+var JoinedTable = Resources["InfoTableFunctions"].Intersect(params);
+
+// sort the joined table
+
+var params = {
+	sortColumn: "MaterialDescription" /* STRING */,
+	t: JoinedTable /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="UpdateMaintenanceDataPriority">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var values = Things["Manufacturing.MaintenanceData"].CreateValues();
+
+values.Order = Order; //STRING [Primary Key]
+values.Priority = Priority; //NUMBER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// result: STRING
+var id = Things["Manufacturing.MaintenanceData"].AddOrUpdateDataTableEntry(params);
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetMaterial">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var Material = Things["Manufacturing.Material"].GetDataTableEntries(params);
+
+
+var params = {
+	sortColumn: "MaterialDescription" /* STRING */,
+	t: Material /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNUtilizationReasons">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.DowntimeOccurancesInformation"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{type:"EQ",fieldName:"LineName",value: me.name},{ type:"Between",fieldName:"LocalTimeStamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+        oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var utilEntries = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: utilEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get teh total count and sum of duration
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: utilEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Duration",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                DowntimeReason : record.Reason,
+                TotalDuration : aggResult.SUM_Duration ,
+                NumberOfOccurances :reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurances" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalDuration" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateOSI">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[//Operational Standards Index calculation
+result = Math.round((LoadingTime/PlannedProductionTime) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="QueryMaintenanceData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var values = Things["Manufacturing.MaintenanceData"].CreateValues();
+
+values.Line = me.name; //THINGNAME
+
+var params = {
+	values: values /* INFOTABLE*/,
+};
+
+// result: INFOTABLE
+var MaintData = Things["Manufacturing.MaintenanceData"].QueryDataTableEntries(params);
+
+
+var params = {
+	sortColumn: "Priority" /* STRING */,
+	t: MaintData /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetComponentMaterial">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var query = new Object();
+    
+  query = {filters: { type : "OR", filters:
+          [
+              {fieldName : "MaterialType", type : "EQ", value : "INT"},
+              {fieldName : "MaterialType", type : "EQ", value : "RAW"}
+          ]}
+  };
+    
+var params = {
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE
+var Material = Things["Manufacturing.Material"].QueryDataTableEntries(params);
+
+var params = {
+	sortColumn: "MaterialDescription" /* STRING */,
+	t: Material /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+
+
+
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="QueryDowntimeData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+    filters: {
+                type : "EQ",
+                fieldName : "UtilizationState",
+        value : "ReasonStates:Down"
+            }         
+};
+
+var params = {
+    startDate: StartDate /* DATETIME */,
+    endDate: EndDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+if(result.getRowCount() == 0) {
+    //this means no row was returned with filter so just want to return the active row
+    var query = {
+        filters: {
+                    type: "And",
+                    filters: [{
+                            type: "EQ",
+                            fieldName: "Active",
+                        	value: true
+                        }, {
+                            type: "EQ",
+                            fieldName: "LineName",
+                            value: me.name		
+                        }
+                    ]
+        } 
+    };        
+    var params = {
+        source: me.name /* STRING */,
+        query: query /* QUERY */,
+    };
+    
+    // result: INFOTABLE
+    result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+    
+}
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateLineQuality">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//Line Quality calculation
+result = Math.round((DefectFreeTime/(Uptime - SpeedLosses)) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CalculateTE">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+//TE calculation
+result = Math.round((DefectFreeTime/(UpTime + EquipmentDowntime + QualityDowntime + ChangeoverTime+MaintenanceTime)) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNScrap">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.ScrapOccurrences"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AcmeTractor.ScrapOccurrences)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{ type:"EQ",fieldName:"GoodConsumption",value: false},{ type:"Between",fieldName:"timestamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+ 	source: me.name /* STRING */,
+          oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var scrapEntries = Things["Manufacturing.Consumption"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: scrapEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get the total count and sum of quantity
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: scrapEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Quantity",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                ScrapReason : record.Reason,
+                TotalScrap : aggResult.SUM_Quantity ,
+                NumberOfOccurrences :reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurrences" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalScrap" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="Timer" source="Manufacturing.TimedTask" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="Manufacturing.TimedTask:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[// call automated update service]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-18T15:38:20.190Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T19:54:40.771Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T19:54:48.608Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T19:55:27.762Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T19:56:25.722Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T19:56:53.345Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T20:00:48.799Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T20:01:20.902Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:47:56.516Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:49:16.883Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:51:51.370Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:53:01.673Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:54:59.330Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:56:50.649Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T22:57:36.690Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T23:00:15.646Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T23:00:46.265Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T23:01:23.842Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T23:01:28.319Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-12T23:37:54.804Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:16:10.457Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:19:54.403Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:21:44.276Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:22:51.694Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:24:57.428Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:26:09.361Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:28:28.410Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:29:11.585Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:29:42.578Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:33:13.946Z" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-13T20:33:22.109Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.991Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;services :  : Input parameter machineID Added, Input parameter machineCode Added, GetReasonCode : Inputs updated, InsertUtilizationData : Code Updated, Service Added&#10;" timestamp="2015-10-19T19:34:50.649Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:34:59.873Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Output Updated&#10;" timestamp="2015-10-19T19:36:35.434Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:36:39.552Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Output Updated&#10;" timestamp="2015-10-19T19:37:18.341Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:37:22.094Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T19:43:36.606Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:43:41.231Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T19:53:30.090Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:53:34.661Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T19:56:42.766Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T19:56:52.248Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T20:11:47.714Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T20:11:51.644Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T20:12:24.055Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T20:12:28.539Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-19T21:23:21.870Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T21:27:25.199Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Output Updated&#10;" timestamp="2015-10-19T21:40:34.188Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T21:40:38.243Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-20T18:15:14.534Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Manufacturing.TimedTask:Timer : New subscription, Subscription Added&#10;" timestamp="2015-10-20T18:23:10.100Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
