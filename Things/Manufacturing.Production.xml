@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" effectiveThingPackage="StreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-13T21:20:04.044Z" name="Manufacturing.Production" published="false" tags="Applications:Manufacturing" thingTemplate="Stream" valueStream="">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions resourceName="*">
+                    <PropertyRead>
+                        <Principal isPermitted="true" name="StreamAccess" type="User"/>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal isPermitted="false" name="StreamAccess" type="User"/>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal isPermitted="true" name="StreamAccess" type="User"/>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal isPermitted="false" name="StreamAccess" type="User"/>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal isPermitted="false" name="StreamAccess" type="User"/>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <dataShape><![CDATA[Manufacturing.ProductionInformation]]></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="STRING" description="Service Provider Name" name="serviceProvider" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <serviceProvider/>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateWithStreamID">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DistinctLotsByMaterialID">
+                        <ResultType aspect.dataShape="Manufacturing.LotIDListing" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="UpdateWithStreamID">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: undefined /* DATETIME */,
+	source: undefined /* STRING */,
+	query: undefined /* QUERY */,
+	endDate: undefined /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE dataShape: "undefined"
+var ProdStream = me.QueryStreamEntriesWithData(params);
+
+var tableLength = ProdStream.getRowCount();
+
+for (var x = 0; x < tableLength; x++) {
+	var row = ProdStream.getRow(x);
+	//Your code here
+
+    var values = me.CreateValues();
+
+    values.Comments = row.Comments; //STRING
+    values.ReasonGroup = row.ReasonGroup; //STRING
+    values.Quantity = row.Quantity; //NUMBER
+    values.MaterialDesc = row.MaterialDesc; //STRING
+    values.Shift = row.Shift; //STRING
+    values.LotID = row.LotID; //STRING
+    values.MaterialID = row.MaterialID; //STRING
+    values.timestamp = row.timestamp; //DATETIME
+    values.StreamID = row.id; //NUMBER
+    values.ProductionOrder = row.ProductionOrder; //STRING
+    values.UOM = row.UOM; //STRING
+    values.GoodProduction = row.GoodProduction; //BOOLEAN
+    values.Reason = row.Reason; //STRING
+
+    var params = {
+        tags: row.tags /* TAGS */,
+        values: values /* INFOTABLE*/,
+        source: row.source /* STRING */,
+        location: row.location /* LOCATION */,
+        streamEntryId: row.id /* STRING */
+    };
+
+    me.UpdateStreamEntry(params);
+
+
+
+
+}
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="DistinctLotsByMaterialID">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+    filters: {
+        type : "EQ",
+        fieldName : "MaterialID",
+        value : MaterialID
+    }
+};
+
+var params = {
+	query: query /* QUERY */,
+};
+
+// result: INFOTABLE dataShape: "undefined"
+var lotresult = me.QueryStreamEntriesWithData(params);
+
+
+var params = {
+	t: lotresult /* INFOTABLE */,
+    columns: "LotID" /* STRING */
+};
+
+// result: INFOTABLE
+var distinctresult = Resources["InfoTableFunctions"].Distinct(params);
+
+var params = {
+	sortColumn: "LotID" /* STRING */,
+	t: distinctresult /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:04.044Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
