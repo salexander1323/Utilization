@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Networks>
+        <Network description="" documentationContent="" homeMashup="" lastModifiedDate="2015-10-16T21:18:48.395Z" name="Sean.Network" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <Connections>
+                <Connection connectionType="Contains" from="" to="Sean.PlantA"/>
+                <Connection connectionType="Contains" from="Sean.PlantA" to="Sean.PlantA.Line005"/>
+                <Connection connectionType="Contains" from="Sean.PlantA" to="Sean.PlantA.Line004"/>
+                <Connection connectionType="Contains" from="Sean.PlantA" to="Sean.PlantA.Line003"/>
+                <Connection connectionType="Contains" from="Sean.PlantA" to="Sean.PlantA.Line002"/>
+                <Connection connectionType="Contains" from="Sean.PlantA" to="Sean.PlantA.Line001"/>
+            </Connections>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;" timestamp="2015-10-14T20:23:42.529Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-16T21:18:48.395Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </Network>
+    </Networks>
+</Entities>
