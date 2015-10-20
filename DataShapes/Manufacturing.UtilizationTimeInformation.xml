@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.929Z" name="Manufacturing.UtilizationTimeInformation" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="MaterialPersonnelShortageTime" ordinal="8"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LinePerformance" ordinal="19"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="Uptime" ordinal="2"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LineQuality" ordinal="20"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="DefectLostTime" ordinal="12"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="AvailableTimeUtilization" ordinal="22"/>
+                <FieldDefinition baseType="NUMBER" description="" name="ChangeoverTime" ordinal="22"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="EquipmentDowntime" ordinal="3"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="DATETIME" description="" name="LocalTimestamp" ordinal="1"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OEE" ordinal="16"/>
+                <FieldDefinition baseType="NUMBER" description="" name="MaintenanceTime" ordinal="23"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OperationalStandardsIndex" ordinal="21"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="QualityDowntime" ordinal="4"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="GlobalEfficiency" ordinal="15"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="SpeedLostTime" ordinal="10"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OperationLostTime" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="StandardizedProductionTime" ordinal="11"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="TrueEfficiency" ordinal="14"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LineAvailability" ordinal="18"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LackOfDemandTime" ordinal="6"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="DefectFreeTime" ordinal="13"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="NetEfficiency" ordinal="17"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-12T22:53:57.372Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.929Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
