@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.851Z" name="Manufacturing.ConsumptionInformation" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Comments" ordinal="8"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="Quantity" ordinal="6"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="GoodConsumption" ordinal="11"/>
+                <FieldDefinition baseType="STRING" description="" name="ReasonGroup" ordinal="12"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialDesc" ordinal="10"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="LotID" ordinal="9"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="DATETIME" description="" name="timestamp" ordinal="10"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="ConsumptionLotID" ordinal="7"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="UOM" ordinal="7"/>
+                <FieldDefinition baseType="STRING" description="" name="Reason" ordinal="13"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-12T22:51:17.705Z" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.851Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
