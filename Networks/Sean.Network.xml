@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Networks>
-        <Network description="" documentationContent="" homeMashup="" lastModifiedDate="2015-10-16T21:18:48.395Z" name="Sean.Network" tags="Applications:Manufacturing">
+        <Network description="" documentationContent="" homeMashup="" lastModifiedDate="2015-10-16T21:18:48.395Z" name="Sean.Network" tags="Applications:Manufacturing;Version:1.0.0.0">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
