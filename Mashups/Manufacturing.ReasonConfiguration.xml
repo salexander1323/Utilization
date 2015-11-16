@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="false" aspect.mashupType="page" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:40:04.487Z" name="Manufacturing.ReasonConfiguration" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
-            <Owner name="SeanS" type="User"/>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="page" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-06T21:52:44.680Z" name="Manufacturing.ReasonConfiguration" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
+            <Owner name="JohnRistey" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -18,8 +18,8 @@
             <ConfigurationTables/>
             <ParameterDefinitions/>
             <Things>
-                <Thing>Manufacturing.Reasons</Thing>
                 <Thing>Manufacturing.ReasonGroups</Thing>
+                <Thing>Manufacturing.Reasons</Thing>
             </Things>
             <ThingShapes/>
             <ThingTemplates/>
@@ -1326,6 +1326,11 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T14:51:00.367Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T14:51:07.193Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:40:04.487Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T19:25:34.455Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T18:53:17.644Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T22:24:29.145Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-28T14:59:02.768Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T21:52:44.680Z" user="JohnRistey"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
