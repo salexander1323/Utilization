@@ -31,14 +31,14 @@
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OperationalStandardsIndex" ordinal="21"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="QualityDowntime" ordinal="4"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="GlobalEfficiency" ordinal="15"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="SpeedLostTime" ordinal="10"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OperationLostTime" ordinal="9"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="StandardizedProductionTime" ordinal="11"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="TrueEfficiency" ordinal="14"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LineAvailability" ordinal="18"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="OperationLostTime" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="SpeedLostTime" ordinal="10"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LackOfDemandTime" ordinal="6"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="DefectFreeTime" ordinal="13"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="LineAvailability" ordinal="18"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="TrueEfficiency" ordinal="14"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="NetEfficiency" ordinal="17"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="NUMBER" description="" name="DefectFreeTime" ordinal="13"/>
             </FieldDefinitions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-12T22:53:57.372Z" user="Administrator"/>
