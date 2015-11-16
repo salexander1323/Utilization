@@ -20,8 +20,8 @@
                 <FieldDefinition baseType="STRING" description="" name="Machine" ordinal="4"/>
                 <FieldDefinition baseType="DATETIME" description="" name="Date" ordinal="5"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="Order" ordinal="1"/>
-                <FieldDefinition baseType="STRING" description="" name="ShortText" ordinal="6"/>
                 <FieldDefinition baseType="THINGNAME" description="" name="Line" ordinal="3"/>
+                <FieldDefinition baseType="STRING" description="" name="ShortText" ordinal="6"/>
                 <FieldDefinition baseType="NUMBER" description="" name="Priority" ordinal="2"/>
             </FieldDefinitions>
             <ConfigurationChanges>
