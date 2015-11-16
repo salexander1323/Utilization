@@ -20,8 +20,8 @@
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="OperationID" ordinal="3"/>
                 <FieldDefinition baseType="STRING" description="" name="Comments" ordinal="7"/>
                 <FieldDefinition baseType="NUMBER" description="" name="Quantity" ordinal="5"/>
-                <FieldDefinition baseType="NUMBER" description="" name="QuantityNeeded" ordinal="8"/>
                 <FieldDefinition baseType="STRING" description="" name="UnitOfMeasure" ordinal="6"/>
+                <FieldDefinition baseType="NUMBER" description="" name="QuantityNeeded" ordinal="8"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="VersionID" ordinal="2"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="BOMMaterialID" ordinal="4"/>
                 <FieldDefinition aspect.defaultValue="true" baseType="BOOLEAN" description="" name="ComponentsOrdered" ordinal="9"/>
