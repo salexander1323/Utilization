@@ -66,11 +66,11 @@ me.InsertUtilizationData(params);
             <ThingProperties>
                 <MaterialPersonnelShortageTime>0.0</MaterialPersonnelShortageTime>
                 <DefaultReworkReason/>
-                <CurrentUtilTimeClassification><![CDATA[TimeClassifications:Equipment Failures]]></CurrentUtilTimeClassification>
+                <CurrentUtilTimeClassification><![CDATA[TimeClassifications:Monitored Production Time]]></CurrentUtilTimeClassification>
                 <ShiftChangeOverTime>0.0</ShiftChangeOverTime>
                 <UpTime>0.0</UpTime>
                 <ShiftMinutesCompleted>0.0</ShiftMinutesCompleted>
-                <LastUtilizationTimeEvent>2015-10-14T20:23:06.946Z</LastUtilizationTimeEvent>
+                <LastUtilizationTimeEvent>2015-11-11T21:04:54.100Z</LastUtilizationTimeEvent>
                 <StandardizedProductionTime>0.0</StandardizedProductionTime>
                 <LineBlog/>
                 <CurrentShift/>
@@ -78,9 +78,9 @@ me.InsertUtilizationData(params);
                 <LinePerformance>0.0</LinePerformance>
                 <ShiftUptime>0.0</ShiftUptime>
                 <DefaultProductionReason/>
-                <CurrentUtilReason><![CDATA[Blah 101]]></CurrentUtilReason>
+                <CurrentUtilReason><![CDATA[Blah 102]]></CurrentUtilReason>
                 <TotalProductionCurrentPO>0.0</TotalProductionCurrentPO>
-                <MachineCode><![CDATA[101]]></MachineCode>
+                <MachineCode><![CDATA[102]]></MachineCode>
                 <CurrentProductionOrder/>
                 <DefaultReworkReasonGroup/>
                 <GlobalEfficiency>0.0</GlobalEfficiency>
@@ -99,7 +99,7 @@ me.InsertUtilizationData(params);
                 <FirstPassYield>0.0</FirstPassYield>
                 <DefaultScrapReasonCode/>
                 <ShiftEquipmentDowntime>0.0</ShiftEquipmentDowntime>
-                <CurrentUtilState><![CDATA[ReasonStates:Down]]></CurrentUtilState>
+                <CurrentUtilState><![CDATA[ReasonStates:Production]]></CurrentUtilState>
                 <MachineID><![CDATA[001]]></MachineID>
                 <DefaultProductionReasonGroup/>
                 <AvailableTimeUtilization>0.0</AvailableTimeUtilization>
