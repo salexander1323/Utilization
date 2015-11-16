@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-14T20:22:19.702Z" name="Manufacturing.Plant" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
-            <Owner name="SeanS" type="User"/>
+        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-11-12T00:09:40.582Z" name="Manufacturing.Plant" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
+            <Owner name="JohnRistey" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -689,7 +689,7 @@ if(BusinessUnit == undefined) {
                     </ServiceImplementation>
                 </ServiceImplementations>
                 <Subscriptions>
-                    <Subscription enabled="true" eventName="Timer" source="OneMinTimer" sourceProperty="">
+                    <Subscription enabled="false" eventName="Timer" source="OneMinTimer" sourceProperty="">
                         <ServiceImplementation description="" handlerName="Script" name="OneMinTimer:Timer">
                             <ConfigurationTables>
                                 <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
@@ -710,7 +710,7 @@ me.GetLatestWeather();
                             </ConfigurationTables>
                         </ServiceImplementation>
                     </Subscription>
-                    <Subscription enabled="true" eventName="Timer" source="OneHourTimer" sourceProperty="">
+                    <Subscription enabled="false" eventName="Timer" source="OneHourTimer" sourceProperty="">
                         <ServiceImplementation description="" handlerName="Script" name="OneHourTimer:Timer">
                             <ConfigurationTables>
                                 <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
@@ -750,6 +750,7 @@ me.AddOEEStream();
             </InstanceVisibilityPermissions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-14T20:22:19.702Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : OneMinTimer:Timer : Disabled, OneHourTimer:Timer : Disabled&#10;" timestamp="2015-11-12T00:09:40.582Z" user="JohnRistey"/>
             </ConfigurationChanges>
         </ThingTemplate>
     </ThingTemplates>
