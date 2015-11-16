@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;" homeMashup="" lastModifiedDate="2015-11-12T19:44:37.409Z" name="ToolTrackingDS" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="NUMBER" description="" name="EstToolLife" ordinal="5"/>
+                <FieldDefinition baseType="NUMBER" description="" name="LastSpindleLoad" ordinal="4"/>
+                <FieldDefinition baseType="NUMBER" description="" name="TimeInCut" ordinal="2"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="INTEGER" description="" name="ToolNo" ordinal="1"/>
+                <FieldDefinition baseType="DATETIME" description="" name="LastChange" ordinal="3"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;fields : ToolNo : Added, TimeInCut : Added, LastChange : Added, LastSpindleLoad : Added&#10;" timestamp="2015-11-12T17:25:41.572Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : EstToolLife : Added&#10;" timestamp="2015-11-12T19:44:37.409Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
