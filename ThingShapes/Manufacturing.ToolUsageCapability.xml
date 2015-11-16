@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingShapes>
+        <ThingShape className="" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-13T18:17:12.365Z" name="Manufacturing.ToolUsageCapability" tags="Applications:Manufacturing">
+            <PropertyDefinitions/>
+            <ServiceDefinitions>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetAllToolUsageForAsset">
+                    <ResultType aspect.dataShape="ToolTrackingDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions/>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetCurrentToolActivity">
+                    <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                        <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ReplaceTool">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="INTEGER" description="" name="ToolNo" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SortToolUsageByDurationDesc">
+                    <ResultType aspect.dataShape="ToolTrackingDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition aspect.dataShape="ToolTrackingDS" baseType="INFOTABLE" description="" name="AllToolUsage" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AggregateNonZeroSpindleLoadsByTool">
+                    <ResultType aspect.dataShape="AverageSpindleLoadByTool" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="UtilizationData" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SetToolToBeTracked">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="INTEGER" description="" name="ToolToBeTracked" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetDashboardToolData">
+                    <ResultType aspect.dataShape="DashboardToolData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions/>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetAllToolActivityForAsset">
+                    <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                        <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SortCurrentToolActivityDataByTimeAsc">
+                    <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="CurrentToolActivityData" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetCurrentToolUsage">
+                    <ResultType aspect.dataShape="ToolTrackingDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions/>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetToolActivity">
+                    <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
+                        <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                        <FieldDefinition baseType="INTEGER" description="" name="ToolNo" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateEstToolLife">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="NUMBER" description="" name="EstToolLife" ordinal="2"/>
+                        <FieldDefinition baseType="INTEGER" description="" name="ToolNo" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="RemoveZeroSpindleLoadRecords">
+                    <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="UtilizationData" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions>
+                <EventDefinition category="" dataShape="Manufacturing.ToolActivityDS" description="" name="CuttingEnded"/>
+                <EventDefinition category="" dataShape="Manufacturing.ToolActivityDS" description="" name="CuttingStarted"/>
+            </EventDefinitions>
+            <ServiceMappings/>
+            <ServiceImplementations>
+                <ServiceImplementation description="" handlerName="Script" name="GetCurrentToolActivity">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[// retrieve utilization records that are completed, tool in spindle matches current tool, tools calcs have been performed, and it is a cutting operation 
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "ToolInSpindle",
+        "type": "EQ",
+        "value": me.ToolInSpindle
+      },
+      {
+        "fieldName": "Reason",
+        "type": "EQ",
+        "value": "Machine powered on, Tool Movement, Cutting"
+      },
+      {
+        "fieldName": "Active",
+        "type": "EQ",
+        "value": false
+      },
+      {
+        "fieldName": "ToolCalcsComplete",
+        "type": "EQ",
+        "value": true
+      }
+    ]
+  }
+};
+
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="GetAllToolUsageForAsset">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var values = Things["ToolTracking"].CreateValues();
+
+var params = {
+	tags: undefined /* TAGS */,
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+	query: undefined /* QUERY */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["ToolTracking"].QueryDataTableEntries(params);
+
+var tableLength = result.rows.length;
+
+for (var x = 0; x < tableLength; x++) {
+	var row = result.rows[x];
+	
+    // convert duration to minutes
+    row.TimeInCut = row.TimeInCut / 60;
+    row.EstToolLife = row.EstToolLife / 60;
+}
+
+// Sort the records by tool
+var params = {
+	sortColumn: "ToolNo" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="ReplaceTool">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[// timestamp:DATETIME
+var timestamp = new Date();
+
+var values = Things["ToolTracking"].CreateValues();
+
+values.LastSpindleLoad = 0; //NUMBER
+values.TimeInCut = 0; //NUMBER
+values.ToolNo = ToolNo; //INTEGER [Primary Key]
+values.LastChange = timestamp; //DATETIME
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// no return
+Things["ToolTracking"].UpdateDataTableEntry(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="SortToolUsageByDurationDesc">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var params = {
+	sortColumn: "TimeInCut" /* STRING */,
+	t: AllToolUsage /* INFOTABLE */,
+	ascending: false /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="SetToolToBeTracked">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[me.SelectedToolToTrack = ToolToBeTracked;]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="AggregateNonZeroSpindleLoadsByTool">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var query = {
+  "filters": {
+    "fieldName": "AverageSpindleLoad",
+    "type": "GT",
+    "value": 0
+  }
+};
+
+var params = {
+	t: UtilizationData /* INFOTABLE */,
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var NonZeroSpindleLoadData = Resources["InfoTableFunctions"].Query(params);
+
+
+var params = {
+	t: NonZeroSpindleLoadData /* INFOTABLE */,
+	columns: "AverageSpindleLoad" /* STRING */,
+	aggregates: "AVERAGE" /* STRING */,
+	groupByColumns: "ToolInSpindle" /* STRING */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Aggregate(params);
+
+
+var params = {
+	sortColumn: "AVERAGE_AverageSpindleLoad" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: false /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="GetDashboardToolData">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "DashboardToolData"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(DashboardToolData)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+var NewRow = {};
+
+NewRow.ToolTracked = "T" + me.SelectedToolToTrack;
+
+// get time in cut for tool being tracked
+var values = Things["ToolTracking"].CreateValues();
+
+values.ToolNo = me.SelectedToolToTrack; //INTEGER [Primary Key]
+
+var params = {
+	tags: undefined /* TAGS */,
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+	query: undefined /* QUERY */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var SelectedToolData = Things["ToolTracking"].QueryDataTableEntries(params);
+
+var tableLength = SelectedToolData.rows.length;
+
+if (tableLength > 0){
+    NewRow.TimeInCut = (SelectedToolData.rows[0].TimeInCut)/60;
+    if (SelectedToolData.rows[0].EstToolLife > 0){
+        NewRow.ToolLifePercent = SelectedToolData.rows[0].TimeInCut / SelectedToolData.rows[0].EstToolLife;
+    }
+    else{
+        NewRow.ToolLifePercent = 0;
+    }
+}
+else{
+    NewRow.TimeInCut = 0;
+    NewRow.ToolLifePercent = 0;
+}
+
+// get data for last tool changed
+var params = {
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var ToolUsageRecords = Things["ToolTracking"].GetDataTableEntries(params);
+
+var params = {
+	sortColumn: "LastChange" /* STRING */,
+	t: ToolUsageRecords /* INFOTABLE */,
+	ascending: false /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var ToolUsageRecords = Resources["InfoTableFunctions"].Sort(params);
+
+var tableLength = ToolUsageRecords.rows.length;
+
+if (tableLength > 0){
+    NewRow.LastToolChangeDate = ToolUsageRecords.rows[0].LastChange;
+	NewRow.LastToolChanged = "T" +  ToolUsageRecords.rows[0].ToolNo;
+}
+
+result.AddRow(NewRow);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="GetAllToolActivityForAsset">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[// retrieve utilization records that are completed, tools calcs have been performed, and it is a cutting operation 
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "Reason",
+        "type": "EQ",
+        "value": "Machine powered on, Tool Movement, Cutting"
+      },
+      {
+        "fieldName": "Active",
+        "type": "EQ",
+        "value": false
+      },
+      {
+        "fieldName": "ToolCalcsComplete",
+        "type": "EQ",
+        "value": true
+      }
+    ]
+  }
+};
+
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="GetCurrentToolUsage">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var values = Things["ToolTracking"].CreateValues();
+
+values.ToolNo = me.ToolInSpindle; //INTEGER [Primary Key]
+
+var params = {
+	tags: undefined /* TAGS */,
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+	query: undefined /* QUERY */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["ToolTracking"].QueryDataTableEntries(params);
+
+var tableLength = result.rows.length;
+
+for (var x = 0; x < tableLength; x++) {
+	var row = result.rows[x];
+	
+    // convert duration to minutes
+    row.TimeInCut = row.TimeInCut / 60;
+    row.EstToolLife = row.EstToolLife / 60;
+}]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="SortCurrentToolActivityDataByTimeAsc">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var params = {
+	sortColumn: "timestamp" /* STRING */,
+	t: CurrentToolActivityData /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="GetToolActivity">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[// retrieve utilization records that are completed, tool in spindle = parameter, tools calcs have been performed, and it is a cutting operation 
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "ToolInSpindle",
+        "type": "EQ",
+        "value": ToolNo
+      },
+      {
+        "fieldName": "Reason",
+        "type": "EQ",
+        "value": "Machine powered on, Tool Movement, Cutting"
+      },
+      {
+        "fieldName": "Active",
+        "type": "EQ",
+        "value": false
+      },
+      {
+        "fieldName": "ToolCalcsComplete",
+        "type": "EQ",
+        "value": true
+      }
+    ]
+  }
+};
+
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: StartDate /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="UpdateEstToolLife">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var values = Things["ToolTracking"].CreateValues();
+
+values.EstToolLife = (EstToolLife * 60); //NUMBER
+values.ToolNo = ToolNo; //INTEGER [Primary Key]
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: me.name /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// no return
+Things["ToolTracking"].UpdateDataTableEntry(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="RemoveZeroSpindleLoadRecords">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var query = {
+  "filters": {
+    "fieldName": "AverageSpindleLoad",
+    "type": "GT",
+    "value": 0
+  }
+};
+
+var params = {
+	t: UtilizationData /* INFOTABLE */,
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Query(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions/>
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-23T17:19:14.552Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;properties : ToolNo : Added, ToolChangeTime : Added, SpindleLoad : Added&#10;services :  : Input parameter NewToolNo Added, UpdateToolChange : Inputs updated, Code Updated, UpdateToolActivity : Output Updated, Service Added&#10;" timestamp="2015-10-23T17:47:12.162Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated,  : Input parameter Duration Added, Input parameter SpindleAvg Added, Input parameter CurrentDate Added, Input parameter NewToolNo Added, UpdateToolUsage : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-10-23T18:03:26.431Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated&#10;" timestamp="2015-10-23T18:05:11.403Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter ToolNo Added, ReplaceTool : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-10-23T18:12:45.785Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineCode : Added, Updated, removed, MemoryMode : Added, removed, PowerOn : Added, removed, MachineModeTag : Added, MemoryModeTag : Added, Updated&#10;" timestamp="2015-10-26T14:06:33.850Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Input parameter OldToolNo Added, Inputs updated, Code Updated, UpdateToolUsage : Input parameter OldToolNo Added, Inputs updated, Code Updated&#10;" timestamp="2015-10-26T14:10:36.618Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolActivity : Code Updated, GetCurrentToolActivity : Service Added, Output Updated, GetCurrentToolUsage : Code Updated, Output Updated, Service Added&#10;" timestamp="2015-10-26T14:16:05.355Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsageForAsset : Code Updated, Service Added&#10;" timestamp="2015-10-26T14:17:05.891Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivityForAsset : Code Updated, GetAllToolActivityForAsset : Service Added, GetAllToolUsageForAsset : Code Updated, Service Added, GetCurrentToolUsageForAsset : removed&#10;" timestamp="2015-10-26T14:18:37.049Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated&#10;" timestamp="2015-10-26T14:21:48.962Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:22:27.783Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated, Output Updated&#10;" timestamp="2015-10-26T14:25:04.918Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:26:04.004Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:26:50.087Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:27:41.430Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Code Updated&#10;" timestamp="2015-10-26T14:28:47.019Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:33:50.994Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Output Updated, GetCurrentToolActivity : Code Updated, GetAllToolUsageForAsset : Code Updated, Output Updated, GetCurrentToolUsage : Code Updated, UpdateToolActivity : Code Updated, UpdateToolUsage : Code Updated&#10;" timestamp="2015-10-26T14:35:51.206Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated&#10;" timestamp="2015-10-26T14:36:37.414Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:37:23.089Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Output Updated&#10;" timestamp="2015-10-26T14:38:35.899Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:39:43.724Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:41:29.031Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:45:53.448Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T14:47:44.130Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Code Updated&#10;" timestamp="2015-10-26T14:50:50.080Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Code Updated&#10;" timestamp="2015-10-26T15:25:11.782Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T15:28:50.177Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineModeTag : removed, MemoryModeTag : removed&#10;" timestamp="2015-10-26T15:29:04.279Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Code Updated&#10;" timestamp="2015-10-26T15:42:21.429Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated&#10;" timestamp="2015-10-26T17:06:54.920Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:07:02.322Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Input parameter StartDate Added, Inputs updated, Input parameter EndDate Added, Code Updated&#10;" timestamp="2015-10-26T17:24:59.077Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:25:16.444Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:25:34.191Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-10-26T17:44:52.886Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:46:48.041Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:49:45.205Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:57:45.286Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T17:59:52.302Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T20:08:00.180Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-10-26T20:10:13.470Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter StartDate Added, Input parameter EndDate Added, Input parameter ToolNo Added, GetToolActivity : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-10-26T20:16:33.655Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Input parameter StartDate Added, Inputs updated, Input parameter EndDate Added, Code Updated&#10;" timestamp="2015-10-26T20:22:31.915Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated, Service Added, StopCutting : Code Updated, Service Added&#10;" timestamp="2015-10-27T12:59:10.290Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Code Updated&#10;" timestamp="2015-10-27T13:01:48.269Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-10-27T13:03:14.406Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Code Updated&#10;" timestamp="2015-10-27T13:08:26.446Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, ToolNo.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-10-27T13:09:05.722Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T13:10:20.463Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T13:11:58.312Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolActivity : Output Updated&#10;" timestamp="2015-10-27T13:15:38.326Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolUsageForAsset : Code Updated&#10;" timestamp="2015-10-27T14:36:14.053Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:36:35.728Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolUsageForAsset : Code Updated&#10;" timestamp="2015-10-27T14:37:16.919Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : ReplaceTool : Code Updated&#10;" timestamp="2015-10-27T14:50:24.339Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:50:51.162Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-05T15:12:06.861Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated, StartCutting : Code Updated&#10;" timestamp="2015-11-05T15:20:15.793Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-05T15:28:55.729Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ActiveProgramNumber : Added, removed, MainProgramNumber : Added, removed&#10;" timestamp="2015-11-05T18:02:09.749Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-05T18:27:49.490Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-05T19:16:33.070Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Input parameter activeProgramNumber Added, Inputs updated, Code Updated, Input parameter activeProgramNumber Updated&#10;" timestamp="2015-11-05T22:37:11.022Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated, Input parameter activeProgramNumber Updated, Inputs updated&#10;" timestamp="2015-11-06T20:08:27.518Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T20:08:30.783Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolChangeTime : removed&#10;" timestamp="2015-11-06T20:21:11.798Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SpindleLoad : removed&#10;" timestamp="2015-11-06T20:22:37.204Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : removed&#10;services : GetCurrentToolActivity : Code Updated&#10;subscriptions : ToolNo.DataChange : removed&#10;" timestamp="2015-11-06T20:41:21.507Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-10T13:52:05.838Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated, TestQuerySpindleLoad : Code Updated, Output Updated, Service Added&#10;" timestamp="2015-11-10T14:10:11.842Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestQuerySpindleLoad : Code Updated&#10;" timestamp="2015-11-10T14:12:24.933Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated&#10;" timestamp="2015-11-10T14:21:56.200Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-10T14:53:47.654Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestQuerySpindleLoad : removed, StartCutting : Code Updated&#10;" timestamp="2015-11-10T14:57:08.894Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Input parameter OldToolNo Updated, Inputs updated, Code Updated&#10;" timestamp="2015-11-10T15:09:29.156Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolActivity : Input parameter NewToolNo Updated, Inputs updated, Input parameter OldToolNo Updated&#10;" timestamp="2015-11-10T15:12:31.129Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : ReplaceTool : Input parameter ToolNo Updated, Inputs updated&#10;" timestamp="2015-11-10T15:12:47.092Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:13:35.725Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolActivity : Input parameter ToolNo Updated, Inputs updated, Code Updated&#10;" timestamp="2015-11-10T15:16:09.897Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated&#10;" timestamp="2015-11-10T15:18:12.382Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-11-10T15:18:55.288Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:19:30.946Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:19:49.369Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-10T15:26:51.937Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:27:26.946Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated&#10;" timestamp="2015-11-10T15:37:26.433Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated&#10;" timestamp="2015-11-10T17:22:16.092Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Code Updated, Input parameter StartTime Added, Input parameter EndTime Added, Test : Inputs updated, Output Updated, Service Added&#10;" timestamp="2015-11-10T18:01:44.477Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-10T18:02:38.850Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Code Updated&#10;" timestamp="2015-11-10T18:07:15.258Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Output Updated, Code Updated&#10;" timestamp="2015-11-10T18:10:59.423Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated, Test : removed&#10;" timestamp="2015-11-10T20:36:51.761Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-11-10T22:08:21.366Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Code Updated&#10;" timestamp="2015-11-10T22:10:02.804Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-11-10T22:19:43.053Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T22:21:48.562Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Code Updated&#10;" timestamp="2015-11-10T22:22:21.343Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Output Updated, Input parameter AllToolUsage Added, Inputs updated, Code Updated, SortToolActivtyDataByDurationDesc : Service Added&#10;" timestamp="2015-11-10T22:38:07.709Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : SortToolUsageByDurationDesc : Code Updated, Inputs updated, Output Updated, Service Added,  : Input parameter AllToolUsage Added&#10;" timestamp="2015-11-10T22:40:53.248Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : SortToolActivtyDataByDurationDesc : removed&#10;" timestamp="2015-11-10T22:41:00.915Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : SortToolUsageByDurationDesc : Code Updated&#10;" timestamp="2015-11-10T22:46:41.353Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter CurrentToolActivityData Added, SortCurrentToolActivityDataByTimeAsc : Inputs updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2015-11-10T23:45:26.173Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Input parameter ToolInSpindle Added, Inputs updated, Code Updated, Input parameter EventTime Added, UpdateToolUsage : Code Updated, Input parameter ToolInSpindle Updated, Inputs updated&#10;" timestamp="2015-11-11T01:18:51.159Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-11T01:21:58.657Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateToolUsage : Code Updated&#10;" timestamp="2015-11-11T01:29:11.743Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Input parameter ToolInSpindle Added, Inputs updated, Input parameter EventTime Added&#10;" timestamp="2015-11-11T01:31:52.844Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-11T01:34:11.018Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : Code Updated&#10;" timestamp="2015-11-11T01:36:52.843Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StopCutting : Input parameter ToolInSpindle Updated, Inputs updated, Code Updated&#10;" timestamp="2015-11-11T01:54:41.024Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T01:55:26.402Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated, Output Updated&#10;" timestamp="2015-11-13T12:06:29.780Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated&#10;" timestamp="2015-11-13T12:10:50.214Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolUsageForAsset : Code Updated, Output Updated&#10;" timestamp="2015-11-13T12:11:41.994Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolUsageForAsset : Code Updated&#10;" timestamp="2015-11-13T12:18:44.690Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolUsageForAsset : Code Updated&#10;" timestamp="2015-11-13T12:22:20.506Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolUsage : Code Updated&#10;" timestamp="2015-11-13T12:24:54.282Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated, Output Updated&#10;" timestamp="2015-11-13T12:41:07.447Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-11-13T12:45:28.252Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Code Updated, Output Updated&#10;" timestamp="2015-11-13T12:51:23.178Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolActivity : Code Updated, Output Updated&#10;" timestamp="2015-11-13T12:56:53.679Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCurrentToolActivity : Code Updated&#10;" timestamp="2015-11-13T12:57:17.678Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllToolActivityForAsset : Code Updated&#10;" timestamp="2015-11-13T12:57:59.052Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T12:58:02.058Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : ReplaceTool : Code Updated&#10;" timestamp="2015-11-13T13:07:50.281Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateEstToolLife : Code Updated, Inputs updated, Service Added,  : Input parameter ToolNo Added, Input parameter EstToolLife Added&#10;" timestamp="2015-11-13T13:10:16.776Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : SortCurrentToolActivityDataByTimeAsc : Output Updated, Input parameter CurrentToolActivityData Updated, Inputs updated, Code Updated&#10;" timestamp="2015-11-13T13:11:33.942Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : SortToolUsageByDurationDesc : Input parameter AllToolUsage Updated, Inputs updated, Output Updated, Code Updated&#10;" timestamp="2015-11-13T13:12:27.826Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : StartCutting : removed, StopCutting : removed, UpdateToolActivity : removed, UpdateToolUsage : removed&#10;" timestamp="2015-11-13T13:13:31.668Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter ToolToBeTracked Added, SetToolToBeTracked : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-11-13T14:14:39.378Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateEstToolLife : Code Updated&#10;" timestamp="2015-11-13T15:05:48.659Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Output Updated, Code Updated, Service Added&#10;" timestamp="2015-11-13T15:17:41.345Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:18:23.941Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:31:10.101Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:31:40.753Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:33:04.010Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:35:15.025Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:36:10.062Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetDashboardToolData : Code Updated&#10;" timestamp="2015-11-13T15:42:30.508Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter UtilizationData Added, RemoveZeroSpindleLoadRecords : Inputs updated, Code Updated, Output Updated, Service Added&#10;" timestamp="2015-11-13T17:24:38.449Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Code Updated, Input parameter UtilizationData Added, AggregateNonZeroSpindleLoadsByTool : Inputs updated, Output Updated, Service Added&#10;" timestamp="2015-11-13T17:57:21.218Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AggregateNonZeroSpindleLoadsByTool : Code Updated&#10;" timestamp="2015-11-13T18:17:12.365Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+        </ThingShape>
+    </ThingShapes>
+</Entities>
