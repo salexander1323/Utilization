@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="MailThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-05T21:47:58.246Z" name="EmailThing" published="false" tags="Applications:Manufacturing" thingTemplate="MailServer" valueStream="">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Mail Server Connection Parameters" isMultiRow="false" name="ConnectionInfo" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="80.0" aspect.friendlyName="SMTP Server Port" baseType="NUMBER" description="SMTP server port" name="smtpPort" ordinal="1"/>
+                            <FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Use TLS" baseType="BOOLEAN" description="Use transport layer security" name="useTLS" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Use SSL" baseType="BOOLEAN" description="Use an SSL connection" name="useSSL" ordinal="5"/>
+                            <FieldDefinition aspect.defaultValue="110.0" aspect.friendlyName="POP3 Server Port" baseType="NUMBER" description="POP3 server port" name="pop3Port" ordinal="3"/>
+                            <FieldDefinition aspect.defaultValue="account@domain.com" aspect.friendlyName="Mail Account User" baseType="STRING" description="Mail account user id" name="accountId" ordinal="6"/>
+                            <FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Connection Timeout" baseType="NUMBER" description="Timeout (milliseconds) to establish a connection" name="connectionTimeout" ordinal="8"/>
+                            <FieldDefinition aspect.defaultValue="smtp.domain.com" aspect.friendlyName="SMTP Server" baseType="STRING" description="SMTP server name" name="smtpServer" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.friendlyName="Socks Host" baseType="STRING" description="Specifies the host name of a SOCKS5 proxy server that will be used for connections to the mail server" name="socksHost" ordinal="10"/>
+                            <FieldDefinition aspect.defaultValue="1080.0" aspect.friendlyName="Socks Port" baseType="NUMBER" description="Specifies the port number for the SOCKS5 proxy server" name="socksPort" ordinal="11"/>
+                            <FieldDefinition aspect.defaultValue="pop3.domain.com" aspect.friendlyName="POP3 Server" baseType="STRING" description="POP3 server name" name="pop3Server" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Operation Timeout" baseType="NUMBER" description="Timeout (milliseconds) to perform an operation" name="operationTimeout" ordinal="9"/>
+                            <FieldDefinition aspect.friendlyName="Mail Account Password" baseType="PASSWORD" description="Mail account password" name="accountPassword" ordinal="7"/>
+                            <FieldDefinition aspect.defaultValue="SystemRepository" aspect.friendlyName="Attachment File Repository" baseType="THINGNAME" description="File Repository for recieved attachments" name="fileRepository" ordinal="12"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <smtpPort>465.0</smtpPort>
+                            <useTLS>true</useTLS>
+                            <useSSL>true</useSSL>
+                            <pop3Port>995.0</pop3Port>
+                            <accountId><![CDATA[thingworx350@yahoo.com]]></accountId>
+                            <connectionTimeout>30000.0</connectionTimeout>
+                            <smtpServer><![CDATA[smtp.mail.yahoo.com]]></smtpServer>
+                            <socksHost/>
+                            <socksPort>1080.0</socksPort>
+                            <pop3Server><![CDATA[pop.mail.yahoo.com]]></pop3Server>
+                            <operationTimeout>30000.0</operationTimeout>
+                            <accountPassword><![CDATA[2OR6xsXbsNGxnflycMlj3g==]]></accountPassword>
+                            <fileRepository><![CDATA[SystemRepository]]></fileRepository>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-05T21:25:47.252Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-11-05T21:44:45.676Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-11-05T21:47:58.246Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
