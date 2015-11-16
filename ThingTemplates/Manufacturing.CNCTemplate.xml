@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="Manufacturing.ProductionLine" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-11-13T14:14:45.456Z" name="Manufacturing.CNCTemplate" tags="Applications:Manufacturing" thingPackage="" valueStream="HoneywellValueStream">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="FeedHold"/>
+                <AlertDefinitions name="CoolantAlarm"/>
+                <AlertDefinitions name="PowerOnKepware"/>
+                <AlertDefinitions name="OEECritical"/>
+                <AlertDefinitions name="CoolantWarning"/>
+                <AlertDefinitions name="ToolChangeTime"/>
+                <AlertDefinitions name="RapidMove"/>
+                <AlertDefinitions name="SequenceNumber"/>
+                <AlertDefinitions name="ManualReference"/>
+                <AlertDefinitions name="FeedMove"/>
+                <AlertDefinitions name="PowerOn"/>
+                <AlertDefinitions name="MemoryMode"/>
+                <AlertDefinitions name="MDIManualProgram"/>
+                <AlertDefinitions name="MainProgramNumber"/>
+                <AlertDefinitions name="CoolantCritical"/>
+                <AlertDefinitions name="NextTool"/>
+                <AlertDefinitions name="MachineID"/>
+                <AlertDefinitions name="SpindleLoad"/>
+                <AlertDefinitions name="SelectedToolToTrack"/>
+                <AlertDefinitions name="CycleStart"/>
+                <AlertDefinitions name="ManualJogMode"/>
+                <AlertDefinitions name="AutomaticMode"/>
+                <AlertDefinitions name="CoolantPercent"/>
+                <AlertDefinitions name="ManualHandle"/>
+                <AlertDefinitions name="ActiveProgramNumber"/>
+                <AlertDefinitions name="OEEWarning"/>
+                <AlertDefinitions name="MachineCode"/>
+                <AlertDefinitions name="EditMode"/>
+                <AlertDefinitions name="ATCActive"/>
+                <AlertDefinitions name="ToolInSpindle"/>
+                <AlertDefinitions name="IncrementalJog"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="FeedHold" ordinal="9"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="CoolantAlarm" ordinal="25"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="PowerOnKepware" ordinal="30"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OEECritical" ordinal="29"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="CoolantWarning" ordinal="26"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="DATETIME" category="" description="" isLocalOnly="false" name="ToolChangeTime" ordinal="21"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="RapidMove" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="SequenceNumber" ordinal="29"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="ManualReference" ordinal="13"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="FeedMove" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="PowerOn" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="MemoryMode" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="MDIManualProgram" ordinal="12"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="MainProgramNumber" ordinal="16"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="CoolantCritical" ordinal="27"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="NextTool" ordinal="24"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="MachineID" ordinal="1"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="SpindleLoad" ordinal="22"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="SelectedToolToTrack" ordinal="31"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="CycleStart" ordinal="20"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="ManualJogMode" ordinal="15"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="AutomaticMode" ordinal="7"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="CoolantPercent" ordinal="8"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="ManualHandle" ordinal="14"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="ActiveProgramNumber" ordinal="20"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="NUMBER" category="" description="" isLocalOnly="false" name="OEEWarning" ordinal="29"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="MachineCode" ordinal="21"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="EditMode" ordinal="10"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="ATCActive" ordinal="18"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="ToolInSpindle" ordinal="20"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="IncrementalJog" ordinal="17"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetCoolantHistory">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="PerformToolCalcs">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="InsertMachineUtilizationData">
+                        <ResultType baseType="STRING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="machineId" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetAverageSpindleLoad">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="MachiningStart" ordinal="1"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="MachiningDuration" ordinal="3"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DetermineCurrentMachineCode">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetToolChangeTimeData">
+                        <ResultType aspect.dataShape="ToolChangeTimeShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CoolantAlarmCheck">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="HoneywellCustomOEECalc">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="1"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetToolChangeTimeDataThreshold">
+                        <ResultType aspect.dataShape="ToolChangeTimeShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="2"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="Threshold" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetCoolantAlarmHistory">
+                        <ResultType aspect.dataShape="CoolantAlarmHistoryResultShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="HoneywellCustomOEELastHour">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetCoolantHistory">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code/>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="PerformToolCalcs">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// retrieve utilization records that are completed, tool in spindle > 0, tools calcs have not been performed, and it is a cutting operation 
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "ToolInSpindle",
+        "type": "GT",
+        "value": 0
+      },
+      {
+        "fieldName": "Reason",
+        "type": "EQ",
+        "value": "Machine powered on, Tool Movement, Cutting"
+      },
+      {
+        "fieldName": "Active",
+        "type": "EQ",
+        "value": false
+      },
+      {
+        "fieldName": "ToolCalcsComplete",
+        "type": "EQ",
+        "value": false
+      }
+    ]
+  }
+};
+
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: undefined /* DATETIME */,
+	source: me.name /* STRING */,
+	query: query /* QUERY */,
+	endDate: undefined /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+//for the infotable returned, calculate average spindle load
+var tableLength = result.rows.length;
+
+for (var x = 0; x < tableLength; x++) {
+	var row = result.rows[x];
+	
+    row.ToolCalcsComplete = true;
+    
+    if (row.Duration > 0) {
+        var params = {
+            MachiningStart: row.timestamp /* DATETIME */,
+            MachiningDuration: row.Duration /* NUMBER */
+        };
+
+        // result: NUMBER
+        var AvgSpindleLoad = me.GetAverageSpindleLoad(params);
+	
+        row.AverageSpindleLoad = AvgSpindleLoad;}
+}
+
+// sort records latest to most recent
+var params = {
+	sortColumn: "timestamp" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);
+
+// iterate through the records
+for (var x = 0; x < tableLength; x++) {
+	var row = result.rows[x];
+
+	// update the stream entry with the average spindle and the ToolCalcsComplete = true (just us the current row values)
+    var values = Things["Manufacturing.Utilization"].CreateValues();
+
+    values.LineName = row.LineName; //STRING [Primary Key]
+    values.LocalTimeStamp = row.LocalTimeStamp; //DATETIME [Primary Key]
+    values.Comment = row.Comment; //STRING
+    values.Shift = row.Shift; //STRING
+    values.TimeClassification = row.TimeClassification; //TAGS
+    values.SequenceNumber = row.SequenceNumber; //NUMBER
+    values.UtilizationStateString = row.UtilizationStateString; //STRING
+    values.Active = row.Active; //BOOLEAN
+    values.ActiveProgramNumber = row.ActiveProgramNumber; //STRING
+    values.AverageSpindleLoad = row.AverageSpindleLoad; //NUMBER
+    values.UtilizationState = row.UtilizationState; //TAGS
+    values.Duration = row.Duration; //NUMBER
+    values.MainProgramNumber = row.MainProgramNumber; //STRING
+    values.ToolCalcsComplete = row.ToolCalcsComplete; //BOOLEAN
+    values.ToolInSpindle = row.ToolInSpindle; //INTEGER
+    values.Reason = row.Reason; //STRING
+
+    var params = {
+        tags: undefined /* TAGS */,
+        values: values /* INFOTABLE*/,
+        source: me.name /* STRING */,
+        location: undefined /* LOCATION */,
+        streamEntryId: row.id /* STRING */
+    };
+
+    // no return
+    Things["Manufacturing.Utilization"].UpdateStreamEntry(params);
+    // query for the tool tracking record
+    var values = Things["ToolTracking"].CreateValues();
+
+    values.ToolNo = row.ToolInSpindle; //INTEGER [Primary Key]
+
+    var params = {
+        tags: undefined /* TAGS */,
+        values: values /* INFOTABLE*/,
+        source: undefined /* STRING */,
+        query: undefined /* QUERY */,
+        maxItems: undefined /* NUMBER */
+    };
+
+    // result: INFOTABLE
+    var ToolTrackingData = Things["ToolTracking"].QueryDataTableEntries(params);
+
+	var ToolTrackingDataResultLength = ToolTrackingData.rows.length
+    
+    if (ToolTrackingDataResultLength > 0){
+        // if there is a record, update it
+        var values = Things["ToolTracking"].CreateValues();
+
+        values.LastSpindleLoad = row.AverageSpindleLoad; //NUMBER
+        values.TimeInCut = ToolTrackingData.rows[0].TimeInCut + row.Duration; //NUMBER
+        values.ToolNo = row.ToolInSpindle; //INTEGER [Primary Key]
+        values.LastChange = ToolTrackingData.rows[0].LastChange; //DATETIME
+        values.EstToolLife = ToolTrackingData.rows[0].EstToolLife;
+
+        var params = {
+            tags: undefined /* TAGS */,
+            sourceType: undefined /* STRING */,
+            values: values /* INFOTABLE*/,
+            source: undefined /* STRING */,
+            location: undefined /* LOCATION */
+        };
+
+        // no return
+        Things["ToolTracking"].UpdateDataTableEntry(params);
+    }
+    else{
+ 		// if there isn't a record, add it       
+        var values = Things["ToolTracking"].CreateValues();
+
+        values.LastSpindleLoad = row.AverageSpindleLoad; //NUMBER
+        values.TimeInCut = row.Duration; //NUMBER
+        values.ToolNo = row.ToolInSpindle; //INTEGER [Primary Key]
+        values.LastChange = row.timestamp; //DATETIME
+        values.EstToolLife = 3600;
+
+        var params = {
+            tags: undefined /* TAGS */,
+            sourceType: undefined /* STRING */,
+            values: values /* INFOTABLE*/,
+            source: me.name /* STRING */,
+            location: undefined /* LOCATION */
+        };
+
+        // result: STRING
+        var id = Things["ToolTracking"].AddDataTableEntry(params);
+    }
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="InsertMachineUtilizationData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var MachineCodeValue = me.MachineCode;
+var EventTime = Date.now();
+var ToolInSpindle = me.ToolInSpindle;
+var MainProgramNumber = me.MainProgramNumber;
+var ActiveProgramNumber = me.ActiveProgramNumber;
+
+var values = Things["Manufacturing.MachineCodesToReasons"].CreateValues();
+
+values.MachineCode = MachineCodeValue; //STRING [Primary Key]
+values.MachineID = machineId; //STRING [Primary Key]
+
+var params = {
+    tags: undefined /* TAGS */,
+    values: values /* INFOTABLE*/,
+    source: undefined /* STRING */,
+    query: undefined /* QUERY */,
+    maxItems: undefined /* NUMBER */
+};
+
+// look up reason based on code
+var codesToReasons = Things["Manufacturing.MachineCodesToReasons"].QueryDataTableEntries(params);
+var reasonGrp = codesToReasons[0].ReasonGroup;
+var reason = codesToReasons[0].Reason;
+
+// add utilization event
+var params = {
+	ActiveProgramNumber: ActiveProgramNumber /* STRING */,
+	ReasonGroup: reasonGrp /* STRING */,
+	EventTime: EventTime /* DATETIME */,
+	Comment: "Automated utilization event" /* STRING */,
+	ToolInSpindle: ToolInSpindle /* INTEGER */,
+	MainProgramNumber: MainProgramNumber /* STRING */,
+	SequenceNumber: me.SequenceNumber /* NUMBER */,    
+	Reason: reason /* STRING */
+};
+
+me.AddUtilizationEvent(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetAverageSpindleLoad">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// dateAddSeconds(dateValue:DATETIME,amount:NUMBER):STRING
+var MachiningEnd = dateAddSeconds(MachiningStart, MachiningDuration);
+
+var query = {
+  "filters": {
+    "fieldName": "value",
+    "type": "NE",
+    "value": 0
+  }
+};
+
+var params = {
+	propertyName: "SpindleLoad" /* STRING */,
+	startDate: MachiningStart /* DATETIME */,
+	oldestFirst: undefined /* BOOLEAN */,
+	query: query /* QUERY */,
+	endDate: MachiningEnd /* DATETIME */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE dataShape: "NumberValueStream"
+var SpindleLoadRecords = me.QueryNumberPropertyHistory(params);
+
+
+var params = {
+	t: SpindleLoadRecords /* INFOTABLE */,
+	columns: "value" /* STRING */,
+	aggregates: "AVERAGE" /* STRING */,
+	groupByColumns: undefined /* STRING */
+};
+
+// result: INFOTABLE
+var AverageSpindleLoad = Resources["InfoTableFunctions"].Aggregate(params);
+
+var tableLength = AverageSpindleLoad.rows.length;
+
+if (tableLength > 0){
+    var result =  AverageSpindleLoad.rows[0].AVERAGE_value}
+else{var result = 0};]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="DetermineCurrentMachineCode">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// machine powered off
+if (me.ActiveProgramNumber < 1) {
+    me.MachineCode = '1';
+}
+// machine powered on, no activity
+else if (me.ActiveProgramNumber > 1 && me.RapidMove == 1 && me.FeedMove == false && me.CycleStart == false) {
+    me.MachineCode = '2';
+}
+// setup
+else if (me.ActiveProgramNumber > 1 && (me.IncrementalJog == true || me.ManualHandle == true || me.ManualJogMode == true || me.ManualReference == true)) {
+    me.MachineCode = '3';
+}
+// machine powered on, tool movement, no cutting
+else if (me.ActiveProgramNumber > 1 && (me.RapidMove == true || me.FeedHold == true)) {
+    me.MachineCode = '4';
+}
+// machine powered on, tool movement, cutting
+else if (me.ActiveProgramNumber > 1 && me.FeedMove == true && me.FeedHold == false) {
+    me.MachineCode = '5';
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CoolantAlarmCheck">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[if (me.CoolantPercent < me.CoolantCritical && me.CoolantAlarm == false && me.AutomaticMode == true) {
+    // tags:TAGS
+    var tags = new Array();
+
+    // timestamp:DATETIME
+    var timestamp = new Date();
+
+    // values:INFOTABLE(Datashape: HoneywellCoolantAlarmHistoryShape)
+    var values = Things["HoneywellCoolantAlarmHistory"].CreateValues();
+
+    values.CoolantValue = me.CoolantPercent; //NUMBER
+
+    // location:LOCATION
+    var location = new Object();
+    location.latitude = 0;
+    location.longitude = 0;
+    location.elevation = 0;
+    location.units ="WGS84";
+
+    var params = {
+        tags : tags,
+        timestamp : timestamp,
+        source : me.name,
+        values : values,
+        location : location
+    };
+
+    // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(HoneywellCoolantAlarmHistoryShape), location:LOCATION):NOTHING
+    Things["HoneywellCoolantAlarmHistory"].AddStreamEntry(params);
+    
+//	// send email message when alarm is thrown
+//    var params = {
+//        to: "john.ristey@thingworx.com" /* STRING */,
+//        body: "Coolant concentration value of " + Math.round(me.CoolantPercent*100)/100 + "% has fallen below the threshold of " + me.CoolantCritical + "%.  Please investigate." /* HTML */,
+//        subject: "Coolant Concentration Alarm" /* STRING */,
+//        bcc: undefined /* STRING */,
+//        from: "thingworx350@yahoo.com" /* STRING */,
+//        cc: undefined /* STRING */
+//    };
+//
+//    // no return
+//    Things["EmailThing"].SendMessage(params);
+}
+else if ((me.CoolantPercent >= me.CoolantCritical || me.AutomaticMode == false) && me.CoolantAlarm == true ) {
+    me.CoolantAlarm == false};]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetToolChangeTimeData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// create the result infotable
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Manufacturing.ToolChangeData"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Manufacturing.ToolChangeData)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+// Get the Property History Data
+
+var params = {
+	startDate: StartDate /* DATETIME */,
+	oldestFirst: false /* BOOLEAN */,
+	query: undefined /* QUERY */,
+	endDate: EndDate /* DATETIME */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var PropertyData = Things[me.name].QueryPropertyHistory(params);
+
+// Sort the data oldest to most recent
+
+var params = {
+	sortColumn: "timestamp" /* STRING */,
+	t: PropertyData /* INFOTABLE */,
+	ascending: undefined /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var PropertyData = Resources["InfoTableFunctions"].Sort(params);
+
+// declare some base variables for the event generation logic
+var ActiveEvent = false;
+
+// iterate through the hisotrical records and build the tool change events
+var tableLength = PropertyData.rows.length;
+
+for (var x = 0; x < tableLength; x++) {
+	var row = PropertyData.rows[x];
+    if (ActiveEvent == false && row.MemoryMode == 6 && row.ATCActive == true){
+        var NewRow = {};
+        NewRow.ToolChangeStart = row.timestamp;
+        NewRow.ActiveProgramNumber = row.ActiveProgramNumber;
+        NewRow.MainProgramNumber = row.MainProgramNumber;
+        NewRow.ToolNo = row.ToolNo;
+        ActiveEvent = true;
+    }
+    if (ActiveEvent == true && (row.MemoryMode !== 6 || row.ATCActive !== true)){
+        ActiveEvent = false;
+        NewRow.ToolChangeEnd = row.timestamp;
+        var dif = (NewRow.ToolChangeEnd - NewRow.ToolChangeStart)/1000;
+        NewRow.Duration = dif;
+        result.AddRow(NewRow);
+    }
+}
+
+// sort the result with most recent first
+
+var params = {
+	sortColumn: "ToolChangeEnd" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: false /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="HoneywellCustomOEECalc">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	EndDate: EndDate /* DATETIME */,
+	StartDate: StartDate /* DATETIME */,
+	topN: 5 /* INTEGER */
+};
+
+// result: INFOTABLE dataShape: "Manufacturing.DowntimeOccurancesInformation"
+var UtilData = me.GetTopNUtilizationReasons(params);
+
+var Running = 0;
+var Idle = 0;
+var NotRunningNotIdle = 0;
+
+var tableLength = UtilData.rows.length;
+
+for (var x = 0; x < tableLength; x++) {
+	var row = UtilData.rows[x];
+	
+    if (row.DowntimeReason == "Machine powered on, Tool movement, No cutting" || row.DowntimeReason == "Machine powered on, Tool Movement, Cutting"){
+        Running = Running + row.TotalDuration}
+    else if (row.DowntimeReason == "Machine powered on, No activity"){
+        Idle = Idle + row.TotalDuration}
+    else if (row.DowntimeReason == "Setup" || row.DowntimeReason == "Machine powered off"){
+        NotRunningNotIdle = NotRunningNotIdle + row.TotalDuration}  
+}
+
+var TotalTime = Running + Idle;
+
+if (TotalTime > 0){var result = (Running / TotalTime)*100} else {var result = 0}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetToolChangeTimeDataThreshold">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var query = {
+  "filters": {
+    "fieldName": "Duration",
+    "type": "GE",
+    "value": Threshold
+  }
+};
+
+var params = {
+	EndDate: undefined /* DATETIME */,
+	StartDate: undefined /* DATETIME */
+};
+
+// result: INFOTABLE
+var result = Things[me.name].GetToolChangeTimeData(params);
+
+var params = {
+	t: result /* INFOTABLE */,
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Query(params);
+
+// sort the result with most recent first
+
+var params = {
+	sortColumn: "ToolChangeEnd" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: false /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetCoolantAlarmHistory">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	tags: undefined /* TAGS */,
+	oldestFirst: undefined /* BOOLEAN */,
+	startDate: undefined /* DATETIME */,
+	source: me.name /* STRING */,
+	query: undefined /* QUERY */,
+	endDate: undefined /* DATETIME */,
+	sourceTags: undefined /* TAGS */,
+	maxItems: undefined /* NUMBER */
+};
+
+// result: INFOTABLE
+var result = Things["HoneywellCoolantAlarmHistory"].QueryStreamEntriesWithData(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="HoneywellCustomOEELastHour">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var EndDate = new Date();
+var StartDate = new Date();
+
+StartDate.setHours(StartDate.getHours() - 1);
+
+var params = {
+	EndDate: EndDate /* DATETIME */,
+	StartDate: StartDate /* DATETIME */,
+	topN: 5 /* INTEGER */
+};
+
+// result: INFOTABLE dataShape: "Manufacturing.DowntimeOccurancesInformation"
+var UtilData = me.GetTopNUtilizationReasons(params);
+
+var tableLength = UtilData.rows.length;
+
+if (tableLength > 0){
+    var Running = 0;
+    var Idle = 0;
+    var NotRunningNotIdle = 0;
+    for (var x = 0; x < tableLength; x++) {
+        var row = UtilData.rows[x];
+
+        if (row.DowntimeReason == "Machine powered on, Tool movement, No cutting" || row.DowntimeReason == "Machine powered on, Tool Movement, Cutting"){
+            Running = Running + row.TotalDuration}
+        else if (row.DowntimeReason == "Machine powered on, No activity"){
+            Idle = Idle + row.TotalDuration}
+        else if (row.DowntimeReason == "Setup" || row.DowntimeReason == "Machine powered off"){
+            NotRunningNotIdle = NotRunningNotIdle + row.TotalDuration}  
+    }
+
+    var TotalTime = Running + Idle;
+
+
+    if (TotalTime > 0){var result = (Running / TotalTime)*100} else {var result = 0}}
+else {var result = 0}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="ToolInSpindle">
+                        <ServiceImplementation description="" handlerName="Script" name="ToolInSpindle.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[var now = new Date();
+me.ToolChangeTime = now;]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="CycleStart">
+                        <ServiceImplementation description="" handlerName="Script" name="CycleStart.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="FeedMove">
+                        <ServiceImplementation description="" handlerName="Script" name="FeedMove.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="Timer" source="HoneywellFiveMinuteTimer" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="HoneywellFiveMinuteTimer:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.UtilizationRecordUpdate();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="ManualReference">
+                        <ServiceImplementation description="" handlerName="Script" name="ManualReference.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="Timer" source="HoneywellOneMinuteTimer" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="HoneywellOneMinuteTimer:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.PerformToolCalcs();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="CoolantPercent">
+                        <ServiceImplementation description="" handlerName="Script" name="CoolantPercent.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.CoolantAlarmCheck();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="MachineCode">
+                        <ServiceImplementation description="" handlerName="Script" name="MachineCode.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[var params = {
+	machineId: "001" /* STRING */
+};
+
+// result: STRING
+var result = me.InsertMachineUtilizationData(params);]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="RapidMove">
+                        <ServiceImplementation description="" handlerName="Script" name="RapidMove.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="ManualHandle">
+                        <ServiceImplementation description="" handlerName="Script" name="ManualHandle.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="IncrementalJog">
+                        <ServiceImplementation description="" handlerName="Script" name="IncrementalJog.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="AutomaticMode">
+                        <ServiceImplementation description="" handlerName="Script" name="AutomaticMode.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();
+me.CoolantAlarmCheck();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="ActiveProgramNumber">
+                        <ServiceImplementation description="" handlerName="Script" name="ActiveProgramNumber.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="MDIManualProgram">
+                        <ServiceImplementation description="" handlerName="Script" name="MDIManualProgram.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="" sourceProperty="FeedHold">
+                        <ServiceImplementation description="" handlerName="Script" name="FeedHold.DataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[me.DetermineCurrentMachineCode();]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape name="Manufacturing.ToolUsageCapability" type="ThingShape"/>
+            </ImplementedShapes>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, baseThingTemplate : updated, implementedShapes : updated, valueStream : updated&#10;documentation : updated&#10;properties : MachineID : Added, MachineCode : Added, MemoryMode : Added&#10;" timestamp="2015-10-26T15:30:27.416Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;subscriptions : New subscription : Code Updated, MachineCode.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-10-27T14:58:42.264Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated, Inputs updated, Service Added,  : Input parameter machineCode Added, Input parameter machineId Added&#10;" timestamp="2015-10-29T16:24:10.026Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : PowerOn : Added, Updated&#10;services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-10-29T16:30:34.791Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : MachineCode.DataChange : Code Updated&#10;" timestamp="2015-10-29T16:37:55.718Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-29T17:38:04.660Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : FeedMove : Added, RapidMove : Added, AutomaticMode : Added&#10;" timestamp="2015-10-29T21:16:39.653Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CoolantPercent : Added, FeedHold : Added, EditMode : Added, ToolNumber : Added, MDIManualProgram : Added, ManualReference : Added, ManualHandle : Added, ManualJogMode : Added, MainProgramNumber : Added, IncrementalJog : Added, ATCActive : Added, ToolInSpindle : Added, ActiveProgramNumber : Added&#10;" timestamp="2015-10-29T21:22:38.516Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineCode : removed&#10;services : InsertMachineUtilizationData : Code Updated&#10;subscriptions : MachineCode.DataChange : removed&#10;" timestamp="2015-10-29T21:36:03.510Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CycleStart : Added&#10;" timestamp="2015-10-30T14:59:06.621Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-10-30T15:02:34.199Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter EndDate Added, Input parameter StartDate Added, GetCoolantHistory : Inputs updated, Service Added&#10;" timestamp="2015-10-30T16:54:33.525Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-30T23:10:21.816Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CoolantPercent : Updated&#10;" timestamp="2015-11-02T18:27:15.081Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, PowerOn.DataChange : New subscription, Subscription Added, FeedMove.DataChange : New subscription, Subscription Added, RapidMove.DataChange : New subscription, Subscription Added, CycleStart.DataChange : New subscription, Subscription Added, AutomaticMode.DataChange : New subscription, Subscription Added, IncrementalJog.DataChange : New subscription, Subscription Added, ManualHandle.DataChange : New subscription, Subscription Added, ManualReference.DataChange" timestamp="2015-11-03T15:00:31.185Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T18:44:45.627Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T18:48:43.624Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T18:48:47.183Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:12:29.670Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:12:40.031Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:14:09.562Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, ActiveProgramNumber.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-11-03T21:15:31.242Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:20:42.692Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:20:45.828Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:22:58.285Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:23:01.861Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:25:10.467Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:25:25.880Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:27:30.509Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:27:34.476Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:33:06.006Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:33:17.231Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineCode : Added&#10;services : InsertMachineUtilizationData : Output Updated, Code Updated&#10;" timestamp="2015-11-03T21:52:29.829Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:52:33.537Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-03T21:55:38.735Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T21:55:42.111Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T22:59:31.273Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-04T17:37:54.385Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-04T17:37:57.875Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-05T15:09:35.411Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ATCActive : Updated, MemoryMode : Updated&#10;" timestamp="2015-11-05T15:26:50.810Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ActiveProgramNumber : Updated, MainProgramNumber : Updated, ToolInSpindle : removed&#10;" timestamp="2015-11-05T15:29:04.512Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNumber : removed&#10;" timestamp="2015-11-05T15:29:21.416Z" user="SeanS"/>
+                <ConfigurationChange changeAction="FORCEEDIT" changeReason="" timestamp="2015-11-05T17:26:35.299Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Output Updated, Code Updated, Input parameter StartDate Added, Inputs updated, Input parameter EndDate Added, GetToolChangeTimeData : Service Added&#10;" timestamp="2015-11-05T17:29:43.955Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:33:23.749Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:37:10.027Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:39:49.069Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:53:22.454Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:54:42.794Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T17:56:15.573Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T18:02:13.878Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T20:25:01.206Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T20:25:42.007Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T20:27:21.854Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-05T20:30:27.651Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-05T20:30:34.278Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeDataThreshold : Code Updated, Service Added&#10;" timestamp="2015-11-05T20:34:53.766Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeDataThreshold : Code Updated, Input parameter Threshold Added, Inputs updated&#10;" timestamp="2015-11-05T20:38:11.852Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-05T22:39:11.174Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-05T22:39:17.611Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolInSpindle : Added&#10;" timestamp="2015-11-06T19:40:37.989Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-06T20:02:18.345Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T20:02:21.775Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-06T20:08:15.961Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T20:08:21.650Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T20:21:22.048Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolChangeTime : Added&#10;" timestamp="2015-11-06T20:22:16.641Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SpindleLoad : Added&#10;" timestamp="2015-11-06T20:23:16.185Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T20:41:38.324Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Added&#10;" timestamp="2015-11-06T20:42:07.571Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, ToolNo.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-11-06T20:43:09.254Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-06T21:18:19.593Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-06T21:20:39.212Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : Updated&#10;" timestamp="2015-11-06T22:02:26.703Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : DetermineCurrentMachineCode : Code Updated, Service Added&#10;" timestamp="2015-11-06T22:43:09.062Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : ManualHandle.DataChange : Code Updated&#10;" timestamp="2015-11-06T22:45:13.140Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : CycleStart.DataChange : Code Updated&#10;" timestamp="2015-11-06T22:45:27.695Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : FeedMove.DataChange : Code Updated&#10;" timestamp="2015-11-06T22:45:36.366Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : IncrementalJog.DataChange : Code Updated, AutomaticMode.DataChange : Code Updated, ManualReference.DataChange : Code Updated, ActiveProgramNumber.DataChange : Code Updated, RapidMove.DataChange : Code Updated, PowerOn.DataChange : removed, MDIManualProgram.DataChange : Code Updated, FeedHold.DataChange : Code Updated&#10;" timestamp="2015-11-06T22:47:54.876Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T22:48:25.669Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-06T22:56:57.862Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, MachineCode.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-11-06T22:57:48.872Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : ToolNo.DataChange : Enabled&#10;" timestamp="2015-11-06T23:00:00.489Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T23:01:19.154Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : NextTool : Added&#10;" timestamp="2015-11-09T15:52:05.549Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CoolantAlarm : Added&#10;services : CoolantAlarmCheck : Code Updated, Service Added&#10;" timestamp="2015-11-09T17:31:30.710Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Code Updated, CoolantPercent.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-11-09T17:33:04.640Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCoolantAlarmHistory : Code Updated, Service Added&#10;" timestamp="2015-11-09T17:34:49.664Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T17:35:16.836Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCoolantAlarmHistory : Output Updated&#10;" timestamp="2015-11-09T17:35:53.171Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetCoolantAlarmHistory : Output Updated&#10;" timestamp="2015-11-09T17:39:57.678Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T17:52:30.436Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Output Updated, GetToolChangeTimeDataThreshold : Output Updated&#10;" timestamp="2015-11-09T17:55:06.814Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeData : Code Updated&#10;" timestamp="2015-11-09T18:08:20.668Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetToolChangeTimeDataThreshold : Code Updated&#10;" timestamp="2015-11-09T18:09:14.707Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-09T18:23:43.424Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T18:24:37.027Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T23:05:28.848Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CoolantWarning : Added, CoolantCritical : Added&#10;" timestamp="2015-11-10T00:39:17.122Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : OEEWarn : Added, removed, OEEWarning : Added, OEECritical : Added&#10;" timestamp="2015-11-10T00:40:23.156Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CoolantAlarmCheck : Code Updated&#10;" timestamp="2015-11-10T00:46:21.319Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : AutomaticMode.DataChange : Code Updated&#10;" timestamp="2015-11-10T00:47:12.317Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T00:47:41.606Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : Code Updated, Output Updated, Inputs updated, Service Added,  : Input parameter EndDate Added, Input parameter StartDate Added&#10;" timestamp="2015-11-10T01:13:48.673Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : Output Updated&#10;" timestamp="2015-11-10T01:14:06.285Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : Code Updated&#10;" timestamp="2015-11-10T01:16:53.231Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalcCopy : Input parameter EndDate Added, Input parameter StartDate Added, HoneywellCustomOEELastHour : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-11-10T01:31:30.769Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEELastHour : Code Updated&#10;" timestamp="2015-11-10T01:31:42.513Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-10T13:40:08.764Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-10T15:21:03.355Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:21:07.186Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : removed&#10;subscriptions : ToolNo.DataChange : removed, New subscription : Code Updated, ToolInSpindle.DataChange : New subscription, Subscription Added&#10;" timestamp="2015-11-10T15:57:59.180Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:58:04.781Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:58:36.203Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T00:26:39.508Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T01:59:13.695Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T02:02:33.921Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T14:07:49.425Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T14:35:11.290Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T14:38:30.937Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T14:39:50.476Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T15:08:25.395Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-11T15:09:36.352Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T16:52:21.734Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T17:20:28.458Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter MachiningStart Added, Input parameter MachiningDuration Added, GetAverageSpindleLoad : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-11-12T00:41:43.408Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Output Updated&#10;" timestamp="2015-11-12T00:41:58.103Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:45:31.194Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:48:02.366Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:49:03.325Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:50:26.021Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:51:52.759Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:54:31.783Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:56:24.040Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T00:58:12.762Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T01:02:49.963Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T01:05:20.335Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Input parameter MachiningEnd Added, Inputs updated, Code Updated&#10;" timestamp="2015-11-12T01:09:40.022Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated, Input parameter MachiningDuration Updated, Inputs updated&#10;" timestamp="2015-11-12T01:12:41.870Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated, Input parameter MachiningDuration Added, Inputs updated, Input parameter MachiningEnd Updated&#10;" timestamp="2015-11-12T01:19:31.337Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Output Updated, Code Updated&#10;" timestamp="2015-11-12T01:21:16.836Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated&#10;" timestamp="2015-11-12T01:22:01.614Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated, Output Updated&#10;" timestamp="2015-11-12T01:30:49.862Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAverageSpindleLoad : Code Updated, Output Updated&#10;" timestamp="2015-11-12T13:38:19.826Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEELastHour : Code Updated&#10;" timestamp="2015-11-12T14:38:14.022Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Output Updated, Code Updated, Service Added&#10;" timestamp="2015-11-12T16:50:10.545Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-12T16:50:13.704Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T16:57:03.784Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:06:17.465Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:11:55.578Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:30:48.578Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:45:38.133Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:48:15.330Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:50:15.306Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T17:54:45.456Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CoolantAlarmCheck : Code Updated&#10;" timestamp="2015-11-12T19:08:22.977Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CoolantAlarmCheck : Code Updated&#10;" timestamp="2015-11-12T19:11:54.780Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CoolantAlarmCheck : Code Updated&#10;" timestamp="2015-11-12T19:12:57.949Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SequenceNumber : Added&#10;" timestamp="2015-11-12T19:28:29.706Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SequenceNumber : Updated&#10;" timestamp="2015-11-12T19:31:18.212Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : PowerOnKepware : Added&#10;" timestamp="2015-11-12T19:33:33.057Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-12T19:51:54.081Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertMachineUtilizationData : Code Updated&#10;" timestamp="2015-11-12T19:52:57.671Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T20:26:11.869Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-12T20:26:30.571Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-12T20:47:35.615Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Output Updated&#10;" timestamp="2015-11-12T20:47:49.821Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, HoneywellOneMinuteTimer:Timer : New subscription, Subscription Added&#10;" timestamp="2015-11-12T20:58:59.558Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, HoneywellFiveMinuteTimer:Timer : New subscription, Subscription Added&#10;" timestamp="2015-11-12T21:17:23.179Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : PerformToolCalcs : Code Updated&#10;" timestamp="2015-11-13T12:09:48.535Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SelectedToolToTrack : Added&#10;" timestamp="2015-11-13T13:46:56.694Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T14:14:45.456Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
