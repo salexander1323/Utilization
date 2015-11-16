@@ -32,8 +32,8 @@
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="ProductionOrder" ordinal="1"/>
                 <FieldDefinition baseType="DATETIME" description="" name="ScheduledStartDate" ordinal="15"/>
                 <FieldDefinition baseType="NUMBER" description="" name="BadQty" ordinal="8"/>
-                <FieldDefinition baseType="STRING" description="" name="ScheduledPlantDescription" ordinal="16"/>
                 <FieldDefinition baseType="NUMBER" description="" name="RequiredQty" ordinal="2"/>
+                <FieldDefinition baseType="STRING" description="" name="ScheduledPlantDescription" ordinal="16"/>
             </FieldDefinitions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T20:19:09.774Z" user="Administrator"/>
