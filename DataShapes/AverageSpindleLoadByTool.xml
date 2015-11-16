@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;" homeMashup="" lastModifiedDate="2015-11-13T18:17:30.255Z" name="AverageSpindleLoadByTool" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="INTEGER" description="" name="ToolInSpindle" ordinal="2"/>
+                <FieldDefinition baseType="NUMBER" description="" name="AVERAGE_AverageSpindleLoad" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : tags : updated, name : updated&#10;documentation : updated&#10;" timestamp="2015-11-13T17:54:08.873Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ToolNo : Added, AVERAGE_AverageSpindleLoad : Added&#10;" timestamp="2015-11-13T17:54:47.836Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ToolNo : removed, ToolInSpindle : Added&#10;" timestamp="2015-11-13T18:17:30.255Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
