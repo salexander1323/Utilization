@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="target" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:36:47.044Z" name="Manufacturing.Master" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
-            <Owner name="SeanS" type="User"/>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="target" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-27T14:58:23.147Z" name="Manufacturing.Master" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
+            <Owner name="stevea" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -66,7 +66,7 @@
               "Widgets" : [ {
                 "Widgets" : [ ],
                 "Properties" : {
-                  "Top" : 7,
+                  "Top" : 12,
                   "AlternateText" : "",
                   "__TypeDisplayName" : "Image",
                   "Visible" : true,
@@ -75,7 +75,7 @@
                   "BorderStyle" : "DefaultImageBorderStyle",
                   "Area" : "UI",
                   "Z-index" : 10,
-                  "Height" : 55,
+                  "Height" : 50,
                   "DisplayName" : "Image-11",
                   "Left" : 11,
                   "SourceURL" : "HoneywellLogoPng",
@@ -84,6 +84,41 @@
                   "Width" : 270,
                   "ShowDataLoading" : true,
                   "Scaling" : "width"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Levels" : "all",
+                  "__TypeDisplayName" : "Menu",
+                  "IconMaxWidth" : 22,
+                  "Visible" : true,
+                  "AllButTopRememberLastChoice" : true,
+                  "Type" : "menu",
+                  "Area" : "UI",
+                  "Z-index" : 10,
+                  "MenuSelectedStyle" : "DefaultMenuSelectedStyle",
+                  "Menu" : "Manufacturing.MainMenu",
+                  "MenuItemDisplay" : "iconleftoftext",
+                  "View" : "horiz",
+                  "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                  "Width" : 250,
+                  "Top" : 20,
+                  "SubMenuHeight" : 25,
+                  "DrivePageMashupOrBindToMashup" : "pagemashup",
+                  "ResponsiveLayout" : false,
+                  "MenuHoverStyle" : "DefaultMenuHoverStyle",
+                  "ConfiguredOrDataDriven" : "configured",
+                  "Height" : 30,
+                  "DisplayName" : "Menu-14",
+                  "EvenlySpacedMenuItems" : false,
+                  "MenuStyle" : "DefaultMenuStyle",
+                  "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                  "Left" : 365,
+                  "MenuBackgroundStyle" : "DefaultMenuBackgroundStyle",
+                  "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                  "Id" : "Menu-14",
+                  "Alignment" : "left",
+                  "ShowDataLoading" : true
                 }
               } ],
               "Properties" : {
@@ -515,7 +550,7 @@
       "Id" : "mashup-root",
       "ShowDataLoading" : true,
       "Width" : 1024,
-      "id_index" : 13
+      "id_index" : 14
     }
   },
   "DesignTimePermissions" : { }
@@ -525,6 +560,10 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-14T20:15:28.555Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-14T20:20:49.519Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:36:47.044Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:57:33.389Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:58:11.702Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:58:12.208Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T14:58:23.147Z" user="stevea"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
