@@ -23,8 +23,8 @@
                 <FieldDefinition aspect.ordinal="1" baseType="THINGNAME" description="Line ThingName passed into the mashup from the schedule" name="Line" ordinal="0"/>
             </ParameterDefinitions>
             <Things>
-                <Thing>Manufacturing.Reasons</Thing>
                 <Thing>Manufacturing.ReasonGroups</Thing>
+                <Thing>Manufacturing.Reasons</Thing>
             </Things>
             <ThingShapes/>
             <ThingTemplates>
