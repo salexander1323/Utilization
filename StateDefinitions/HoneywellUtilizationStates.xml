@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StateDefinitions>
+        <StateDefinition description="" documentationContent="" homeMashup="" lastModifiedDate="2015-11-10T00:19:17.660Z" name="HoneywellUtilizationStates" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"stateType":"string","stateDefinitions":[{"displayString":"Idle","description":"","name":"Idle","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"#f9ef6b","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":"#000000"},"defaultValue":"Machine powered on, No activity"},{"displayString":"Off","description":"","name":"Off","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"#c0c0c0","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":"#000000"},"defaultValue":"Machine powered off"},{"displayString":"Setup","description":"","name":"Setup","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"#15eeff","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":""},"defaultValue":"Setup"},{"displayString":"Not Cutting","description":"","name":"Not Cutting","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"#1532ff","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":"#ffffff"},"defaultValue":"Machine powered on, Tool movement, No cutting"},{"displayString":"Cutting","description":"","name":"Cutting","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"#66cc33","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":""},"defaultValue":"Machine powered on, Tool Movement, Cutting"},{"displayString":"Unknown","description":"","name":"Unknown","defaultStyleDefinition":{"fontEmphasisUnderline":false,"displayString":"","fontEmphasisItalic":false,"textSize":"normal","lineColor":"","backgroundColor":"","lineStyle":"solid","lineThickness":1,"image":"","secondaryBackgroundColor":"","fontEmphasisBold":false,"foregroundColor":"#000000"}}]}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : tags : updated, name : updated&#10;" timestamp="2015-11-10T00:15:17.106Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T00:19:17.660Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>
