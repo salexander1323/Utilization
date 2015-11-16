@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:39:09.967Z" name="Manufacturing.ProductionLineView" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
+        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-21T19:04:38.211Z" name="Manufacturing.ProductionLineView" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
             <Owner name="SeanS" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -465,6 +465,7 @@
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-14T20:20:15.883Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-14T20:26:49.508Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:39:09.967Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T19:04:38.211Z" user="SeanS"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
