@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="CNC001" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-13T15:44:10.148Z" name="Manufacturing.CNC001" published="false" tags="Applications:Manufacturing" thingTemplate="Manufacturing.CNCTemplate" valueStream="HoneywellValueStream">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings>
+                <PropertyBinding name="SpindleLoad" sourceName="SPINDLE_LOAD" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="FeedHold" sourceName="FEED_HOLD" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="CycleStart" sourceName="CYCLE_START_ACTIVE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="RapidMove" sourceName="RAPID_MOVE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="ManualJogMode" sourceName="MANUAL_JOG_MODE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="SequenceNumber" sourceName="Seq_Number" sourceThingName="Honeywell_OPC_Thing2"/>
+                <PropertyBinding name="AutomaticMode" sourceName="AUTOMATIC_MODE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="CoolantPercent" sourceName="Coolant_Percent" sourceThingName="Honeywell_OPC_Thing2"/>
+                <PropertyBinding name="ManualHandle" sourceName="MANUAL_HANDLE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="ActiveProgramNumber" sourceName="ACTIVE_PROGRAM" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="ManualReference" sourceName="MANUAL_REFERENCE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="EditMode" sourceName="EDIT_MODE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="FeedMove" sourceName="FEED_MOVE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="MemoryMode" sourceName="M_CODE" sourceThingName="Honeywell_OPC_Thing2"/>
+                <PropertyBinding name="PowerOn" sourceName="MACHINE_POWER_ON" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="MDIManualProgram" sourceName="MDI_MANUAL_PROGRAM" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="ATCActive" sourceName="ATC_ACTIVE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="ToolInSpindle" sourceName="TOOL_IN_SPINDLE" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="MainProgramNumber" sourceName="MAIN_PROGRAM_NO" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="NextTool" sourceName="NEXT_TOOL" sourceThingName="Honeywell_OPC_Thing"/>
+                <PropertyBinding name="IncrementalJog" sourceName="INCREMENTAL_JOG" sourceThingName="Honeywell_OPC_Thing"/>
+            </PropertyBindings>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <FeedHold>false</FeedHold>
+                <CoolantAlarm>false</CoolantAlarm>
+                <MaterialPersonnelShortageTime>0.0</MaterialPersonnelShortageTime>
+                <PowerOnKepware>0.0</PowerOnKepware>
+                <OEECritical>90.0</OEECritical>
+                <ShiftChangeOverTime>0.0</ShiftChangeOverTime>
+                <CurrentUtilTimeClassification><![CDATA[TimeClassifications:Monitored Production Time]]></CurrentUtilTimeClassification>
+                <DefaultReworkReason/>
+                <ToolChangeTime>2015-11-13T22:38:08.489Z</ToolChangeTime>
+                <UpTime>0.0</UpTime>
+                <SequenceNumber>50.0</SequenceNumber>
+                <ShiftMinutesCompleted>0.0</ShiftMinutesCompleted>
+                <ManualReference>false</ManualReference>
+                <FeedMove>false</FeedMove>
+                <PowerOn>true</PowerOn>
+                <MemoryMode>30.0</MemoryMode>
+                <MDIManualProgram>true</MDIManualProgram>
+                <MainProgramNumber><![CDATA[30]]></MainProgramNumber>
+                <LastUtilizationTimeEvent>2015-11-11T21:04:53.991Z</LastUtilizationTimeEvent>
+                <StandardizedProductionTime>0.0</StandardizedProductionTime>
+                <CurrentShift/>
+                <LineBlog/>
+                <NetEfficiency>0.0</NetEfficiency>
+                <LinePerformance>0.0</LinePerformance>
+                <SelectedToolToTrack>2</SelectedToolToTrack>
+                <CycleStart>false</CycleStart>
+                <ShiftUptime>0.0</ShiftUptime>
+                <DefaultProductionReason/>
+                <ManualHandle>false</ManualHandle>
+                <TotalProductionCurrentPO>0.0</TotalProductionCurrentPO>
+                <CurrentUtilReason><![CDATA[Machine powered on, No activity]]></CurrentUtilReason>
+                <MachineCode><![CDATA[2]]></MachineCode>
+                <EditMode>false</EditMode>
+                <CurrentProductionOrder/>
+                <DefaultReworkReasonGroup/>
+                <GlobalEfficiency>0.0</GlobalEfficiency>
+                <ToolInSpindle>0</ToolInSpindle>
+                <LineAvailability>0.0</LineAvailability>
+                <IncrementalJog>false</IncrementalJog>
+                <LineQuality>0.0</LineQuality>
+                <DefectLostTime>0.0</DefectLostTime>
+                <CoolantWarning>9.0</CoolantWarning>
+                <TotalScrapCurrentPO>0.0</TotalScrapCurrentPO>
+                <CurrentProductionLotID/>
+                <ChangeoverTime>0.0</ChangeoverTime>
+                <RapidMove>true</RapidMove>
+                <ShiftOtherTime>0.0</ShiftOtherTime>
+                <DefaultUtilizationReasonGroup/>
+                <OEE>0.0</OEE>
+                <MaintenanceTime>0.0</MaintenanceTime>
+                <FirstPassYieldCurrentPO>0.0</FirstPassYieldCurrentPO>
+                <DefaultConsumptionReasonGroup/>
+                <DefaultScrapReasonCode/>
+                <FirstPassYield>0.0</FirstPassYield>
+                <ShiftEquipmentDowntime>0.0</ShiftEquipmentDowntime>
+                <CurrentUtilState><![CDATA[ReasonStates:Idle]]></CurrentUtilState>
+                <MachineID><![CDATA[001]]></MachineID>
+                <NextTool>1</NextTool>
+                <CoolantCritical>8.0</CoolantCritical>
+                <SpindleLoad>0.0</SpindleLoad>
+                <DefaultProductionReasonGroup/>
+                <AvailableTimeUtilization>0.0</AvailableTimeUtilization>
+                <ManualJogMode>false</ManualJogMode>
+                <EquipmentDowntime>0.0</EquipmentDowntime>
+                <AutomaticMode>false</AutomaticMode>
+                <OperationStandardsIndex>0.0</OperationStandardsIndex>
+                <ShiftManagerContactNo/>
+                <CoolantPercent>10.159778594970703</CoolantPercent>
+                <DefaultConsumptionReason/>
+                <ShiftQualityDowntime>0.0</ShiftQualityDowntime>
+                <ActiveProgramNumber><![CDATA[9004]]></ActiveProgramNumber>
+                <OEEWarning>95.0</OEEWarning>
+                <DefaultScrapReasonGroup/>
+                <QualityDowntime>0.0</QualityDowntime>
+                <LineImage/>
+                <ATCActive>false</ATCActive>
+                <TotalScrapCurrentShift>0.0</TotalScrapCurrentShift>
+                <TotalProductionCurrentShift>0.0</TotalProductionCurrentShift>
+                <SpeedLostTime>0.0</SpeedLostTime>
+                <OperationLostTime>0.0</OperationLostTime>
+                <TrueEfficiency>0.0</TrueEfficiency>
+                <LackOfDemandTime>0.0</LackOfDemandTime>
+                <DefectFreeTime>0.0</DefectFreeTime>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-10-26T15:31:06.481Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;documentation : updated&#10;" timestamp="2015-10-26T15:32:39.835Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SpindleLoad : updated property binding, MachineCode : updated property binding, ToolNo : updated property binding&#10;" timestamp="2015-10-26T15:34:21.139Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-26T15:43:22.315Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : description : updated&#10;" timestamp="2015-10-26T17:09:11.976Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : MemoryMode : updated property binding, PowerOn : updated property binding&#10;" timestamp="2015-10-29T17:42:06.220Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ActiveProgramNumber : updated property binding, ATCActive : updated property binding, AutomaticMode : updated property binding, CoolantPercent : updated property binding, EditMode : updated property binding, FeedHold : updated property binding, FeedMove : updated property binding, IncrementalJog : updated property binding, MainProgramNumber : updated property binding, ManualHandle : updated property binding, ManualJogMode : updated property binding, ManualReference : updated property binding, M" timestamp="2015-10-29T21:27:33.873Z" user="SeanS"/>
+                <ConfigurationChange changeAction="FORCEEDIT" changeReason="" timestamp="2015-11-02T18:56:31.447Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CycleStart : updated property binding&#10;" timestamp="2015-11-02T18:58:11.804Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : updated property binding&#10;" timestamp="2015-11-05T15:12:21.588Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : updated property binding&#10;" timestamp="2015-11-05T19:08:47.210Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : updated property binding&#10;" timestamp="2015-11-05T19:10:13.298Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolInSpindle : updated property binding&#10;" timestamp="2015-11-06T19:41:26.987Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : updated property binding&#10;" timestamp="2015-11-06T21:21:29.093Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T21:21:45.391Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-06T23:02:01.583Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : NEXT_TOOL : added remote property from browse&#10;" timestamp="2015-11-09T15:50:20.603Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : NEXT_TOOL : removed&#10;" timestamp="2015-11-09T15:50:51.639Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : NextTool : updated property binding&#10;" timestamp="2015-11-09T15:53:18.690Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T00:42:03.428Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T00:42:08.452Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : Code Updated, Service Added&#10;" timestamp="2015-11-10T00:58:20.697Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : Output Updated&#10;" timestamp="2015-11-10T00:58:30.473Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : HoneywellCustomOEECalc : removed&#10;" timestamp="2015-11-10T01:02:23.210Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : ToolNo : updated property binding&#10;" timestamp="2015-11-10T15:55:39.558Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T15:59:23.165Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-12T13:39:18.236Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SequenceNumber : updated property binding&#10;" timestamp="2015-11-12T19:36:53.982Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-12T20:41:55.686Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T12:11:51.706Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T15:42:56.512Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T15:44:10.148Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
