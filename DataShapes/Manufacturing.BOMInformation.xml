@@ -17,11 +17,11 @@
             </VisibilityPermissions>
             <ConfigurationTables/>
             <FieldDefinitions>
-                <FieldDefinition baseType="DATETIME" description="" name="EffectivityStartDate" ordinal="3"/>
                 <FieldDefinition baseType="NUMBER" description="" name="BatchSize" ordinal="5"/>
+                <FieldDefinition baseType="DATETIME" description="" name="EffectivityStartDate" ordinal="3"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="VersionID" ordinal="2"/>
-                <FieldDefinition baseType="DATETIME" description="" name="EffectivityEndDate" ordinal="4"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="MaterialID" ordinal="1"/>
+                <FieldDefinition baseType="DATETIME" description="" name="EffectivityEndDate" ordinal="4"/>
             </FieldDefinitions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-12T19:51:29.654Z" user="Administrator"/>
