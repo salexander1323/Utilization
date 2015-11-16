@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-10-20T17:38:17.706Z" name="Manufacturing.LineUtilization" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
-            <Owner name="SeanS" type="User"/>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-10T00:10:36.575Z" name="Manufacturing.LineUtilization" rows="0.0" tags="Applications:Manufacturing;Version:1.0.0.0">
+            <Owner name="JohnRistey" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -61,14 +61,6 @@
     },
     "DynamicThingTemplates_Manufacturing_ProductionLine" : {
       "Services" : [ {
-        "Name" : "GetProperties",
-        "Characteristic" : "Services",
-        "Parameters" : { },
-        "Target" : "GetProperties",
-        "APIMethod" : "get",
-        "Id" : "e0ba53b1-02b3-41a2-97ba-2fb8ae537ce2",
-        "RefreshInterval" : 0
-      }, {
         "Name" : "QueryUtilizationData",
         "Characteristic" : "Services",
         "Parameters" : { },
@@ -179,19 +171,27 @@
     "SourceDetails" : "AllData",
     "SourceId" : "QueryUtilizationData",
     "TargetId" : "Grid-5"
+  }, {
+    "PropertyMaps" : [ {
+      "TargetPropertyType" : "property",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetProperty" : "Data",
+      "SourcePropertyType" : "InfoTable",
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE"
+    } ],
+    "TargetSection" : "",
+    "SourceSection" : "DynamicThingTemplates_Manufacturing_ProductionLine",
+    "TargetArea" : "UI",
+    "SourceArea" : "Data",
+    "Id" : "fcb42cf4-795e-4e8b-875d-b317fb58faf9",
+    "SourceDetails" : "AllData",
+    "SourceId" : "QueryUtilizationData",
+    "TargetId" : "DataExport-16"
   } ],
   "mashupType" : "mashup",
   "RunTimePermissions" : { },
   "Events" : [ {
-    "EventHandlerArea" : "Data",
-    "EventTriggerId" : "mashup-root",
-    "EventTriggerSection" : "",
-    "Id" : "397f66e6-27d7-4855-85e5-d033cb00c72a",
-    "EventTriggerEvent" : "LineChanged",
-    "EventTriggerArea" : "Mashup",
-    "EventHandlerId" : "DynamicThingTemplates_Manufacturing_ProductionLine",
-    "EventHandlerService" : "GetProperties"
-  }, {
     "EventHandlerArea" : "Data",
     "EventTriggerId" : "mashup-root",
     "EventTriggerSection" : "",
@@ -236,76 +236,6 @@
               "Id" : "Label-14",
               "Alignment" : "left",
               "Width" : 145,
-              "ShowDataLoading" : true
-            }
-          }, {
-            "Widgets" : [ ],
-            "Properties" : {
-              "DataBinding" : {
-                "PropertyMaps" : [ {
-                  "TargetPropertyType" : "property",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetProperty" : "Data",
-                  "SourcePropertyType" : "InfoTable",
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE"
-                } ],
-                "SourceSection" : "DynamicThingTemplates_AcmeTractor_ProductionLine",
-                "TargetSection" : "",
-                "TargetArea" : "UI",
-                "SourceArea" : "Data",
-                "Id" : "332f7c47-a73e-4cb7-be53-0c0a7235c0a0",
-                "SourceDetails" : "AllData",
-                "SourceId" : "QueryUtilizationData",
-                "TargetId" : "DataExport-16"
-              },
-              "Top" : 9,
-              "FocusStyle" : {
-                "fontEmphasisUnderline" : false,
-                "displayString" : "",
-                "fontEmphasisItalic" : false,
-                "textSize" : "normal",
-                "lineColor" : "#ffe620",
-                "backgroundColor" : "",
-                "lineStyle" : "solid",
-                "lineThickness" : 1,
-                "image" : "",
-                "secondaryBackgroundColor" : "",
-                "fontEmphasisBold" : false,
-                "foregroundColor" : ""
-              },
-              "ActiveStyle" : "ButtonNavHover",
-              "Visible" : true,
-              "__TypeDisplayName" : "Data Export",
-              "ResponsiveLayout" : false,
-              "TabSequence" : 3,
-              "Type" : "dataexport",
-              "Area" : "UI",
-              "ColumnFormat" : "{\"Active\":{\"baseType\":\"BOOLEAN\",\"description\":\"\",\"name\":\"Active\",\"aspects\":{\"isPrimaryKey\":false,\"defaultValue\":false},\"ordinal\":0},\"Comment\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Comment\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"Duration\":{\"baseType\":\"NUMBER\",\"description\":\"\",\"name\":\"Duration\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"LineName\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"LineName\",\"aspects\":{\"isPrimaryKey\":true},\"ordinal\":0},\"LocalTimeStamp\":{\"baseType\":\"DATETIME\",\"description\":\"\",\"name\":\"LocalTimeStamp\",\"aspects\":{\"isPrimaryKey\":true},\"ordinal\":0},\"Reason\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Reason\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"Shift\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Shift\",\"aspects\":{\"cacheTime\":0},\"ordinal\":9},\"TimeClassification\":{\"baseType\":\"TAGS\",\"description\":\"\",\"name\":\"TimeClassification\",\"aspects\":{\"tagType\":\"ModelTags\",\"cacheTime\":0},\"ordinal\":8},\"UtilizationState\":{\"baseType\":\"TAGS\",\"description\":\"\",\"name\":\"UtilizationState\",\"aspects\":{\"tagType\":\"ModelTags\",\"cacheTime\":0},\"ordinal\":7},\"UtilizationStateString\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"UtilizationStateString\",\"aspects\":{\"cacheTime\":0},\"ordinal\":10}}",
-              "Style" : "AcmeTractor.ButtonStyle.ExportLight",
-              "Height" : 29,
-              "Z-index" : 10,
-              "DisplayName" : "DataExport-16",
-              "Left" : 155,
-              "IconAlignment" : "left",
-              "HoverStyle" : {
-                "fontEmphasisUnderline" : false,
-                "displayString" : "",
-                "fontEmphasisItalic" : false,
-                "textSize" : "normal",
-                "lineColor" : "",
-                "backgroundColor" : "#b1b1b1",
-                "lineStyle" : "solid",
-                "lineThickness" : 1,
-                "image" : "",
-                "secondaryBackgroundColor" : "",
-                "fontEmphasisBold" : false,
-                "foregroundColor" : "#ffffff"
-              },
-              "Id" : "DataExport-16",
-              "Label" : "Export",
-              "RoundedCorners" : true,
-              "Width" : 90,
               "ShowDataLoading" : true
             }
           } ],
@@ -423,27 +353,6 @@
                 "Width" : "auto",
                 "Align" : "right",
                 "Title" : "Time Stamp"
-              }, {
-                "ValidationMessage" : "",
-                "AllowEdit" : false,
-                "FormatOptions" : {
-                  "renderer" : "STRING",
-                  "formatInfo" : {
-                    "FieldName" : "",
-                    "StateFormats" : [ {
-                      "stateName" : "fixed",
-                      "state" : ""
-                    } ],
-                    "StateDefinitionType" : "fixed",
-                    "StateDefinition" : ""
-                  },
-                  "FormatString" : "full"
-                },
-                "FieldName" : "Shift",
-                "ValidationExpression" : "",
-                "Width" : "auto",
-                "Align" : "center",
-                "Title" : "Shift"
               }, {
                 "ValidationMessage" : "",
                 "AllowEdit" : false,
@@ -634,39 +543,6 @@
                 "ValidationMessage" : "",
                 "AllowEdit" : false,
                 "FormatOptions" : {
-                  "renderer" : "TAGS",
-                  "FormatString" : "plain"
-                },
-                "FieldName" : "TimeClassification",
-                "ValidationExpression" : "",
-                "Width" : "auto",
-                "Align" : "left",
-                "Title" : "Time Classification"
-              }, {
-                "ValidationMessage" : "",
-                "AllowEdit" : false,
-                "FormatOptions" : {
-                  "renderer" : "STRING",
-                  "formatInfo" : {
-                    "FieldName" : "",
-                    "StateFormats" : [ {
-                      "stateName" : "fixed",
-                      "state" : ""
-                    } ],
-                    "StateDefinitionType" : "fixed",
-                    "StateDefinition" : ""
-                  },
-                  "FormatString" : "full"
-                },
-                "FieldName" : "UtilizationStateString",
-                "ValidationExpression" : "",
-                "Width" : "auto",
-                "Align" : "left",
-                "Title" : "Utilization State"
-              }, {
-                "ValidationMessage" : "",
-                "AllowEdit" : false,
-                "FormatOptions" : {
                   "renderer" : "STRING",
                   "formatInfo" : {
                     "FieldName" : "",
@@ -735,127 +611,368 @@
       }, {
         "Widgets" : [ {
           "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "TargetWindow" : "modal-popup",
+                  "PopupScrolling" : "auto",
+                  "__TypeDisplayName" : "Navigation",
+                  "Visible" : true,
+                  "NavigationActiveStyle" : "DefaultBlogStyle",
+                  "Type" : "navigation",
+                  "MashupParameters" : [ {
+                    "BaseType" : "THINGNAME",
+                    "Description" : "Plant ThingName passed into the mashup from schedule screen",
+                    "ParmDef" : {
+                      "baseType" : "THINGNAME",
+                      "description" : "Plant ThingName passed into the mashup from schedule screen",
+                      "name" : "Plant",
+                      "aspects" : {
+                        "ordinal" : "0"
+                      },
+                      "ordinal" : 0
+                    },
+                    "ParameterName" : "Plant"
+                  }, {
+                    "BaseType" : "STRING",
+                    "Description" : "Plant Description passed into the mashup from the schedule",
+                    "ParmDef" : {
+                      "baseType" : "STRING",
+                      "description" : "Plant Description passed into the mashup from the schedule",
+                      "name" : "PlantDescription",
+                      "aspects" : {
+                        "ordinal" : "2"
+                      },
+                      "ordinal" : 0
+                    },
+                    "ParameterName" : "PlantDescription"
+                  }, {
+                    "BaseType" : "STRING",
+                    "Description" : "Line Description passed into the mashup from the schedule",
+                    "ParmDef" : {
+                      "baseType" : "STRING",
+                      "description" : "Line Description passed into the mashup from the schedule",
+                      "name" : "LineDescription",
+                      "aspects" : {
+                        "ordinal" : "3"
+                      },
+                      "ordinal" : 0
+                    },
+                    "ParameterName" : "LineDescription"
+                  }, {
+                    "BaseType" : "THINGNAME",
+                    "Description" : "Line ThingName passed into the mashup from the schedule",
+                    "ParmDef" : {
+                      "baseType" : "THINGNAME",
+                      "description" : "Line ThingName passed into the mashup from the schedule",
+                      "name" : "Line",
+                      "aspects" : {
+                        "ordinal" : "1"
+                      },
+                      "ordinal" : 0
+                    },
+                    "ParameterName" : "Line"
+                  } ],
+                  "Area" : "UI",
+                  "Style" : "AcmeTractor.ButtonStyle",
+                  "Z-index" : 10,
+                  "MessageToShow" : "Mashup must be selected",
+                  "ModalPopupOpacity" : 0.5,
+                  "PlantDescription" : "",
+                  "RoundedCorners" : true,
+                  "Width" : 120,
+                  "Top" : 12,
+                  "ResponsiveLayout" : false,
+                  "Height" : 30,
+                  "FixedPopupHeight" : 475,
+                  "PopupTitle" : "",
+                  "DisplayName" : "Navigation-15",
+                  "Left" : 10,
+                  "ClickOutsideToClose" : false,
+                  "Text" : "Add Utilization",
+                  "FixedPopupWidth" : 495,
+                  "ShowMessageIfNoMashup" : false,
+                  "IconAlignment" : "left",
+                  "Transparent" : false,
+                  "ShowCloseButton" : true,
+                  "NavigationHoverStyle" : "DefaultRangeSelectionStyle",
+                  "Id" : "Navigation-15",
+                  "Alignment" : "center",
+                  "MashupCaption" : "",
+                  "ShowDataLoading" : true,
+                  "MashupName" : "Manufacturing.AddUtilizationEvent",
+                  "PopupTitleStyle" : "DefaultPopupTitleStyle"
+                }
+              } ],
+              "Properties" : {
+                "Top" : 35,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "Visible" : true,
+                "ResponsiveLayout" : true,
+                "Type" : "panel",
+                "Area" : "UI",
+                "Style" : {
+                  "fontEmphasisUnderline" : false,
+                  "displayString" : "",
+                  "fontEmphasisItalic" : false,
+                  "textSize" : "normal",
+                  "lineColor" : "",
+                  "backgroundColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "image" : "",
+                  "secondaryBackgroundColor" : "",
+                  "fontEmphasisBold" : false,
+                  "foregroundColor" : ""
+                },
+                "Height" : 200,
+                "Z-index" : 10,
+                "DisplayName" : "Panel-8",
+                "Left" : 40,
+                "HorizontalAnchor" : "left",
+                "Id" : "Panel-8",
+                "Width" : 300,
+                "ShowDataLoading" : true
+              }
+            } ],
+            "Properties" : {
+              "TabWidth" : 36,
+              "Visible" : true,
+              "__TypeDisplayName" : "Container",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "ResponsiveLayout" : true,
+              "Type" : "container",
+              "MinHeight" : 0,
+              "Area" : "UI",
+              "Style" : "DefaultContainerStyle",
+              "AnimateExpandCollapse" : true,
+              "ExpandCollapseTabLocation" : "outside",
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "Overlay" : false,
+              "DisplayName" : "Left Sidebar",
+              "OverlayIsTransparent" : false,
+              "BGImageRepeat" : "no-repeat",
+              "BGImageSize" : "auto",
+              "Id" : "container-18",
+              "ShowDataLoading" : true,
+              "TabOffset" : 0,
+              "ShowExpandCollapseTab" : false,
+              "TabLocation" : "center",
+              "Expanded" : true,
+              "TabHeight" : 36,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle"
+            }
+          }, {
             "Widgets" : [ ],
             "Properties" : {
-              "TargetWindow" : "modal-popup",
-              "PopupScrolling" : "auto",
-              "__TypeDisplayName" : "Navigation",
+              "TabWidth" : 36,
               "Visible" : true,
-              "NavigationActiveStyle" : "DefaultBlogStyle",
-              "Type" : "navigation",
-              "MashupParameters" : [ {
-                "BaseType" : "THINGNAME",
-                "Description" : "Plant ThingName passed into the mashup from schedule screen",
-                "ParmDef" : {
-                  "baseType" : "THINGNAME",
-                  "description" : "Plant ThingName passed into the mashup from schedule screen",
-                  "name" : "Plant",
-                  "aspects" : {
-                    "ordinal" : "0"
-                  },
-                  "ordinal" : 0
-                },
-                "ParameterName" : "Plant"
-              }, {
-                "BaseType" : "STRING",
-                "Description" : "Plant Description passed into the mashup from the schedule",
-                "ParmDef" : {
-                  "baseType" : "STRING",
-                  "description" : "Plant Description passed into the mashup from the schedule",
-                  "name" : "PlantDescription",
-                  "aspects" : {
-                    "ordinal" : "2"
-                  },
-                  "ordinal" : 0
-                },
-                "ParameterName" : "PlantDescription"
-              }, {
-                "BaseType" : "STRING",
-                "Description" : "Line Description passed into the mashup from the schedule",
-                "ParmDef" : {
-                  "baseType" : "STRING",
-                  "description" : "Line Description passed into the mashup from the schedule",
-                  "name" : "LineDescription",
-                  "aspects" : {
-                    "ordinal" : "3"
-                  },
-                  "ordinal" : 0
-                },
-                "ParameterName" : "LineDescription"
-              }, {
-                "BaseType" : "THINGNAME",
-                "Description" : "Line ThingName passed into the mashup from the schedule",
-                "ParmDef" : {
-                  "baseType" : "THINGNAME",
-                  "description" : "Line ThingName passed into the mashup from the schedule",
-                  "name" : "Line",
-                  "aspects" : {
-                    "ordinal" : "1"
-                  },
-                  "ordinal" : 0
-                },
-                "ParameterName" : "Line"
-              } ],
+              "__TypeDisplayName" : "Container",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "ResponsiveLayout" : true,
+              "Type" : "container",
+              "MinHeight" : 0,
               "Area" : "UI",
-              "Style" : "AcmeTractor.ButtonStyle",
+              "Style" : "DefaultContainerStyle",
+              "AnimateExpandCollapse" : true,
+              "ExpandCollapseTabLocation" : "outside",
               "Z-index" : 10,
-              "MessageToShow" : "Mashup must be selected",
-              "ModalPopupOpacity" : 0.5,
-              "PlantDescription" : "",
-              "RoundedCorners" : true,
-              "Width" : 120,
-              "Top" : 22,
-              "ResponsiveLayout" : false,
-              "Height" : 30,
-              "FixedPopupHeight" : 475,
-              "PopupTitle" : "",
-              "DisplayName" : "Navigation-15",
-              "Left" : 22,
-              "ClickOutsideToClose" : false,
-              "Text" : "Add Utilization",
-              "FixedPopupWidth" : 495,
-              "ShowMessageIfNoMashup" : false,
-              "IconAlignment" : "left",
-              "Transparent" : false,
-              "ShowCloseButton" : true,
-              "NavigationHoverStyle" : "DefaultRangeSelectionStyle",
-              "Id" : "Navigation-15",
-              "Alignment" : "center",
-              "MashupCaption" : "",
+              "MinWidth" : 0,
+              "Overlay" : false,
+              "DisplayName" : "Column 1",
+              "OverlayIsTransparent" : false,
+              "BGImageRepeat" : "no-repeat",
+              "BGImageSize" : "auto",
+              "Id" : "container-19",
               "ShowDataLoading" : true,
-              "MashupName" : "Manufacturing.AddUtilizationEvent",
-              "PopupTitleStyle" : "DefaultPopupTitleStyle"
+              "TabOffset" : 0,
+              "ShowExpandCollapseTab" : false,
+              "TabLocation" : "center",
+              "Expanded" : true,
+              "TabHeight" : 36,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "DataBinding" : {
+                    "PropertyMaps" : [ {
+                      "TargetPropertyType" : "property",
+                      "TargetPropertyBaseType" : "INFOTABLE",
+                      "TargetProperty" : "Data",
+                      "SourcePropertyType" : "InfoTable",
+                      "SourceProperty" : "",
+                      "SourcePropertyBaseType" : "INFOTABLE"
+                    } ],
+                    "TargetSection" : "",
+                    "SourceSection" : "DynamicThingTemplates_Manufacturing_ProductionLine",
+                    "TargetArea" : "UI",
+                    "SourceArea" : "Data",
+                    "Id" : "fcb42cf4-795e-4e8b-875d-b317fb58faf9",
+                    "SourceDetails" : "AllData",
+                    "SourceId" : "QueryUtilizationData",
+                    "TargetId" : "DataExport-16"
+                  },
+                  "Top" : 12,
+                  "FocusStyle" : {
+                    "fontEmphasisUnderline" : false,
+                    "displayString" : "",
+                    "fontEmphasisItalic" : false,
+                    "textSize" : "normal",
+                    "lineColor" : "#ffe620",
+                    "backgroundColor" : "",
+                    "lineStyle" : "solid",
+                    "lineThickness" : 1,
+                    "image" : "",
+                    "secondaryBackgroundColor" : "",
+                    "fontEmphasisBold" : false,
+                    "foregroundColor" : ""
+                  },
+                  "ActiveStyle" : "ButtonNavHover",
+                  "Visible" : true,
+                  "__TypeDisplayName" : "Data Export",
+                  "ResponsiveLayout" : false,
+                  "TabSequence" : 3,
+                  "Type" : "dataexport",
+                  "Area" : "UI",
+                  "ColumnFormat" : "{\"Active\":{\"baseType\":\"BOOLEAN\",\"description\":\"\",\"name\":\"Active\",\"aspects\":{\"isPrimaryKey\":false,\"defaultValue\":false},\"ordinal\":0},\"Comment\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Comment\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"Duration\":{\"baseType\":\"NUMBER\",\"description\":\"\",\"name\":\"Duration\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"LineName\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"LineName\",\"aspects\":{\"isPrimaryKey\":true},\"ordinal\":0},\"LocalTimeStamp\":{\"baseType\":\"DATETIME\",\"description\":\"\",\"name\":\"LocalTimeStamp\",\"aspects\":{\"isPrimaryKey\":true},\"ordinal\":0},\"Reason\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Reason\",\"aspects\":{\"isPrimaryKey\":false},\"ordinal\":0},\"Shift\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"Shift\",\"aspects\":{\"cacheTime\":0},\"ordinal\":9},\"TimeClassification\":{\"baseType\":\"TAGS\",\"description\":\"\",\"name\":\"TimeClassification\",\"aspects\":{\"tagType\":\"ModelTags\",\"cacheTime\":0},\"ordinal\":8},\"UtilizationState\":{\"baseType\":\"TAGS\",\"description\":\"\",\"name\":\"UtilizationState\",\"aspects\":{\"tagType\":\"ModelTags\",\"cacheTime\":0},\"ordinal\":7},\"UtilizationStateString\":{\"baseType\":\"STRING\",\"description\":\"\",\"name\":\"UtilizationStateString\",\"aspects\":{\"cacheTime\":0},\"ordinal\":10}}",
+                  "Style" : "AcmeTractor.ButtonStyle.ExportLight",
+                  "Height" : 29,
+                  "Z-index" : 10,
+                  "DisplayName" : "DataExport-16",
+                  "Left" : 140,
+                  "IconAlignment" : "left",
+                  "HoverStyle" : {
+                    "fontEmphasisUnderline" : false,
+                    "displayString" : "",
+                    "fontEmphasisItalic" : false,
+                    "textSize" : "normal",
+                    "lineColor" : "",
+                    "backgroundColor" : "#b1b1b1",
+                    "lineStyle" : "solid",
+                    "lineThickness" : 1,
+                    "image" : "",
+                    "secondaryBackgroundColor" : "",
+                    "fontEmphasisBold" : false,
+                    "foregroundColor" : "#ffffff"
+                  },
+                  "Id" : "DataExport-16",
+                  "Label" : "Export",
+                  "RoundedCorners" : true,
+                  "Width" : 90,
+                  "ShowDataLoading" : true
+                }
+              } ],
+              "Properties" : {
+                "Top" : 35,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "Visible" : true,
+                "ResponsiveLayout" : true,
+                "Type" : "panel",
+                "Area" : "UI",
+                "Style" : {
+                  "fontEmphasisUnderline" : false,
+                  "displayString" : "",
+                  "fontEmphasisItalic" : false,
+                  "textSize" : "normal",
+                  "lineColor" : "",
+                  "backgroundColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "image" : "",
+                  "secondaryBackgroundColor" : "",
+                  "fontEmphasisBold" : false,
+                  "foregroundColor" : ""
+                },
+                "Height" : 200,
+                "Z-index" : 10,
+                "DisplayName" : "Panel-21",
+                "Left" : 40,
+                "HorizontalAnchor" : "left",
+                "Id" : "Panel-21",
+                "Width" : 300,
+                "ShowDataLoading" : true
+              }
+            } ],
+            "Properties" : {
+              "TabWidth" : 36,
+              "Visible" : true,
+              "__TypeDisplayName" : "Container",
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "ResponsiveLayout" : true,
+              "Type" : "container",
+              "MinHeight" : 0,
+              "Area" : "UI",
+              "Style" : "DefaultContainerStyle",
+              "AnimateExpandCollapse" : true,
+              "ExpandCollapseTabLocation" : "outside",
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "Overlay" : false,
+              "DisplayName" : "Right Sidebar",
+              "OverlayIsTransparent" : false,
+              "BGImageRepeat" : "no-repeat",
+              "BGImageSize" : "auto",
+              "Id" : "container-20",
+              "ShowDataLoading" : true,
+              "TabOffset" : 0,
+              "ShowExpandCollapseTab" : false,
+              "TabLocation" : "center",
+              "Expanded" : true,
+              "TabHeight" : 36,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle"
             }
           } ],
           "Properties" : {
-            "Top" : 35,
-            "VerticalAnchor" : "top",
-            "__TypeDisplayName" : "Panel",
+            "PrintWidth" : 650,
+            "Columns" : 1,
+            "Rows" : 0,
             "Visible" : true,
-            "ResponsiveLayout" : true,
-            "Type" : "panel",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
             "Area" : "UI",
-            "Style" : {
-              "fontEmphasisUnderline" : false,
-              "displayString" : "",
-              "fontEmphasisItalic" : false,
-              "textSize" : "normal",
-              "lineColor" : "",
-              "backgroundColor" : "",
-              "lineStyle" : "solid",
-              "lineThickness" : 1,
-              "image" : "",
-              "secondaryBackgroundColor" : "",
-              "fontEmphasisBold" : false,
-              "foregroundColor" : ""
-            },
-            "Height" : 200,
             "Z-index" : 10,
-            "DisplayName" : "Panel-8",
-            "Left" : 40,
-            "HorizontalAnchor" : "left",
-            "Id" : "Panel-8",
-            "Width" : 300,
+            "LeftSidebarWidth" : 340,
+            "Footer" : false,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 50,
+            "PctColumn1" : 100,
+            "PctRow1" : 50,
+            "PctColumn2" : 0,
+            "PctRow8" : 0,
+            "PctColumn3" : 1,
+            "PctRow7" : 0,
+            "PctColumn4" : 1,
+            "Header" : false,
+            "PctRow6" : 0,
+            "IncludeSpacingInFixedAreas" : false,
+            "PctColumn5" : 1,
+            "PctRow5" : 0,
+            "PctColumn6" : 1,
+            "RightSidebar" : true,
+            "HeaderHeight" : 0,
+            "Top" : 30,
+            "PrintMarginLeftRight" : 0.5,
+            "Orientation" : "horizontal",
+            "ResponsiveLayout" : true,
+            "RightSidebarWidth" : 250,
+            "PctColumn8" : 1,
+            "PctColumn7" : 1,
+            "DisplayName" : "Layout-17",
+            "Spacing" : 2,
+            "Left" : 205,
+            "PrintMarginTopBottom" : 0.5,
+            "IsPrintLayout" : false,
+            "FooterHeight" : 0,
+            "Id" : "Layout-17",
+            "LeftSidebar" : true,
             "ShowDataLoading" : true
           }
         } ],
@@ -873,10 +990,10 @@
           "Style" : {
             "displayString" : "",
             "fontEmphasisUnderline" : false,
-            "fontEmphasisItalic" : false,
             "textSize" : "normal",
+            "fontEmphasisItalic" : false,
             "lineColor" : "#c0c0c0",
-            "backgroundColor" : "#ededed",
+            "backgroundColor" : "#ffffff",
             "lineStyle" : "solid",
             "lineThickness" : 1,
             "image" : "",
@@ -942,7 +1059,7 @@
         "Left" : 215,
         "PrintMarginTopBottom" : 0.5,
         "IsPrintLayout" : false,
-        "FooterHeight" : 75,
+        "FooterHeight" : 55,
         "Id" : "Layout-1",
         "LeftSidebar" : false,
         "ShowDataLoading" : true
@@ -975,7 +1092,7 @@
       "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
       "Width" : 1024,
       "Master" : "Manufacturing.Master",
-      "id_index" : 16,
+      "id_index" : 22,
       "Top" : 0,
       "TitleBarStyle" : "DefaultTitleBarStyle",
       "ResponsiveLayout" : true,
@@ -1029,6 +1146,11 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:37:44.335Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:38:14.723Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T17:38:17.706Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T17:53:48.566Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-03T23:10:56.842Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T15:13:56.073Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T15:14:29.502Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T00:10:36.575Z" user="JohnRistey"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
