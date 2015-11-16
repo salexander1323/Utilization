@@ -18,8 +18,8 @@
             <ConfigurationTables/>
             <FieldDefinitions>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="User" ordinal="2"/>
-                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="production_order" ordinal="3"/>
                 <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="new_status" ordinal="5"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="production_order" ordinal="3"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="1"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="comment" ordinal="6"/>
                 <FieldDefinition aspect.cacheTime="0.0" aspect.defaultValue="" aspect.tagType="DataTags" baseType="TAGS" description="" name="old_status" ordinal="4"/>
