@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-11T00:36:03.535Z" name="Manufacturing.ToolActivityDS" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="BOOLEAN" description="" name="Active" ordinal="6"/>
+                <FieldDefinition baseType="STRING" description="" name="ActiveProgramNumber" ordinal="7"/>
+                <FieldDefinition baseType="NUMBER" description="" name="SpindleLoadAvg" ordinal="6"/>
+                <FieldDefinition baseType="NUMBER" description="" name="Duration" ordinal="5"/>
+                <FieldDefinition baseType="INTEGER" description="" name="ToolNo" ordinal="2"/>
+                <FieldDefinition baseType="STRING" description="" name="MainProgramNumber" ordinal="8"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;fields : toolNumber : Added, removed, startTime : Added, removed, EndTime : Added, Updated, SpindleLoadAvg : Added, ToolNo : Added, StartTime : Added, Duration : Added&#10;" timestamp="2015-10-23T14:48:02.393Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : AssetName : Added&#10;" timestamp="2015-10-23T17:24:02.770Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : ActiveProgramNumber : Added, MainProgramNumber : Added&#10;" timestamp="2015-11-06T20:07:41.469Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ToolNo : Updated&#10;" timestamp="2015-11-10T13:44:38.411Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-10T13:45:06.207Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : AssetName : removed, StartTime : removed, EndTime : removed&#10;" timestamp="2015-11-11T00:31:46.769Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : Active : Added&#10;" timestamp="2015-11-11T00:36:03.535Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
