@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-13T15:37:28.934Z" name="DashboardToolData" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="LastToolChanged" ordinal="3"/>
+                <FieldDefinition baseType="STRING" description="" name="ToolTracked" ordinal="1"/>
+                <FieldDefinition baseType="NUMBER" description="" name="TimeInCut" ordinal="2"/>
+                <FieldDefinition baseType="NUMBER" description="" name="ToolLifePercent" ordinal="4"/>
+                <FieldDefinition baseType="DATETIME" description="" name="LastToolChangeDate" ordinal="5"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : tags : updated, name : updated&#10;documentation : updated&#10;" timestamp="2015-11-13T15:14:20.404Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ToolTracked : Added, TimeInCut : Added, LastToolChanged : Added&#10;" timestamp="2015-11-13T15:14:56.426Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T15:15:18.263Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : ToolLifePercent : Added&#10;" timestamp="2015-11-13T15:22:47.226Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-13T15:23:01.087Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : LastToolChangeDate : Added&#10;" timestamp="2015-11-13T15:37:28.934Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
