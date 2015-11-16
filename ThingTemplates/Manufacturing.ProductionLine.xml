@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="GenericThing" description="Production Line Template for all tractor production lines." documentationContent="&lt;p&gt;This template is used for &lt;b&gt;BOTH&lt;/b&gt; the Final Assembly Lines and Feeder Lines (Transmission, Engine, and Cab Assembly).&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-10-20T18:23:10.100Z" name="Manufacturing.ProductionLine" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
-            <Owner name="SeanS" type="User"/>
+        <ThingTemplate baseThingTemplate="GenericThing" description="Production Line Template for all tractor production lines." documentationContent="&lt;p&gt;This template is used for &lt;b&gt;BOTH&lt;/b&gt; the Final Assembly Lines and Feeder Lines (Transmission, Engine, and Cab Assembly).&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-11-12T21:15:34.003Z" name="Manufacturing.ProductionLine" tags="Applications:Manufacturing;Version:1.0.0.0" thingPackage="" valueStream="">
+            <Owner name="JohnRistey" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -180,8 +180,13 @@
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddUtilizationEvent">
                         <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="ActiveProgramNumber" ordinal="5"/>
                             <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="ReasonGroup" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="EventTime" ordinal="7"/>
                             <FieldDefinition baseType="STRING" description="" name="Comment" ordinal="3"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="ToolInSpindle" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="MainProgramNumber" ordinal="4"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="SequenceNumber" ordinal="8"/>
                             <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="Reason" ordinal="2"/>
                         </ParameterDefinitions>
                     </ServiceDefinition>
@@ -198,6 +203,14 @@
                             <FieldDefinition baseType="NUMBER" description="" name="LoadingTime" ordinal="4"/>
                         </ParameterDefinitions>
                     </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNIdleReasons">
+                        <ResultType aspect.dataShape="Manufacturing.IdleOccurrences" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="startDate" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="endDate" ordinal="3"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateShiftDurations">
                         <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions>
@@ -211,6 +224,10 @@
                             <FieldDefinition baseType="NUMBER" description="" name="PlannedProductionTime" ordinal="1"/>
                             <FieldDefinition baseType="NUMBER" description="" name="AvailableLineHrs" ordinal="2"/>
                         </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="Add time to the event duration while it is still active" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="IncrementEventDuration">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
                     </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryUtilizationData">
                         <ResultType aspect.dataShape="Manufacturing.UtilizationInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
@@ -232,6 +249,14 @@
                             <FieldDefinition baseType="STRING" description="" name="LotID" ordinal="8"/>
                             <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="MaterialID" ordinal="1"/>
                             <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="Reason" ordinal="4"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTopNProductionReasons">
+                        <ResultType aspect.dataShape="Manufacturing.ProductionOccurrences" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="startDate" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="endDate" ordinal="3"/>
                         </ParameterDefinitions>
                     </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetReworkProductionData">
@@ -281,6 +306,10 @@
                             <FieldDefinition aspect.isRequired="true" baseType="STRING" description="" name="UserID" ordinal="2"/>
                         </ParameterDefinitions>
                     </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UtilizationRecordUpdate">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetUtilizationTimeStream">
                         <ResultType aspect.dataShape="Manufacturing.UtilizationTimeInformation" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions>
@@ -322,7 +351,7 @@
                         <ParameterDefinitions>
                             <FieldDefinition baseType="DATETIME" description="" name="EndDate" ordinal="3"/>
                             <FieldDefinition baseType="DATETIME" description="" name="StartDate" ordinal="2"/>
-                            <FieldDefinition baseType="NUMBER" description="" name="topN" ordinal="1"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="topN" ordinal="1"/>
                         </ParameterDefinitions>
                     </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="QueryDowntimeData">
@@ -959,7 +988,8 @@ var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
                                 </DataShape>
                                 <Rows>
                                     <Row>
-                                        <code><![CDATA[// we want to retrieve the active utilization stream record for the line and complete it
+                                        <code><![CDATA[// we want to retrieve any active utilization stream records for the line and complete them
+// there could potentially be more than one active record if they were inserted very closely in time
 var tags = new Array();
 
 var query = {
@@ -988,52 +1018,92 @@ var params = {
 
 var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
 
-if(result.getRowCount() > 0) {
+// if we got any active records we need to complete them - need to assume that there could be more than one
+if (result.rows.length > 0){
 
-    // location:LOCATION
-    var location = new Object();
-    location.latitude = 0;
-    location.longitude = 0;
-    location.elevation = 0;
-    location.units = 'WGS84';
+    // sort result on timestamp
+    var params = {
+        sortColumn: "timestamp" /* STRING */,
+        t: result /* INFOTABLE */,
+        ascending: false /* BOOLEAN */
+    };
+    // result: INFOTABLE
+    var result = Resources["InfoTableFunctions"].Sort(params);
 
-    // values:INFOTABLE(Datashape: AcmeTractor.Utilization)
-    var values = Things["Manufacturing.Utilization"].CreateValues();
+    // create new infotable to hold records to be updated - has an extra field - EndTimeStamp
+    var params = {
+        infoTableName : "InfoTable",
+        dataShapeName : "Manufacturing.UtilizationCompleteShape"
+    };
 
-    // date1:DATETIME
-    var date1 = Date.now();
+    // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Manufacturing.UtilizationCompleteShape)
+    var RecordsWithEndDate = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
 
-    for each (var activeRow in result.rows) {
-        // date2:DATETIME
-        var date2 = activeRow.LocalTimeStamp;
+	// Insert result records into new infotable with the proper EndTimeStamp
+    var tableLength = result.rows.length;
+
+    var date1 = EventTime;
+    
+    for (var x = 0; x < tableLength; x++) {
+        var row = result.rows[x];
+        var NewRow = row;
+        NewRow.EndTimeStamp = date1;
+        date1 = row.timestamp;
+        RecordsWithEndDate.AddRow(NewRow);
+    }
+
+    var tableLength2 = RecordsWithEndDate.rows.length;
+
+    // Update utilization records that now have the proper completion date
+    for (var x = 0; x < tableLength; x++) {
+        var row = RecordsWithEndDate.rows[x];
+
+        // location:LOCATION
+        var location = new Object();
+        location.latitude = 0;
+        location.longitude = 0;
+        location.elevation = 0;
+        location.units = 'WGS84';
+
+        // values:INFOTABLE(Datashape: Manufacturing.Utilization)
+        var values = Things["Manufacturing.Utilization"].CreateValues();
+
+        var date2 = row.LocalTimeStamp;
+        date1 = row.EndTimeStamp;
 
         // dateDifference(date1:DATETIME, date2:DATETIME):NUMBER
-        //difference returns millsec, need to convert to minutes
-        var difference = dateDifference(date1, date2)/60000;
+        //difference returns millsec, need to convert to seconds
+        var difference = dateDifference(date1, date2)/1000;
 
         values.Duration = Math.round(difference*100)/100;
         values.Active = false;
-        values.LocalTimeStamp = activeRow.LocalTimeStamp;
-        values.Comment = activeRow.Comment;
-        values.TimeClassification = activeRow.TimeClassification;
-        values.Reason = activeRow.Reason;
-        values.UtilizationState = activeRow.UtilizationState;
-        values.UtilizationStateString = activeRow.UtilizationStateString;
+        values.LocalTimeStamp = row.LocalTimeStamp;
+        values.Comment = row.Comment;
+        values.TimeClassification = row.TimeClassification;
+        values.Reason = row.Reason;
+        values.UtilizationState = row.UtilizationState;
+        values.UtilizationStateString = row.UtilizationStateString;
         values.LineName = me.name;
-        values.Shift = activeRow.Shift;
+        values.Shift = row.Shift;
+        values.MainProgramNumber = row.MainProgramNumber;
+        values.ActiveProgramNumber = row.ActiveProgramNumber;
+        values.ToolInSpindle = row.ToolInSpindle;
+        values.AverageSpindleLoad = row.AverageSpindleLoad;
+        values.ToolCalcsComplete = row.ToolCalcsComplete;
+        values.SequenceNumber = row.SequenceNumber;
 
         var params = {
             values: values /* INFOTABLE*/,
             source: me.name /* STRING */,
             location: location /* LOCATION */,
-            streamEntryId: activeRow.id /* STRING */,
-            tags : activeRow.tags
+            streamEntryId: row.id /* STRING */,
+            tags : row.tags
         };
 
         // no return
         Things["Manufacturing.Utilization"].UpdateStreamEntry(params);
     }
-}
+};
 
 //Next, we need to get the utlization reason
 var keyReason = Reason + ReasonGroup;
@@ -1059,6 +1129,12 @@ values.UtilizationState = ReasonResult[0].UtilizationState;
 values.UtilizationStateString = ReasonResult[0].UtilizationState;
 values.Reason = Reason;
 values.Shift = me.CurrentShift;
+values.MainProgramNumber = MainProgramNumber;
+values.ActiveProgramNumber = ActiveProgramNumber;
+values.ToolInSpindle = ToolInSpindle;
+values.AverageSpindleLoad = 0;
+values.ToolCalcsComplete = false;
+values.SequenceNumber = SequenceNumber;
 
 // tags:TAGS
 var tags = new Array();
@@ -1107,6 +1183,115 @@ me.CurrentUtilReason = Reason;]]></code>
                                         <code><![CDATA[
 //Line Availability calculation
 result = Math.round(((Uptime + EquipmentDowntime + QualityDowntime)/LoadingTime) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNIdleReasons">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.IdleOccurrences"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{type:"EQ",fieldName:"LineName",value: me.name}, { type:"EQ",fieldName:"UtilizationStateString",value: "ReasonStates:Idle"},{ type:"Between",fieldName:"LocalTimeStamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+        oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var idleEntries = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: idleEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get the total count and sum of duration
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: idleEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Duration",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                IdleReason : record.Reason,
+                TotalDuration : aggResult.SUM_Duration ,
+                NumberOfOccurrences :reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurrences" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalDuration" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
+}]]></code>
                                     </Row>
                                 </Rows>
                             </ConfigurationTable>
@@ -1272,6 +1457,86 @@ me.ShiftMinutesCompleted = me.ShiftUptime + me.ShiftEquipmentDowntime + me.Shift
                                     <Row>
                                         <code><![CDATA[//Available Utilization Time calculation
 result = Math.round((PlannedProductionTime/AvailableLineHrs) * 10000)/100;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="IncrementEventDuration">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var tags = new Array();
+
+var query = {
+    filters: {
+        type: "EQ",
+        fieldName: "Active",
+    	value: true
+    }
+};
+
+var params = {
+    //source : "",
+    tags : tags,
+    maxItems : 500,
+    query : query
+};
+
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+if(result.getRowCount() > 0) {
+
+    // location:LOCATION
+    var location = new Object();
+    location.latitude = 0;
+    location.longitude = 0;
+    location.elevation = 0;
+    location.units = 'WGS84';
+
+    // values:INFOTABLE(Datashape: AcmeTractor.Utilization)
+    var values = Things["Manufacturing.Utilization"].CreateValues();
+
+    // date1:DATETIME
+    var date1 = Date.now();
+
+    for each (var activeRow in result.rows) {
+        // date2:DATETIME
+        var date2 = activeRow.LocalTimeStamp;
+
+        // dateDifference(date1:DATETIME, date2:DATETIME):NUMBER
+        // difference returns millsec, need to convert to minutes
+        var difference = dateDifference(date1, date2) / 60000;
+
+        values.Duration = Math.round(difference * 100) / 100;
+        values.Active = true;
+        values.LocalTimeStamp = activeRow.LocalTimeStamp;
+        values.Comment = activeRow.Comment;
+        values.TimeClassification = activeRow.TimeClassification;
+        values.Reason = activeRow.Reason;
+        values.UtilizationState = activeRow.UtilizationState;
+        values.UtilizationStateString = activeRow.UtilizationStateString;
+        values.LineName = me.name;
+        values.Shift = activeRow.Shift;
+
+        var params = {
+            values: values /* INFOTABLE*/,
+            source: me.name /* STRING */,
+            location: location /* LOCATION */,
+            streamEntryId: activeRow.id /* STRING */,
+            tags : activeRow.tags
+        };
+
+        // no return
+        Things["Manufacturing.Utilization"].UpdateStreamEntry(params);
+    }
+}]]></code>
                                     </Row>
                                 </Rows>
                             </ConfigurationTable>
@@ -1480,6 +1745,115 @@ if(me.CurrentProductionOrder != "" && me.CurrentProductionOrder != "No Order") {
 else {
     var result = false;
     throw "A work order is not currently running, cannot produce.";
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTopNProductionReasons">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[ var params = {
+      infoTableName : "InfoTable",
+      dataShapeName : "Manufacturing.ProductionOccurrences"
+  };
+  
+  // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(OEEValues)
+  var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+  
+try {
+                                  
+      var query = {filters:{type: "And", filters:[{type:"EQ",fieldName:"LineName",value: me.name}, { type:"EQ",fieldName:"UtilizationStateString",value: "ReasonStates:Production"},{ type:"Between",fieldName:"LocalTimeStamp",from : StartDate, to : EndDate}]}};
+    
+      var params = {
+        oldestFirst: false /* BOOLEAN */,
+        query: query /* QUERY */,
+        maxItems: 500 /* NUMBER */
+      };
+    
+      // result: INFOTABLE
+      var productionEntries = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+    
+                                                             
+      var params = {
+          t: productionEntries ,
+          columns: "Reason" 
+      };
+      
+      // get the distinct reasons
+      var distinctRecords = Resources["InfoTableFunctions"].Distinct(params);
+      
+      // loop through each distinct record and get the total count and sum of duration
+      for each (var record in distinctRecords.rows) {
+                     
+              var params = {
+                  t: productionEntries,
+                  value: record.Reason ,
+                  fieldName: "Reason" 
+              };
+              
+              // result: STRING
+              var reasonResults = Resources["InfoTableFunctions"].EQFilter(params);
+                                                                                             
+              var params = {
+                  t: reasonResults,
+                  columns:  "Duration",
+                  aggregates: "SUM"                                     
+              };
+              
+              // result: STRING
+              var aggResult = Resources["InfoTableFunctions"].Aggregate(params);
+              
+              //add a new record
+              var newRow = {
+                ProductionReason : record.Reason,
+                TotalDuration : aggResult.SUM_Duration ,
+                NumberOfOccurrences :reasonResults.getRowCount()
+              }
+                  
+              result.AddRow(newRow);
+      }          
+                              
+        var params = {
+            sortColumn: "NumberOfOccurrences" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        var params = {
+            sortColumn: "TotalDuration" /* STRING */,
+            t: result /* INFOTABLE */,
+            ascending: false /* BOOLEAN */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Sort(params);
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].Query(params);
+        
+        var params = {
+            t: result /* INFOTABLE */,
+            maxItems: topN /* NUMBER */
+        };
+        
+        // result: STRING
+        var result = Resources["InfoTableFunctions"].TopN(params);
+                       
+
+} catch(err) {
+
 }]]></code>
                                     </Row>
                                 </Rows>
@@ -1775,6 +2149,147 @@ var params = {
 
 // no return
 Things["Manufacturing.OrderStatusLog"].AddStreamEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="UtilizationRecordUpdate">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// this service will update the duration on any active utilization records and close out any that should be closed
+
+// we want to retrieve any active utilization stream records for the line
+// there could potentially be more than one active record if they were inserted very closely in time
+// we want to update the duration on the most recent record and keep it active
+// we want to close out any that are not the most recent
+
+// get the current time
+var EventTime = Date.now();
+
+// query for active records
+var tags = new Array();
+
+var query = {
+    filters: {
+        type: "AND",
+        filters: [{
+            type: "EQ",
+            fieldName: "LineName",
+            value: me.name
+        }
+                  , {
+                      type: "EQ",
+                      fieldName: "Active",
+                      value: true
+                  }
+                 ]
+    }
+};
+
+var params = {
+    //source : "",
+    tags : tags,
+    maxItems : 500,
+    query : query
+};
+
+var result = Things["Manufacturing.Utilization"].QueryStreamEntriesWithData(params);
+
+// if we got any active records we need to update duration on most recent and complete any others - need to assume that there could be more than one
+if (result.rows.length > 0){
+
+    // sort result on timestamp
+    var params = {
+        sortColumn: "timestamp" /* STRING */,
+        t: result /* INFOTABLE */,
+        ascending: false /* BOOLEAN */
+    };
+    // result: INFOTABLE
+    var result = Resources["InfoTableFunctions"].Sort(params);
+
+    // create new infotable to hold records to be updated - has an extra field - EndTimeStamp
+    var params = {
+        infoTableName : "InfoTable",
+        dataShapeName : "Manufacturing.UtilizationCompleteShape"
+    };
+
+    // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Manufacturing.UtilizationCompleteShape)
+    var RecordsWithEndDate = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+	// Insert result records into new infotable with the proper EndTimeStamp
+    var tableLength = result.rows.length;
+
+    var date1 = EventTime;
+    
+    for (var x = 0; x < tableLength; x++) {
+        var row = result.rows[x];
+        var NewRow = row;
+        NewRow.EndTimeStamp = date1;
+        date1 = row.timestamp;
+        RecordsWithEndDate.AddRow(NewRow);
+    }
+
+    var tableLength2 = RecordsWithEndDate.rows.length;
+
+    // Update utilization records that now have the proper completion date
+    for (var x = 0; x < tableLength; x++) {
+        var row = RecordsWithEndDate.rows[x];
+
+        // location:LOCATION
+        var location = new Object();
+        location.latitude = 0;
+        location.longitude = 0;
+        location.elevation = 0;
+        location.units = 'WGS84';
+
+        // values:INFOTABLE(Datashape: Manufacturing.Utilization)
+        var values = Things["Manufacturing.Utilization"].CreateValues();
+
+        var date2 = row.LocalTimeStamp;
+        date1 = row.EndTimeStamp;
+
+        // dateDifference(date1:DATETIME, date2:DATETIME):NUMBER
+        //difference returns millsec, need to convert to seconds
+        var difference = dateDifference(date1, date2)/1000;
+
+        values.Duration = Math.round(difference*100)/100;
+        if (x==0){values.Active = true}
+        else {values.Active = false};
+        values.LocalTimeStamp = row.LocalTimeStamp;
+        values.Comment = row.Comment;
+        values.TimeClassification = row.TimeClassification;
+        values.Reason = row.Reason;
+        values.UtilizationState = row.UtilizationState;
+        values.UtilizationStateString = row.UtilizationStateString;
+        values.LineName = row.LineName;
+        values.Shift = row.Shift;
+        values.MainProgramNumber = row.MainProgramNumber;
+        values.ActiveProgramNumber = row.ActiveProgramNumber;
+        values.ToolInSpindle = row.ToolInSpindle;
+        values.AverageSpindleLoad = row.AverageSpindleLoad;
+        values.ToolCalcsComplete = row.ToolCalcsComplete;
+    	values.SequenceNumber = row.SequenceNumber;
+        
+        var params = {
+            values: values /* INFOTABLE*/,
+            source: me.name /* STRING */,
+            location: location /* LOCATION */,
+            streamEntryId: row.id /* STRING */,
+            tags : row.tags
+        };
+
+        // no return
+        Things["Manufacturing.Utilization"].UpdateStreamEntry(params);
+    }
+};]]></code>
                                     </Row>
                                 </Rows>
                             </ConfigurationTable>
@@ -2143,7 +2658,7 @@ try {
       var params = {
         oldestFirst: false /* BOOLEAN */,
         query: query /* QUERY */,
-        maxItems: 500 /* NUMBER */
+        maxItems: 10000 /* NUMBER */
       };
     
       // result: INFOTABLE
@@ -2551,7 +3066,8 @@ try {
                                     </DataShape>
                                     <Rows>
                                         <Row>
-                                            <code><![CDATA[// call automated update service]]></code>
+                                            <code><![CDATA[// call automated update service
+me.IncrementEventDuration();]]></code>
                                         </Row>
                                     </Rows>
                                 </ConfigurationTable>
@@ -2628,6 +3144,51 @@ try {
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-19T21:40:38.243Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-20T18:15:14.534Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Manufacturing.TimedTask:Timer : New subscription, Subscription Added&#10;" timestamp="2015-10-20T18:23:10.100Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : IncrementEventDuration : Description updated, Code Updated, Service Added&#10;" timestamp="2015-10-21T19:03:11.108Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : Manufacturing.TimedTask:Timer : Code Updated&#10;" timestamp="2015-10-21T19:03:48.599Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T19:12:34.539Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : IncrementEventDuration : Code Updated&#10;" timestamp="2015-10-21T19:14:33.235Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : IncrementEventDuration : Code Updated&#10;" timestamp="2015-10-21T19:18:45.002Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-21T19:39:13.704Z" user="SeanS"/>
+                <ConfigurationChange changeAction="FORCEEDIT" changeReason="" timestamp="2015-10-26T17:50:10.451Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter topN Added, Input parameter startDate Added, Input parameter endDate Added, GetTopNIdleReasons : Inputs updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2015-10-27T22:02:34.327Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T23:48:11.691Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-27T23:48:18.445Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter topN Added, Input parameter startDate Added, Input parameter endDate Added, GetTopNProductionReasons : Inputs updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2015-10-28T14:33:36.644Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertUtilizationData : Code Updated&#10;" timestamp="2015-10-29T20:20:41.723Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTopNUtilizationReasonDurations : Service Added, removed, GetTopNUtilizationReasons : removed&#10;" timestamp="2015-11-09T21:29:03.289Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTopNUtilizationReasons : Code Updated, Inputs updated, Service Added,  : Input parameter topN Added, Input parameter StartDate Added, Input parameter EndDate Added&#10;" timestamp="2015-11-09T21:34:32.168Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTopNUtilizationReasons : Output Updated, Code Updated&#10;" timestamp="2015-11-09T21:36:41.213Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-09T21:36:44.752Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTopNUtilizationReasons : Code Updated&#10;" timestamp="2015-11-09T21:38:57.004Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Code Updated&#10;" timestamp="2015-11-09T23:05:16.929Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Input parameter MainProgramNumber Added, Inputs updated, Input parameter ActiveProgramNumber Added, Input parameter ToolInSpindle Added&#10;" timestamp="2015-11-11T14:34:52.040Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Input parameter EventTime Added, Inputs updated&#10;" timestamp="2015-11-11T15:06:51.981Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Code Updated&#10;" timestamp="2015-11-11T15:19:34.357Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UtilizationRecordUpdate : Code Updated, Service Added&#10;" timestamp="2015-11-11T15:30:51.955Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T15:31:00.045Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestUpdateActiveRecords : Code Updated, Service Added&#10;" timestamp="2015-11-11T16:04:56.285Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestUpdateActiveRecords : Code Updated&#10;" timestamp="2015-11-11T16:05:37.830Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestUpdateActiveRecords : Code Updated&#10;" timestamp="2015-11-11T16:06:34.205Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T16:52:51.796Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UtilizationRecordUpdate : Code Updated&#10;" timestamp="2015-11-11T16:58:22.257Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestUpdateActiveRecords : removed,  : Input parameter StreamID Added, Inputs updated, Code Updated, Test : Output Updated, Service Added&#10;" timestamp="2015-11-11T17:03:29.642Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-11T17:04:22.310Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-11T17:22:08.654Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-11T17:43:39.890Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-11T17:44:09.924Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T17:58:35.471Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Output Updated, Code Updated&#10;" timestamp="2015-11-11T18:04:28.993Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Output Updated&#10;" timestamp="2015-11-11T18:04:39.169Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated&#10;" timestamp="2015-11-11T18:05:31.913Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated, removed&#10;" timestamp="2015-11-11T18:10:58.343Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Code Updated, Output Updated, Service Added&#10;" timestamp="2015-11-11T18:33:43.833Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : removed&#10;" timestamp="2015-11-11T20:50:16.259Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T21:17:19.165Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Input parameter SequenceNumber Added, Inputs updated, Code Updated&#10;" timestamp="2015-11-12T19:50:56.288Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Code Updated&#10;" timestamp="2015-11-12T19:59:16.651Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddUtilizationEvent : Code Updated&#10;" timestamp="2015-11-12T20:02:32.325Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UtilizationRecordUpdate : Code Updated&#10;" timestamp="2015-11-12T21:15:34.002Z" user="JohnRistey"/>
             </ConfigurationChanges>
         </ThingTemplate>
     </ThingTemplates>
