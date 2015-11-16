@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <DataShapes>
-        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;&#10;&#10;" homeMashup="" lastModifiedDate="2015-10-13T21:20:03.912Z" name="Manufacturing.UtilizationInformation" tags="Applications:Manufacturing;Version:1.0.0.0">
-            <Owner name="SeanS" type="User"/>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-12T19:41:44.797Z" name="Manufacturing.UtilizationInformation" tags="Applications:Manufacturing;Version:1.0.0.0">
+            <Owner name="JohnRistey" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -17,21 +17,29 @@
             </VisibilityPermissions>
             <ConfigurationTables/>
             <FieldDefinitions>
-                <FieldDefinition aspect.defaultValue="false" aspect.isPrimaryKey="false" baseType="BOOLEAN" description="" name="Active" ordinal="0"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="LineName" ordinal="0"/>
                 <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="LocalTimeStamp" ordinal="0"/>
-                <FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="Duration" ordinal="0"/>
-                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="UtilizationState" ordinal="7"/>
                 <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Comment" ordinal="0"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="9"/>
                 <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="TimeClassification" ordinal="8"/>
+                <FieldDefinition baseType="NUMBER" description="" name="SequenceNumber" ordinal="16"/>
                 <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="UtilizationStateString" ordinal="10"/>
+                <FieldDefinition baseType="STRING" description="" name="ActiveProgramNumber" ordinal="14"/>
+                <FieldDefinition aspect.defaultValue="false" aspect.isPrimaryKey="false" baseType="BOOLEAN" description="" name="Active" ordinal="0"/>
+                <FieldDefinition baseType="NUMBER" description="" name="AverageSpindleLoad" ordinal="12"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="UtilizationState" ordinal="7"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="Duration" ordinal="0"/>
+                <FieldDefinition baseType="INTEGER" description="" name="ToolInSpindle" ordinal="11"/>
+                <FieldDefinition baseType="STRING" description="" name="MainProgramNumber" ordinal="13"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="ToolCalcsComplete" ordinal="15"/>
                 <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Reason" ordinal="0"/>
             </FieldDefinitions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-17T18:30:01.658Z" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-17T18:31:27.486Z" user="Administrator"/>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-13T21:20:03.912Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : ToolInSpindle : Added, AverageSpindleLoad : Added, MainProgramNumber : Added, ActiveProgramNumber : Added, ToolCalcsComplete : Added&#10;" timestamp="2015-11-11T13:51:47.721Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : SequenceNumber : Added&#10;" timestamp="2015-11-12T19:41:44.797Z" user="JohnRistey"/>
             </ConfigurationChanges>
         </DataShape>
     </DataShapes>
