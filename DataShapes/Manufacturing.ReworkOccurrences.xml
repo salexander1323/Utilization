@@ -17,8 +17,8 @@
             </VisibilityPermissions>
             <ConfigurationTables/>
             <FieldDefinitions>
-                <FieldDefinition baseType="NUMBER" description="" name="TotalRework" ordinal="3"/>
                 <FieldDefinition baseType="STRING" description="" name="ReworkReason" ordinal="1"/>
+                <FieldDefinition baseType="NUMBER" description="" name="TotalRework" ordinal="3"/>
                 <FieldDefinition baseType="NUMBER" description="" name="NumberOfOccurrences" ordinal="3"/>
             </FieldDefinitions>
             <ConfigurationChanges>
