@@ -17,13 +17,13 @@
             </VisibilityPermissions>
             <ConfigurationTables/>
             <FieldDefinitions>
-                <FieldDefinition baseType="STRING" description="" name="MaterialDescription" ordinal="8"/>
                 <FieldDefinition baseType="STRING" description="" name="MaterialsEqual" ordinal="10"/>
+                <FieldDefinition baseType="STRING" description="" name="MaterialDescription" ordinal="8"/>
                 <FieldDefinition baseType="STRING" description="" name="OperationID" ordinal="3"/>
                 <FieldDefinition baseType="STRING" description="" name="Comments" ordinal="7"/>
                 <FieldDefinition baseType="NUMBER" description="" name="Quantity" ordinal="5"/>
-                <FieldDefinition baseType="NUMBER" description="" name="QuantityNeeded" ordinal="9"/>
                 <FieldDefinition baseType="STRING" description="" name="UnitOfMeasure" ordinal="6"/>
+                <FieldDefinition baseType="NUMBER" description="" name="QuantityNeeded" ordinal="9"/>
                 <FieldDefinition baseType="STRING" description="" name="VersionID" ordinal="2"/>
                 <FieldDefinition baseType="STRING" description="" name="BOMMaterialID" ordinal="4"/>
                 <FieldDefinition baseType="STRING" description="" name="MaterialID" ordinal="1"/>
