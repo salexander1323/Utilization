@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;" homeMashup="" lastModifiedDate="2015-10-28T14:31:32.128Z" name="Manufacturing.ProductionOccurrences" tags="Applications:Manufacturing">
+            <Owner name="SeanS" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="NUMBER" description="" name="TotalDuration" ordinal="1"/>
+                <FieldDefinition baseType="STRING" description="" name="ProductionReason" ordinal="3"/>
+                <FieldDefinition baseType="NUMBER" description="" name="NumberOfOccurrences" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;fields : TotalDuration : Added, NumberOfOccurrences : Added, ProductionReason : Added&#10;" timestamp="2015-10-28T14:31:32.128Z" user="SeanS"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
