@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-16T21:28:52.495Z" name="Sean.PlantA.Line002" published="false" tags="Applications:Manufacturing;Version:1.0.0.0" thingTemplate="Manufacturing.ProductionLine" valueStream="">
-            <Owner name="SeanS" type="User"/>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-10-26T15:33:06.021Z" name="Sean.PlantA.Line002" published="false" tags="Applications:Manufacturing;Version:1.0.0.0" thingTemplate="Manufacturing.ProductionLine" valueStream="HoneywellValueStream">
+            <Owner name="stevea" type="User"/>
             <avatar/>
             <DesignTimePermissions>
                 <Create/>
@@ -35,7 +35,9 @@
                 <AlertDefinitions name="MachineCode"/>
                 <AlertDefinitions name="MachineID"/>
             </AlertConfigurations>
-            <ImplementedShapes/>
+            <ImplementedShapes>
+                <ImplementedShape name="Manufacturing.ToolUsageCapability" type="ThingShape"/>
+            </ImplementedShapes>
             <ThingProperties>
                 <MaterialPersonnelShortageTime>0.0</MaterialPersonnelShortageTime>
                 <DefaultReworkReason/>
@@ -43,7 +45,7 @@
                 <ShiftChangeOverTime>0.0</ShiftChangeOverTime>
                 <UpTime>0.0</UpTime>
                 <ShiftMinutesCompleted>0.0</ShiftMinutesCompleted>
-                <LastUtilizationTimeEvent>2015-10-16T21:16:55.816Z</LastUtilizationTimeEvent>
+                <LastUtilizationTimeEvent>2015-11-11T21:04:54.766Z</LastUtilizationTimeEvent>
                 <StandardizedProductionTime>0.0</StandardizedProductionTime>
                 <LineBlog/>
                 <CurrentShift/>
@@ -95,6 +97,11 @@
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;" timestamp="2015-10-16T21:16:55.812Z" user="SeanS"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="properties : MachineID : Added, MachineCode : Added&#10;" timestamp="2015-10-16T21:28:52.495Z" user="SeanS"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : implementedShapes : updated&#10;" timestamp="2015-10-23T18:26:01.332Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SpindleLoad : updated property binding, ToolNo : updated property binding&#10;" timestamp="2015-10-23T18:28:15.879Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2015-10-23T19:35:32.484Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-23T19:35:58.740Z" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : SpindleLoad : updated property binding, ToolNo : updated property binding&#10;" timestamp="2015-10-26T15:33:06.021Z" user="stevea"/>
             </ConfigurationChanges>
         </Thing>
     </Things>
