@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-12T19:58:43.116Z" name="Manufacturing.UtilizationCompleteShape" tags="Applications:Manufacturing">
+            <Owner name="JohnRistey" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.tagType="DataTags" baseType="TAGS" description="Tags" name="tags" ordinal="0"/>
+                <FieldDefinition baseType="STRING" description="Source type" name="sourceType" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="LineName" ordinal="0"/>
+                <FieldDefinition baseType="LOCATION" description="Location of the entry" name="location" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="LocalTimeStamp" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Comment" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="Shift" ordinal="9"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="TimeClassification" ordinal="8"/>
+                <FieldDefinition baseType="NUMBER" description="" name="SequenceNumber" ordinal="23"/>
+                <FieldDefinition aspect.cacheTime="0.0" baseType="STRING" description="" name="UtilizationStateString" ordinal="10"/>
+                <FieldDefinition baseType="DATETIME" description="Time of entry" name="timestamp" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="Entry ID" name="id" ordinal="0"/>
+                <FieldDefinition baseType="DATETIME" description="" name="EndTimeStamp" ordinal="17"/>
+                <FieldDefinition aspect.defaultValue="false" aspect.isPrimaryKey="false" baseType="BOOLEAN" description="" name="Active" ordinal="0"/>
+                <FieldDefinition baseType="STRING" description="" name="ActiveProgramNumber" ordinal="19"/>
+                <FieldDefinition baseType="NUMBER" description="" name="AverageSpindleLoad" ordinal="21"/>
+                <FieldDefinition baseType="STRING" description="Source of the entry" name="source" ordinal="0"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="Duration" ordinal="0"/>
+                <FieldDefinition aspect.cacheTime="0.0" aspect.tagType="ModelTags" baseType="TAGS" description="" name="UtilizationState" ordinal="7"/>
+                <FieldDefinition baseType="STRING" description="" name="MainProgramNumber" ordinal="18"/>
+                <FieldDefinition baseType="INTEGER" description="" name="ToolInSpindle" ordinal="20"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="ToolCalcsComplete" ordinal="22"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="Reason" ordinal="0"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-11-09T22:41:32.828Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : EndTimeStamp : Added&#10;" timestamp="2015-11-09T22:42:25.732Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : MainProgramNumber : Added, ActiveProgramNumber : Added, ToolInSpindle : Added, AverageSpindleLoad : Added, removed, ToolCalcsComplete : Added&#10;" timestamp="2015-11-11T15:05:18.952Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-11T15:05:31.473Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : SequenceNumber : Added&#10;" timestamp="2015-11-12T19:58:34.063Z" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-12T19:58:43.116Z" user="JohnRistey"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
